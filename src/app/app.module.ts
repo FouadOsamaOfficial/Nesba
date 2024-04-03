@@ -9,6 +9,7 @@ import { FooterComponent } from './sharedComponents/footer/footer.component';
 import { HeaderComponent } from './sharedComponents/header/header.component';
 import { RateIntroductionComponent } from './Components/rate-introduction/rate-introduction.component';
 import { ContactComponent } from './Components/contact/contact.component';
+import { LoginComponent } from './sharedComponents/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './Components/contact/contact.component';
     FooterComponent,
     HeaderComponent,
     RateIntroductionComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
