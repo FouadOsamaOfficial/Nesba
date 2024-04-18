@@ -10,6 +10,7 @@ import { HeaderComponent } from './sharedComponents/header/header.component';
 import { RateIntroductionComponent } from './Components/rate-introduction/rate-introduction.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { LoginComponent } from './sharedComponents/login/login.component';
+import { SignupComponent } from './sharedComponents/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './sharedComponents/login/login.component';
     HeaderComponent,
     RateIntroductionComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

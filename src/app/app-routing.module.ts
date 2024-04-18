@@ -5,6 +5,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { RateIntroductionComponent } from './Components/rate-introduction/rate-introduction.component';
 import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component';
 import { LoginComponent } from './sharedComponents/login/login.component';
+import { SignupComponent } from './sharedComponents/signup/signup.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
 { path: 'contact', component: ContactComponent },
 { path: 'rate-introduction' , component: RateIntroductionComponent },
 { path: 'login' , component: LoginComponent },
+{ path: 'sign-up' , component: SignupComponent },
 ];
 
 @NgModule({
