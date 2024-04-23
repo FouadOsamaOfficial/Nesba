@@ -4,7 +4,8 @@
   font-size:14px;
   text-transform:uppercase;
   letter-spacing:2px;
-  text-shadow:1px 1px 2px rgba(0,0,0,0.4)
+  text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+  position: absolute ;
 }
 
 .dropdown-menu {
@@ -17,20 +18,20 @@ a.dropdown-item:hover {
   color:#03727d !important
 }
 .nav-item a{
-  color:#dfdfdf;
+  color:#fff;
 }
 .nav-item a:hover {
-  color:#fff
+  color:#dfdfdf;
 }
 .nav-item{
   min-width:12vw;
 }
 #mainNavigation {
-  position:fixed;
+  position:absolute;
   top:0;
   left:0;
   width:100%;
-  z-index:123;
+  /* z-index:123; */
   padding-bottom:0;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
 background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */

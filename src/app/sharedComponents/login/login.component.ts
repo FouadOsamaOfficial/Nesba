@@ -13,4 +13,9 @@ export class LoginComponent {
     this.router.navigate(['/sign-up']);
   }
 
+  onLogin(){
+    this.router.navigate(['/user-profile']);
+    
+  }
+
 }

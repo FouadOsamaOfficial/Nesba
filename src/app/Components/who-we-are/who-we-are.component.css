@@ -56,10 +56,10 @@ margin-bottom:60px;
 
 .sec-title .title{
 position: relative;
-display: block;
+display: #222222;
 font-size: 18px;
 line-height: 24px;
-color: #00aeef;
+color: black;
 font-weight: 500;
 margin-bottom: 15px;
 }
@@ -149,7 +149,8 @@ padding: 10px 30px;
 font-weight: 600;
 overflow: hidden;
 letter-spacing: 0.02em;
-background-color: #00aeef;
+background-color: black;
+border-radius: 35px;
 }
 
 .btn-style-one:hover{
@@ -219,7 +220,7 @@ padding-bottom: 0px;
 position: absolute;
 bottom: 16px;
 z-index: 1;
-background: orange;
+background: red;
 padding: 10px 15px;
 left: 96px;
 width: calc(100% - 152px);
@@ -249,7 +250,9 @@ top: -80px;
 left: -3px;
 background: transparent;
 z-index: 0;
-border: 44px solid #00aeef;
+border: 44px solid red;
+/* border-image: linear-gradient(to right, red, black); */
+
 }
 
 .about-section .image-column .image-1{

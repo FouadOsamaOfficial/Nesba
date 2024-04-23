@@ -1,0 +1,30 @@
+<body>
+    <header>
+      <h1>User Funding Tracker</h1>
+    </header>
+  
+    <main>
+      <section class="funding-tracker">
+        <div class="tracker-item">
+          <h2>January 2024</h2>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p class="totalFund">Total Funds: $10,000</p>
+          <p>Loan Type: Personal Loan</p>
+          <p>Status: <span class="accepted">Accepted</span></p>
+        </div>
+        <div class="tracker-item">
+          <h2>February 2024</h2>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p class="totalFund">Total Funds: $15,000</p>
+          <p>Loan Type: Mortgage Loan</p>
+          <p>Status: <span class="declined">Declined</span></p>
+        </div>
+      </section>
+    </main>
+    <button class="btn btn-outline-secondary" (click)="previous()">Previous</button>
+
+  </body>

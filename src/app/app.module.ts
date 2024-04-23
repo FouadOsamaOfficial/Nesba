@@ -11,6 +11,11 @@ import { RateIntroductionComponent } from './Components/rate-introduction/rate-i
 import { ContactComponent } from './Components/contact/contact.component';
 import { LoginComponent } from './sharedComponents/login/login.component';
 import { SignupComponent } from './sharedComponents/signup/signup.component';
+import { UserProfileComponent } from './Components/user-profile/user-profile.component';
+import { FundingComponent } from './Components/funding/funding.component';
+import { PreviousFundingComponent } from './Components/previous-funding/previous-funding.component';
+import { FundingTrackerComponent } from './Components/funding-tracker/funding-tracker.component';
+import { ServicesComponent } from './Components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,13 @@ import { SignupComponent } from './sharedComponents/signup/signup.component';
     RateIntroductionComponent,
     ContactComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    UserProfileComponent,
+    FundingComponent,
+    PreviousFundingComponent,
+    FundingTrackerComponent,
+    ServicesComponent,
+
   ],
   imports: [
     BrowserModule,
