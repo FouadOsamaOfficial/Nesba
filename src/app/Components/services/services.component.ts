@@ -14,4 +14,16 @@ export class ServicesComponent {
     this.router.navigate(['./user-profile']);
   
   }
+  toFinanceProducts(){
+    this.router.navigate(['./finance-products']);
+
+  }
+  toCards(){
+    this.router.navigate(['./cards']);
+    
+  }
+  toInvestment(){
+    this.router.navigate(['./investment']);
+    
+  }
 }

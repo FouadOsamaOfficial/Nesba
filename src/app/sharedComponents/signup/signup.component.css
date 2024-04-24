@@ -130,3 +130,25 @@ button:hover {
   background: #4b111b;
 }
 
+
+.two-col{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+  color: black;
+  font-size: small;
+  margin-top: 10px;
+  
+ }
+ .one{
+  display: flex;
+ }
+ label a{
+  text-decoration: none;
+  color: black;
+ }
+
+ .two-col input {
+  margin-right: 7px;
+
+ }

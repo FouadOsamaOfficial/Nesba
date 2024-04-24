@@ -7,13 +7,17 @@ import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component'
 import { LoginComponent } from './sharedComponents/login/login.component';
 import { SignupComponent } from './sharedComponents/signup/signup.component';
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
-import { FundingComponent } from './Components/funding/funding.component';
 import { PreviousFundingComponent } from './Components/previous-funding/previous-funding.component';
 import { FundingTrackerComponent } from './Components/funding-tracker/funding-tracker.component';
 import { ServicesComponent } from './Components/services/services.component';
+import { FinanceProductsComponent } from './Components/finance-products/finance-products.component';
+import { CardsComponent } from './Components/cards/cards.component';
+import { InvestmentComponent } from './Components/investment/investment.component';
+import { FundingComponent } from './Components/funding/funding.component';
+import { TermsComponent } from './Components/terms/terms.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+{ path: '', component: HomeComponent },
 { path: 'home', component: HomeComponent },
 { path: 'who-we-are', component: WhoWeAreComponent },
 { path: 'contact', component: ContactComponent },
@@ -24,7 +28,11 @@ const routes: Routes = [
 { path: 'services' , component:ServicesComponent  },
 { path: 'funding' , component:FundingComponent  },
 { path: 'previous-funding' , component: PreviousFundingComponent },
-{ path: 'funding-tracker ' , component:FundingTrackerComponent },
+{ path: 'funding-tracker' , component:FundingTrackerComponent },
+{ path: 'finance-products' , component:FinanceProductsComponent },
+{ path: 'cards' , component:CardsComponent },
+{ path: 'investment' , component:InvestmentComponent },
+{ path: 'terms' , component:TermsComponent },
 
 ];
 

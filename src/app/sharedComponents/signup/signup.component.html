@@ -4,19 +4,26 @@
   <h2>Already have an account? <span class="button" (click)="backSignin()">Sign in</span></h2>
 
   <div class="signup__field">
-    <input class="signup__input" type="text" name="Gover-ID" id="Gover-ID" required />
-    <label class="signup__label" for="Gover-ID">Gover-ID</label>
+    <input class="signup__input" type="text" name="Gover-ID" id="Gover-ID" placeholder="" required />
+    <label class="signup__label" for="Gover-ID">ID-phone Number in abshir</label>
   </div>
 
   <div class="signup__field">
-    <input class="signup__input" type="text" name="username" id="username" required />
+    <input class="signup__input" type="text" name="username" id="username" placeholder="" required />
     <label class="signup__label" for="username">Username</label>
   </div>
 
   <div class="signup__field">
-    <input class="signup__input" type="password" name="password" id="password" required />
+    <input class="signup__input" type="password" name="password" id="password" placeholder="" required />
     <label class="signup__label" for="password">Password</label>
   </div>
 
   <button>Sign up</button>
+  <div class="two-col">
+    <div class="one">
+      <input type="checkbox" name="" id="check" required>
+      <label for="check"> <a class="button" (click)="readTerms()">terms&condtions Approval</a></label>
+    </div>
+  </div>
 </form>
+

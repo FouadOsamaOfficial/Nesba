@@ -16,6 +16,10 @@ import { FundingComponent } from './Components/funding/funding.component';
 import { PreviousFundingComponent } from './Components/previous-funding/previous-funding.component';
 import { FundingTrackerComponent } from './Components/funding-tracker/funding-tracker.component';
 import { ServicesComponent } from './Components/services/services.component';
+import { FinanceProductsComponent } from './Components/finance-products/finance-products.component';
+import { CardsComponent } from './Components/cards/cards.component';
+import { InvestmentComponent } from './Components/investment/investment.component';
+import { TermsComponent } from './Components/terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,10 @@ import { ServicesComponent } from './Components/services/services.component';
     PreviousFundingComponent,
     FundingTrackerComponent,
     ServicesComponent,
+    FinanceProductsComponent,
+    CardsComponent,
+    InvestmentComponent,
+    TermsComponent,
 
   ],
   imports: [

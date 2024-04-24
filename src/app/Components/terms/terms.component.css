@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 130px;
+
+  }
+  .brandLogo{
+    position: absolute;
+    float: left;
+    top: 0;
+    margin: 0;
+    padding: 0;
+
+  }
+  .brandLogo img{
+    width: 120px;
+    height: auto;
+    /* top: 50px; */
+    margin-top: 95px;
+    margin-left: 5px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  p {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .btn{
+    margin: 10px;
+  }

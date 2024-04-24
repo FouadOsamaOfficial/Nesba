@@ -15,4 +15,9 @@ export class SignupComponent {
     this.router.navigate(['/login']);
 
   }
+
+  readTerms(){
+    this.router.navigate(['/terms']);
+
+  }
 }
