@@ -17,6 +17,9 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { UserDashboardComponent } from './Components/user-dashboard/user-dashboard.component';
 import { LoginComponent } from './sharedComponents/login/login.component';
 import { SignupComponent } from './sharedComponents/signup/signup.component';
+import { SecurityComponent } from './sharedComponents/security/security.component';
+import { PropertyRead } from '@angular/compiler';
+import { PrivacyComponent } from './sharedComponents/privacy/privacy.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
@@ -36,6 +39,8 @@ const routes: Routes = [
 { path: 'investment' , component:InvestmentComponent },
 { path: 'terms' , component:TermsComponent },
 { path: 'contact' , component:ContactComponent },
+{ path: 'privacy' , component:PrivacyComponent },
+{ path: 'security' , component:SecurityComponent },
 
 ];
 

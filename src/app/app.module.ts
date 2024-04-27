@@ -25,6 +25,8 @@ import { LoginComponent } from './sharedComponents/login/login.component';
 import { SignupComponent } from './sharedComponents/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsideComponent } from './sharedComponents/aside/aside.component';
+import { PrivacyComponent } from './sharedComponents/privacy/privacy.component';
+import { SecurityComponent } from './sharedComponents/security/security.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { AsideComponent } from './sharedComponents/aside/aside.component';
     TermsComponent,
     UserDashboardComponent,
     AsideComponent,
+    PrivacyComponent,
+    SecurityComponent,
 
   ],
   imports: [

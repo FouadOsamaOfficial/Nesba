@@ -1,29 +1,49 @@
-
-<form class="signup" onsubmit="return false" autocomplete="off">
+<form class="signup" [formGroup]="signupForm" (ngSubmit)="onSubmit()" autocomplete="off">
   <h1>Create account</h1>
   <h2>Already have an account? <span class="button" (click)="backSignin()">Sign in</span></h2>
 
   <div class="signup__field">
-    <input class="signup__input" type="text" name="Gover-ID" id="Gover-ID" placeholder="" required />
+    <input class="signup__input" type="text" formControlName="goverId" id="Gover-ID" placeholder="" />
     <label class="signup__label" for="Gover-ID">ID-phone Number in abshir</label>
+    <div *ngIf="signupForm.get('goverId')?.invalid && signupForm.get('goverId')?.dirty" class="error-message">
+      ID-phone Number in abshir is required
+    </div>
   </div>
 
   <div class="signup__field">
-    <input class="signup__input" type="text" name="username" id="username" placeholder="" required />
+    <input class="signup__input" type="text" formControlName="username" id="username" />
     <label class="signup__label" for="username">Username</label>
+    <div *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.dirty" class="error-message">
+      Username is required
+    </div>
   </div>
 
   <div class="signup__field">
-    <input class="signup__input" type="password" name="password" id="password" placeholder="" required />
+    <input class="signup__input" type="password" formControlName="password" id="password" />
     <label class="signup__label" for="password">Password</label>
+    <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.dirty" class="error-message">
+      Password is required
+    </div>
+  </div>
+
+  <div class="signup__field">
+    <input class="signup__input" type="password" formControlName="confirmPassword" id="confirmPassword" />
+    <label class="signup__label" for="confirmPassword">Confirm Password</label>
+    <div *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.dirty"
+      class="error-message">
+      Confirm Password is required
+    </div>
   </div>
 
   <button>Sign up</button>
   <div class="two-col">
     <div class="one">
-      <input type="checkbox" name="" id="check" required>
+      <input type="checkbox" formControlName="termsAndConditions" id="check" />
       <label for="check"> <a class="button" (click)="readTerms()">terms&condtions Approval</a></label>
+      <div *ngIf="signupForm.get('termsAndConditions')?.invalid && signupForm.get('termsAndConditions')?.dirty"
+        class="error-message">
+        You must agree to terms and conditions
+      </div>
     </div>
   </div>
 </form>
-

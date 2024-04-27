@@ -11,7 +11,7 @@ export class ServicesComponent {
   constructor( private router:Router){}
 
   previous(){
-    this.router.navigate(['./user-profile']);
+    this.router.navigate(['./user-dashboard']);
   
   }
   toFinanceProducts(){

@@ -12,6 +12,9 @@ export class LoginService {
     { username: 'omar', password: '12345' }
   ];
 
+  addCredentials(username: string, password: string): void {
+    this.validCredentials.push({ username, password });
+  }
   constructor() { }
   isValidLogin(inputUsername: string, inputPassword: string): boolean {
     // Check if any credentials match the input username and password
@@ -26,15 +29,15 @@ export class LoginService {
     return this.isLoggedInFlag; // Return the value of the isLoggedInFlag
   }
 
-    // Method to simulate user login
-    login(): void {
-      // Perform login actions such as setting isLoggedInFlag to true
-      this.isLoggedInFlag = true;
-    }
-  
-    // Method to simulate user logout
-    logout(): void {
-      // Perform logout actions such as setting isLoggedInFlag to false
-      this.isLoggedInFlag = false;
-    }
+  // Method to simulate user login
+  login(): void {
+    // Perform login actions such as setting isLoggedInFlag to true
+    this.isLoggedInFlag = true;
+  }
+
+  // Method to simulate user logout
+  logout(): void {
+    // Perform logout actions such as setting isLoggedInFlag to false
+    this.isLoggedInFlag = false;
+  }
 }
