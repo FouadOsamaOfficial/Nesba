@@ -146,6 +146,7 @@ button:hover {
  label a{
   text-decoration: none;
   color: black;
+  cursor: pointer;
  }
 
  .two-col input {

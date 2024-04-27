@@ -9,14 +9,6 @@ import { Router } from '@angular/router';
 export class UserProfileComponent {
 constructor( private router:Router){}
 
-  goingToFunding(){
-    this.router.navigate(['./funding']);
 
-  }
-
-  goingToNewFinancing(){
-    this.router.navigate(['./services']);
-  
-  }
 
 }

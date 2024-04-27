@@ -1,37 +1,45 @@
 <!-- <source src="../../../assets/videos/mylivewallpapers.com-I-Enjoy-Being-Alone.mp4" type="video/mp4"> -->
 
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
 
-<div class="box">
-  <video id="bg-video" src="../../../assets/videos/beach-background.mp4" muted loop autoplay ></video>
-  <div class="container">
-    <div class="top">
-      <span>Have an account?</span>
-      <header>Login</header>
-    </div>
-    <div class="input-field">
-      <input type="text" class="input" placeholder="Username" id="">
-      <i class="bx bx-user"></i>
-    </div>
-    <div class="input-field">
-      <input type="password" class="input" placeholder="Password" id="">
-      <i class="bx bx-user"></i>
-    </div>
-    <div class="input-field">
-      <input type="submit" class="submit" value="Login" id="" (click)="onLogin()">
-    </div>
-    <div class="two-col">
-      <div class="one">
-        <input type="checkbox" name="" id="check">
-        <label for="check">RememberMe</label>
+  <div class="box">
+    <video id="bg-video" src="../../../assets/videos/beach-background.mp4" muted loop autoplay></video>
+    <div class="container">
+      <div class="top">
+        <span>Have an account?</span>
+        <header>Login</header>
       </div>
-      <div class="two">
-        <label><a href="#">Forget password</a></label>
+      <div class="input-field">
+        <input type="text" class="input" placeholder="username" id="username" formControlName="username">
+        <div *ngIf="formControls['username'].touched && formControls['username'].hasError('required')" class="error-message">Username is required</div>
+        <i class="bx bx-user"></i>
       </div>
-      <div class="three">
-        <button class="btn btn-outline" (click)="signup()">Sign-Up </button>
-        <!-- <label><a (click)="signup()">Sign-Up</a></label> -->
+      <div class="input-field">
+        <input type="password" class="input" placeholder="Password" id="password" formControlName="password">
+        <div *ngIf="formControls['password'].touched && formControls['password'].hasError('required')" class="error-message">Password is required</div>
+
+        <i class="bx bx-user"></i>
+      </div>
+      <div class="input-field">
+        <input type="submit" class="submit" value="Login" id=""[disabled]="loginForm.invalid" (click)="onLogin()">
+        <!-- <input type="submit" [disabled]="loginForm.invalid" (click)="onLogin()"> -->
+      </div>
+      <div class="two-col">
+        <div class="one">
+          <input type="checkbox" name="" id="check">
+          <label for="check">RememberMe</label>
+        </div>
+        <div class="two">
+          <label><a href="#">Forget password</a></label>
+        </div>
+        <div class="three">
+          <button class="btn btn-outline" (click)="signup()">Sign-Up </button>
+          <!-- <label><a (click)="signup()">Sign-Up</a></label> -->
+        </div>
       </div>
     </div>
   </div>
-</div>
+</form>
+<div *ngIf="errorMessage" class="error-message" >{{ errorMessage }}</div>
+
 

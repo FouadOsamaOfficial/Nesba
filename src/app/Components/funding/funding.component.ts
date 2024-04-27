@@ -7,21 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./funding.component.css']
 })
 export class FundingComponent {
-  constructor(private router:Router){}
+  constructor(private router: Router) { }
 
 
 
-  previousFunding(){
+  previousFunding() {
     this.router.navigate(['./previous-funding']);
 
   }
-fundingTracker(){
-  this.router.navigate(['./funding-tracker ']);
+  fundingTracker() {
+    this.router.navigate(['./funding-tracker']);
+  }
 
-}
+  previous() {
+    this.router.navigate(['./user-dashboard']);
 
-previous(){
-  this.router.navigate(['./user-profile']);
-
-}
+  }
 }
