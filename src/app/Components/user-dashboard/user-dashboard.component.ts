@@ -23,6 +23,25 @@ export class UserDashboardComponent {
     this.router.navigate(['./services']);
   
   }
+  goToEvents(){
+    this.router.navigate(['./events']);
+
+  }
+  goToDocuments(){
+    this.router.navigate(['./documents']);
+
+  }
+  goToSpending(){
+    this.router.navigate(['./spending']);
+
+  }
+  goToEmails(){
+    this.router.navigate(['./emails']);
+
+  }
+  
+  
+ 
 
   ngOnInit(): void {
     this.renderChart();

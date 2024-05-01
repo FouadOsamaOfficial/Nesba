@@ -27,6 +27,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsideComponent } from './sharedComponents/aside/aside.component';
 import { PrivacyComponent } from './sharedComponents/privacy/privacy.component';
 import { SecurityComponent } from './sharedComponents/security/security.component';
+import { DocumentsComponent } from './Components/documents/documents.component';
+import { SpendingComponent } from './Components/spending/spending.component';
+import { EventsComponent } from './Components/events/events.component';
+import { EmailsComponent } from './Components/emails/emails.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +56,10 @@ import { SecurityComponent } from './sharedComponents/security/security.componen
     AsideComponent,
     PrivacyComponent,
     SecurityComponent,
+    DocumentsComponent,
+    SpendingComponent,
+    EventsComponent,
+    EmailsComponent,
 
   ],
   imports: [

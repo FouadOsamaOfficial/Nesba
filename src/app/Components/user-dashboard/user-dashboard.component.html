@@ -201,7 +201,7 @@
       </div>
       <div class="sidenav__profile">
         <div class="sidenav__profile-avatar"></div>
-        <div class="sidenav__profile-title text-light">Matthew H</div>
+        <div class="sidenav__profile-title text-light">Mohamed H</div>
       </div>
       <div class="row row--align-v-center row--align-h-center">
         <ul class="navList">
@@ -209,18 +209,18 @@
             <li>
             <div class="navList__subheading row row--align-v-center">
               <span class="navList__subheading-icon"><i class="fas fa-briefcase-medical"></i></span>
-              <span class="navList__subheading-title">insurance</span>
+              <span class="navList__subheading-title">Funding</span>
             </div>
             <ul class="subList subList--hidden">
-              <li class="subList__item">medical</li>
-              <li class="subList__item">vision</li>
-              <li class="subList__item">dental</li>
+              <li class="subList__item">new funding </li>
+              <li class="subList__item">last funding</li>
+              <li class="subList__item">current funding</li>
             </ul>
           </li>
           <li>
             <div class="navList__subheading row row--align-v-center">
               <span class="navList__subheading-icon"><i class="fas fa-plane-departure"></i></span>
-              <span class="navList__subheading-title">travel</span>
+              <span class="navList__subheading-title">Loan</span>
             </div>
             <ul class="subList subList--hidden">
               <li class="subList__item">domestic</li>
@@ -231,7 +231,7 @@
           <li>
             <div class="navList__subheading row row--align-v-center">
               <span class="navList__subheading-icon"><i class="far fa-angry"></i></span>
-              <span class="navList__subheading-title">taxes</span>
+              <span class="navList__subheading-title">Mortgage</span>
             </div>
             <ul class="subList subList--hidden">
               <li class="subList__item">current</li>
@@ -351,7 +351,7 @@
           <li>
             <div class="navList__subheading row row--align-v-center">
               <span class="navList__subheading-icon"><i class="fas fa-wine-glass-alt"></i></span>
-              <span class="navList__subheading-title">weddings</span>
+              <span class="navList__subheading-title">New Feature</span>
             </div>
             <ul class="subList subList--hidden">
               <li class="subList__item">past</li>
@@ -362,7 +362,7 @@
           <li>
             <div class="navList__subheading row row--align-v-center">
               <span class="navList__subheading-icon"><i class="fas fa-school"></i></span>
-              <span class="navList__subheading-title">playdates</span>
+              <span class="navList__subheading-title">User discounts</span>
             </div>
             <ul class="subList subList--hidden">
               <li class="subList__item">weirdos</li>
@@ -373,7 +373,7 @@
           <li>
                 <div class="navList__subheading row row--align-v-center">
                   <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
-                  <span class="navList__subheading-title">networking</span>
+                  <span class="navList__subheading-title">Governments Statment</span>
                 </div>
                 <ul class="subList subList--hidden">
                   <li class="subList__item">tech</li>
@@ -390,7 +390,7 @@
       <div class="main-header">
         <div class="main-header__intro-wrapper">
           <div class="main-header__welcome">
-            <div class="main-header__welcome-title text-light">Welcome, <strong>Matthew</strong></div>
+            <div class="main-header__welcome-title text-light">Welcome, <strong>Mohamed</strong></div>
             <div class="main-header__welcome-subtitle text-light">How are you today?</div>
           </div>
           <div class="quickview">
@@ -423,7 +423,7 @@
           <div class="overviewCard-icon overviewCard-icon--document">
              <i class="far fa-file-alt"></i>
           </div>
-          <div class="overviewCard-description">
+          <div class="overviewCard-description" (click)="goToDocuments()">
             <h3 class="overviewCard-title text-light1">New <strong>Document</strong></h3>
             <p class="overviewCard-subtitle">Europe Trip</p>
           </div>
@@ -432,7 +432,7 @@
           <div class="overviewCard-icon overviewCard-icon--calendar">
              <i class="far fa-calendar-check"></i>
           </div>
-          <div class="overviewCard-description">
+          <div class="overviewCard-description" (click)="goToEvents()">
             <h3 class="overviewCard-title text-light1">Upcoming <strong>Event</strong></h3>
             <p class="overviewCard-subtitle">Chili Cookoff</p>
           </div>
@@ -441,7 +441,7 @@
           <div class="overviewCard-icon overviewCard-icon--mail">
              <i class="far fa-envelope"></i>
           </div>
-          <div class="overviewCard-description">
+          <div class="overviewCard-description" (click)="goToEmails()">
             <h3 class="overviewCard-title text-light1">Recent <strong>Emails</strong></h3>
             <p class="overviewCard-subtitle">+10</p>
           </div>
@@ -473,7 +473,7 @@
         <div class="card">
           <div class="card__header">
             <div class="card__header-title text-light">Your <strong>Events</strong>
-              <a href="#" class="card__header-link text-bold">View All</a>
+              <a class="card__header-link text-bold" (click)="goToEvents()">View All</a>
             </div>
             <div class="settings">
               <div class="settings__block"><i class="fas fa-edit"></i></div>
@@ -541,7 +541,7 @@
         <div class="card">
           <div class="card__header">
             <div class="card__header-title text-light">Recent <strong>Documents</strong>
-              <a href="#" class="card__header-link text-bold">View All</a>
+              <a class="card__header-link text-bold" (click)="goToDocuments()">View All</a>
             </div>
             <div class="settings">
               <div class="settings__block"><i class="fas fa-edit"></i></div>
@@ -576,7 +576,7 @@
         <div class="card card--finance">
           <div class="card__header">
             <div class="card__header-title text-light">Monthly <strong>Spending</strong>
-              <a href="#" class="card__header-link text-bold">View All</a>
+              <a class="card__header-link text-bold" (click)="goToSpending()">View All</a>
             </div>
             <div class="settings">
               <div class="settings__block"><i class="fas fa-edit"></i></div>

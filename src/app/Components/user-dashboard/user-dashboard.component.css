@@ -875,20 +875,30 @@
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    font-size: 21px;
+    /* font-size: 21px; */
     /* color: #fff; */
   }
   .overviewCard-icon--document {
-    background-color: #e67e22;
+    /* background-color: #e67e22; */
+    background-image:url('../../../assets/images/nesbalogo-removebg-preview.png');
+    background-size: cover;
+    /* width: 50px; */
+    /* height: auto; */
   }
   .overviewCard-icon--calendar {
-    background-color: #27ae60;
+    /* background-color: #27ae60; */
+    background-image:url('../../../assets/images/nesbalogo-removebg-preview.png');
+    background-size: cover;
   }
   .overviewCard-icon--mail {
-    background-color: #e74c3c;
+    /* background-color: #e74c3c; */
+    background-image:url('../../../assets/images/nesbalogo-removebg-preview.png');
+    background-size: cover;
   }
   .overviewCard-icon--photo {
-    background-color: #af64cc;
+    /* background-color: #af64cc; */
+    background-image:url('../../../assets/images/nesbalogo-removebg-preview.png');
+    background-size: cover;
   }
   .overviewCard-description {
     display: flex;
@@ -897,7 +907,7 @@
   }
   .overviewCard-title {
     font-size: 18px;
-    color: #1BBAE1;
+    color: #10182F;
     margin: 0;
   }
   .overviewCard-subtitle {
@@ -1032,7 +1042,7 @@
   }
   .card__source {
     line-height: 1.8;
-    color: #1BBAE1;
+    color: #10182F;
   }
   .card__note {
     margin: 10px 0;

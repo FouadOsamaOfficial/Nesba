@@ -18,8 +18,11 @@ import { UserDashboardComponent } from './Components/user-dashboard/user-dashboa
 import { LoginComponent } from './sharedComponents/login/login.component';
 import { SignupComponent } from './sharedComponents/signup/signup.component';
 import { SecurityComponent } from './sharedComponents/security/security.component';
-import { PropertyRead } from '@angular/compiler';
 import { PrivacyComponent } from './sharedComponents/privacy/privacy.component';
+import { DocumentsComponent } from './Components/documents/documents.component';
+import { SpendingComponent } from './Components/spending/spending.component';
+import { EventsComponent } from './Components/events/events.component';
+import { EmailsComponent } from './Components/emails/emails.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
@@ -41,6 +44,10 @@ const routes: Routes = [
 { path: 'contact' , component:ContactComponent },
 { path: 'privacy' , component:PrivacyComponent },
 { path: 'security' , component:SecurityComponent },
+{ path: 'documents' , component:DocumentsComponent },
+{ path: 'spending' , component:SpendingComponent },
+{ path: 'events' , component:EventsComponent },
+{ path: 'emails' , component:EmailsComponent },
 
 ];
 

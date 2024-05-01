@@ -5,7 +5,8 @@
   text-transform:uppercase;
   letter-spacing:2px;
   text-shadow:1px 1px 2px rgba(0,0,0,0.4);
-  position: absolute ;
+  /* position: relative ; */
+  position: absolute;
 }
 
 .dropdown-menu {
@@ -32,6 +33,9 @@ a.dropdown-item:hover {
   left:0;
   width:100%;
   /* z-index:123; */
+  /* position: relative; */
+  position: absolute;
+  /* z-index: 1; */
   padding-bottom:0;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
 background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */

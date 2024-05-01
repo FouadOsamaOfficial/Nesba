@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LoginService } from 'src/app/Services/login/login.service';
 
 @Component({
@@ -7,11 +7,11 @@ import { LoginService } from 'src/app/Services/login/login.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isLoggedIn: boolean = false; // Variable to track user authentication status
+  @Input() isLoggedIn: boolean = false;
 
   constructor(private authService: LoginService) { }
 
   ngOnInit(): void {
-    this.isLoggedIn = this.authService.isLoggedIn(); // Check if user is logged in
+    this.isLoggedIn = this.authService.isLoggedIn();
   }
 }

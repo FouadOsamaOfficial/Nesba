@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Nesba';
+  isLoggedIn: boolean = false; // Initially, the user is not logged in
+
+  // Method to simulate user login
+  login() {
+    this.isLoggedIn = true;
+  }
+
+  // Method to simulate user logout
+  logout() {
+    this.isLoggedIn = false;
+  }
 }
