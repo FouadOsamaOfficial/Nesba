@@ -948,6 +948,8 @@
     font-size: 16px;
     /* color: #1BBAE1; */
     color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding-left: 5px;
 
     letter-spacing: normal;
     display: inline-block;

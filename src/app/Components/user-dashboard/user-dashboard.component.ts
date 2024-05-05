@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
 import { Router } from '@angular/router';
@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 export class UserDashboardComponent {
   @ViewChild('headerAvatar') headerAvatar!: ElementRef;
   @ViewChild('subHeadings') subHeadings!: ElementRef;
+    
+  isDropdownActive: boolean = false;
+
 
   constructor( private router:Router){}
 
@@ -40,8 +43,16 @@ export class UserDashboardComponent {
 
   }
   
-  
- 
+
+
+
+
+  @HostListener('document:click', ['$event'])
+  clickOutsideDropdown(event: MouseEvent) {
+    if (this.isDropdownActive && !this.headerAvatar.nativeElement.contains(event.target)) {
+      this.isDropdownActive = false;
+    }
+  }
 
   ngOnInit(): void {
     this.renderChart();

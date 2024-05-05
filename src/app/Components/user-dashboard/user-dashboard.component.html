@@ -174,7 +174,7 @@
         <input class="header__input" placeholder="Search..." />
       </div>
       <div class="header__avatar" (click)="toggleDropdown()" #headerAvatar>
-        <div class="dropdown">
+        <div class="dropdown" *ngIf="isDropdownActive">
           <ul class="dropdown__list">
             <li class="dropdown__list-item">
               <span class="dropdown__icon"><i class="far fa-user"></i></span>
@@ -487,7 +487,7 @@
                 <div>today</div>
               </div>
               <div class="card__detail">
-                <div class="card__source text-bold">Jonathan G</div>
+                <div class="card__source text-bold">Ahmed G</div>
                 <div class="card__description">Going away party at 8:30pm. Bring a friend!</div>
                 <div class="card__note">1404 Gibson St</div>
               </div>
@@ -498,7 +498,7 @@
                 <div>Tuesday</div>
               </div>
               <div class="card__detail">
-                <div class="card__source text-bold">Matthew H</div>
+                <div class="card__source text-bold">Mohamed H</div>
                 <div class="card__description">Flying to Bora Bora at 4:30pm</div>
                 <div class="card__note">Delta, Gate 27B</div>
               </div>
@@ -509,7 +509,7 @@
                 <div>Thursday</div>
               </div>
               <div class="card__detail">
-                <div class="card__source text-bold">National Institute of Science</div>
+                <div class="card__source text-bold">National Institute of Comarial </div>
                 <div class="card__description">Join the institute for an in-depth look at Stephen Hawking</div>
                 <div class="card__note">7:30pm, Carnegie Center for Science</div>
               </div>
@@ -520,7 +520,7 @@
                 <div>Friday</div>
               </div>
               <div class="card__detail">
-                <div class="card__source text-bold">24th Annual Heart Ball</div>
+                <div class="card__source text-bold">loan update of the National Bank </div>
                 <div class="card__description">Join us and contribute to your favorite local charity.</div>
                 <div class="card__note">6:45pm, Austin Convention Ctr</div>
               </div>
@@ -531,7 +531,7 @@
                 <div>Saturday</div>
               </div>
               <div class="card__detail">
-                <div class="card__source text-bold">Little Rock Air Show</div>
+                <div class="card__source text-bold">news about mortgage</div>
                 <div class="card__description">See the Blue Angels fly with roaring thunder</div>
                 <div class="card__note">11:00pm, Jacksonville Airforce Base</div>
               </div>

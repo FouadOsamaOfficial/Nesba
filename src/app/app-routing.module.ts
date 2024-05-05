@@ -25,7 +25,7 @@ import { EventsComponent } from './Components/events/events.component';
 import { EmailsComponent } from './Components/emails/emails.component';
 
 const routes: Routes = [
-{ path: '', component: HomeComponent },
+{ path: '', component: HomeComponent  },
 { path: 'home', component: HomeComponent },
 { path: 'who-we-are', component: WhoWeAreComponent },
 { path: 'rate-introduction' , component: RateIntroductionComponent },
