@@ -60,13 +60,15 @@ import { EmailsComponent } from './Components/emails/emails.component';
     SpendingComponent,
     EventsComponent,
     EmailsComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

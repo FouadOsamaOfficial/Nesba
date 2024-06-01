@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
 import { Router } from '@angular/router';
@@ -9,14 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent {
-  @ViewChild('headerAvatar') headerAvatar!: ElementRef;
+  @ViewChild('headerAvatar', { static: true }) headerAvatar!: ElementRef;
   @ViewChild('subHeadings') subHeadings!: ElementRef;
-    
+
   isDropdownActive: boolean = false;
 
 
-  constructor( private router:Router){}
+  constructor( private router:Router ,private renderer: Renderer2){}
+  toProfile(){
+    this.router.navigate(['./user-profile']);
 
+  }
   goingToFunding(){
     this.router.navigate(['./funding']);
 
@@ -59,11 +62,21 @@ export class UserDashboardComponent {
 
   }
 
+  // toggleDropdown() {
+  //   const dropdown = this.headerAvatar.nativeElement.nextElementSibling;
+  //   dropdown.classList.toggle('dropdown--active');
+  // }
+  
   toggleDropdown() {
     const dropdown = this.headerAvatar.nativeElement.nextElementSibling;
-    dropdown.classList.toggle('dropdown--active');
-  }
+    console.log('Dropdown element:', dropdown); // Check if this is correctly finding the dropdown
 
+    if (dropdown) {
+      this.renderer.addClass(dropdown, 'dropdown--active');
+    } else {
+      console.error('Dropdown element not found.');
+    }
+  }
   toggleSubheading(subHeading: HTMLElement) {
     subHeading.classList.toggle('navList__subheading--open');
     const subList = subHeading.nextElementSibling;

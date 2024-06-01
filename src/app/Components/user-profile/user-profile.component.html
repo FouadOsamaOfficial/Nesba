@@ -1,0 +1,83 @@
+
+
+<div class="user-profile" *ngIf="userForm">
+  <div class="card">
+    <div class="card-header">
+      <h2>{{ userForm.get('name')?.value }}</h2>
+      <h3>{{ userForm.get('title')?.value }}</h3>
+    </div>
+    <div class="card-content">
+        <div class="user" *ngIf="viewMode">
+          <img [src]="avatarUrl" alt="user avatar" class="user-avatar" />
+          <div class="user-avatar-edit">
+            <label for="avatarInput">
+              <i class="material-icons">+</i>
+            </label>
+            <input id="avatarInput" type="file" (change)="editAvatar($event)" style="display:none;">
+          </div>
+        </div>
+    <div class="card-content">
+      <form [formGroup]="userForm" *ngIf="!viewMode">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" formControlName="name">
+        </div>
+        <div>
+          <label for="title">Title</label>
+          <input id="title" formControlName="title">
+        </div>
+        <div>
+          <label for="department">Department</label>
+          <input id="department" formControlName="department">
+        </div>
+        <div>
+          <label for="location">Location</label>
+          <input id="location" formControlName="location">
+        </div>
+        <div>
+          <label for="company">Company</label>
+          <input id="company" formControlName="company">
+        </div>
+        <div>
+          <label for="manager">Manager</label>
+          <input id="manager" formControlName="manager">
+        </div>
+        <div>
+          <label for="workPhone">Work Phone</label>
+          <input id="workPhone" formControlName="workPhone">
+        </div>
+        <div>
+          <label for="mobilePhone">Mobile Phone</label>
+          <input id="mobilePhone" formControlName="mobilePhone">
+        </div>
+        <div>
+          <label for="alias">Alias</label>
+          <input id="alias" formControlName="alias">
+        </div>
+        <div>
+          <label for="otherEmail">Other Email</label>
+          <input id="otherEmail" formControlName="otherEmail">
+        </div>
+      </form>
+      <div *ngIf="viewMode">
+        <p><strong>Name:</strong> {{ userForm.get('name')?.value }}</p>
+        <p><strong>Title:</strong> {{ userForm.get('title')?.value }}</p>
+        <p><strong>Department:</strong> {{ userForm.get('department')?.value }}</p>
+        <p><strong>Location:</strong> {{ userForm.get('location')?.value }}</p>
+        <p><strong>Company:</strong> {{ userForm.get('company')?.value }}</p>
+        <p><strong>Manager:</strong> {{ userForm.get('manager')?.value }}</p>
+        <p><strong>Work Phone:</strong> {{ userForm.get('workPhone')?.value }}</p>
+        <p><strong>Mobile Phone:</strong> {{ userForm.get('mobilePhone')?.value }}</p>
+        <p><strong>Alias:</strong> {{ userForm.get('alias')?.value }}</p>
+        <p><strong>Other Email:</strong> {{ userForm.get('otherEmail')?.value }}</p>
+      </div>
+    </div>
+    <div class="card-actions">
+      <button (click)="switchMode()">{{ viewMode ? 'Edit' : 'View' }}</button>
+      <button *ngIf="!viewMode" (click)="saveChanges()">Save</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<button class="btn btn-outline-secondary" (click)="previous()">Previous</button>
