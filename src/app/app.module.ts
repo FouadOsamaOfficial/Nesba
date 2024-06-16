@@ -30,7 +30,13 @@ import { SecurityComponent } from './sharedComponents/security/security.componen
 import { DocumentsComponent } from './Components/documents/documents.component';
 import { SpendingComponent } from './Components/spending/spending.component';
 import { EventsComponent } from './Components/events/events.component';
-import { EmailsComponent } from './Components/emails/emails.component';
+import { EmailsComponent, SafeUrlPipe } from './Components/emails/emails.component';
+import { ComingSoonComponent } from './sharedComponents/coming-soon/coming-soon.component';
+import { DebitComponent } from './Components/debit/debit.component';
+import { CreditComponent } from './Components/credit/credit.component';
+import { MortgageFinanceComponent } from './Components/mortgage-finance/mortgage-finance.component';
+import { PersonalFinanceComponent } from './Components/personal-finance/personal-finance.component';
+import { AutoLeaseFinanceComponent } from './Components/auto-lease-finance/auto-lease-finance.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +66,13 @@ import { EmailsComponent } from './Components/emails/emails.component';
     SpendingComponent,
     EventsComponent,
     EmailsComponent,
-    
+    ComingSoonComponent,
+    DebitComponent,
+    CreditComponent,
+    SafeUrlPipe,
+    MortgageFinanceComponent,
+    PersonalFinanceComponent,
+    AutoLeaseFinanceComponent
 
   ],
   imports: [

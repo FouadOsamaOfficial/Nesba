@@ -23,6 +23,12 @@ import { DocumentsComponent } from './Components/documents/documents.component';
 import { SpendingComponent } from './Components/spending/spending.component';
 import { EventsComponent } from './Components/events/events.component';
 import { EmailsComponent } from './Components/emails/emails.component';
+import { ComingSoonComponent } from './sharedComponents/coming-soon/coming-soon.component';
+import { CreditComponent } from './Components/credit/credit.component';
+import { DebitComponent } from './Components/debit/debit.component';
+import { MortgageFinanceComponent } from './Components/mortgage-finance/mortgage-finance.component';
+import { PersonalFinanceComponent } from './Components/personal-finance/personal-finance.component';
+import { AutoLeaseFinanceComponent } from './Components/auto-lease-finance/auto-lease-finance.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent  },
@@ -48,6 +54,12 @@ const routes: Routes = [
 { path: 'spending' , component:SpendingComponent },
 { path: 'events' , component:EventsComponent },
 { path: 'emails' , component:EmailsComponent },
+{ path: 'coming-soon' , component:ComingSoonComponent },
+{ path: 'debits' , component:DebitComponent },
+{ path: 'credits' , component:CreditComponent },
+{ path: 'mortgage-finance' , component:MortgageFinanceComponent },
+{ path: 'personal-finance' , component:PersonalFinanceComponent },
+{ path: 'auto-lease-finance' , component:AutoLeaseFinanceComponent },
 
 ];
 

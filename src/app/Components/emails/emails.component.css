@@ -1,10 +1,139 @@
-
-body {margin:2em;
-    
+.wrapper{ margin: 80px 0;
+margin-top: 150px; }
+.thumb {
+    width: 70px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.filter{
+    margin-bottom: 20px;
 }
 .table{
-    margin-top: 150px;
+    border-radius: 10px;
 }
-.btn {
-    margin: 10px;
+.table > tbody > tr > td {
+     vertical-align: middle;
+
+}
+.controller button{
+    margin: 5px;
+}
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
   }
+  
+  .pagination li {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .pagination li.active a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .pager .prev, .pager .next {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+  }
+  
+  .pager .disabled {
+    pointer-events: none;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .video_box {
+    background: rgba(0, 0, 0, 0.54);
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video_inner {
+    position: relative;
+    width: 430px;
+    height: 280px;
+    background: #fff;
+    padding: 15px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #d64a4a;
+    padding: 0 11px;
+    color: #fff;
+    font-size: 34px;
+    line-height: normal;
+    cursor: pointer;
+  }
+  
+  .video_body {
+    width: 400px;
+    height: 250px;
+  }
+
+.list .btn{
+    margin-right: 5px;
+}
+
+
+
+/* .video_box {
+    background: rgba(0, 0, 0, 0.54);
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 555;
+    display: none;
+}
+.video_inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 430px;
+	height: 280px;
+	background: #fff;
+    padding: 15px;
+
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    background: #d64a4a;
+    padding: 0px 11px;
+    color: #fff;
+    font-size: 34px;
+    line-height: normal;
+    right: -42px;
+    cursor: pointer;
+}
+.video_body{
+	width: 400px;
+	height: 250px;
+} */
+
+/* .pagination{
+    text-align: center;
+    align-items: center;
+} */
