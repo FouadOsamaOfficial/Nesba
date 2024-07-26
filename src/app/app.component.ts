@@ -6,16 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Nesba';
-  isLoggedIn: boolean = false; // Initially, the user is not logged in
+  // title = 'Nesba';
+  // isLoggedIn: boolean = false; // Initially, the user is not logged in
 
   // Method to simulate user login
-  login() {
-    this.isLoggedIn = true;
-  }
+  // login() {
+  //   this.isLoggedIn = true;
+  // }
 
   // Method to simulate user logout
-  logout() {
-    this.isLoggedIn = false;
-  }
+  // logout() {
+  //   this.isLoggedIn = false;
+  // }
 }

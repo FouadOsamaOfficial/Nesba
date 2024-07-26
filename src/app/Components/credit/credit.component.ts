@@ -9,4 +9,9 @@ import { Router } from '@angular/router';
 export class CreditComponent {
   constructor(private router:Router){}
 
+  previous() {
+    this.router.navigate(['./cards']);
+
+  }
+
 }

@@ -37,6 +37,9 @@ import { CreditComponent } from './Components/credit/credit.component';
 import { MortgageFinanceComponent } from './Components/mortgage-finance/mortgage-finance.component';
 import { PersonalFinanceComponent } from './Components/personal-finance/personal-finance.component';
 import { AutoLeaseFinanceComponent } from './Components/auto-lease-finance/auto-lease-finance.component';
+import { UnitsModalComponent } from './sharedComponents/units-modal/units-modal.component';
+import { AuthService } from './Services/Auth/auth.service';
+import { RealEstateMarketComponent } from './sharedComponents/real-estate-market/real-estate-market.component';
 
 @NgModule({
   declarations: [
@@ -72,8 +75,9 @@ import { AutoLeaseFinanceComponent } from './Components/auto-lease-finance/auto-
     SafeUrlPipe,
     MortgageFinanceComponent,
     PersonalFinanceComponent,
-    AutoLeaseFinanceComponent
-
+    AutoLeaseFinanceComponent,
+    UnitsModalComponent,
+    RealEstateMarketComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,7 +86,7 @@ import { AutoLeaseFinanceComponent } from './Components/auto-lease-finance/auto-
     ReactiveFormsModule,
     
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,6 @@
-<!-- <source src="../../../assets/videos/mylivewallpapers.com-I-Enjoy-Being-Alone.mp4" type="video/mp4"> -->
+<app-header></app-header>
 
 <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-
   <div class="box">
     <video id="bg-video" src="../../../assets/videos/beach-background.mp4" muted loop autoplay></video>
     <div class="container">
@@ -17,12 +16,10 @@
       <div class="input-field">
         <input type="password" class="input" placeholder="Password" id="password" formControlName="password">
         <div *ngIf="formControls['password'].touched && formControls['password'].hasError('required')" class="error-message">Password is required</div>
-
         <i class="bx bx-user"></i>
       </div>
       <div class="input-field">
-        <input type="submit" class="submit" value="Login" id=""[disabled]="loginForm.invalid" (click)="onLogin()">
-        <!-- <input type="submit" [disabled]="loginForm.invalid" (click)="onLogin()"> -->
+        <input type="submit" class="submit" value="Login" [disabled]="loginForm.invalid">
       </div>
       <div class="two-col">
         <div class="one">
@@ -33,13 +30,16 @@
           <label><a href="#">Forget password</a></label>
         </div>
         <div class="three">
-          <button class="btn btn-outline" (click)="signup()">Sign-Up </button>
-          <!-- <label><a (click)="signup()">Sign-Up</a></label> -->
+          <button class="btn btn-outline" (click)="signup()">Sign-Up</button>
         </div>
       </div>
     </div>
   </div>
 </form>
-<div *ngIf="errorMessage" class="error-message" >{{ errorMessage }}</div>
 
-
+<div *ngIf="errorMessage" class="popup">
+  <div class="popup-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

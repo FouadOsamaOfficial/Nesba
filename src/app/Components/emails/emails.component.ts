@@ -27,7 +27,6 @@ export class EmailsComponent implements  OnInit{
   constructor(private router:Router , private sanitizer: DomSanitizer) { }
 
   musicList: MusicItem[] = [
-    { url: 'https://youtu.be/GbgIcKCM8J8?si=jBKN1r_wcwV30X9c', title: 'tlpany' },
     { url: 'YOUTUBE_VIDEO_ID_2', title: 'Music Title 2' },
     { url: 'YOUTUBE_VIDEO_ID_3', title: 'Music Title 3' },
     { url: 'YOUTUBE_VIDEO_ID_4', title: 'Music Title 4' },

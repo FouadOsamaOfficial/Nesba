@@ -1,1 +1,452 @@
-<p>auto-lease-finance works!</p>
+<!-- <div class="card-container">
+    <div class="card" (click)="showTable(1)">
+      <h3>Refinance</h3>
+      <p>Click to see </p>
+    </div>
+    <div class="card" (click)="showTable(2)">
+      <h3>New Finance</h3>
+      <p>Click to see </p>
+    </div>
+    <div class="card" (click)="showTable(3)">
+      <h3>Buyout</h3>
+      <p>Click to see </p>
+    </div>
+
+  </div>
+  
+  <div class="table-container">
+
+      <div class="report-container" *ngIf="selectedTable === 1" class="data-table">
+        <div class="report-header">
+            <h1 class="recent-Articles">Refinance</h1>
+        </div>
+
+        <div class="report-body">
+            <div class="report-topic-heading">
+                <h3 class="t-op">Article</h3>
+                <h3 class="t-op">Views</h3>
+                <h3 class="t-op">Comments</h3>
+                <h3 class="t-op">Status</h3>
+            </div>
+
+            <div class="items">
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">2.9k</h3>
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 72</h3>
+                    <h3 class="t-op-nextlvl">1.5k</h3>
+                    <h3 class="t-op-nextlvl">360</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 71</h3>
+                    <h3 class="t-op-nextlvl">1.1k</h3>
+                    <h3 class="t-op-nextlvl">150</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 70</h3>
+                    <h3 class="t-op-nextlvl">1.2k</h3>
+                    <h3 class="t-op-nextlvl">420</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 69</h3>
+                    <h3 class="t-op-nextlvl">2.6k</h3>
+                    <h3 class="t-op-nextlvl">190</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 68</h3>
+                    <h3 class="t-op-nextlvl">1.9k</h3>
+                    <h3 class="t-op-nextlvl">390</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 67</h3>
+                    <h3 class="t-op-nextlvl">1.2k</h3>
+                    <h3 class="t-op-nextlvl">580</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 66</h3>
+                    <h3 class="t-op-nextlvl">3.6k</h3>
+                    <h3 class="t-op-nextlvl">160</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 65</h3>
+                    <h3 class="t-op-nextlvl">1.3k</h3>
+                    <h3 class="t-op-nextlvl">220</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="report-container" *ngIf="selectedTable === 2" class="data-table">
+        <div class="report-header">
+            <h1 class="recent-Articles">New Finance</h1>
+        </div>
+
+        <div class="report-body">
+            <div class="report-topic-heading">
+                <h3 class="t-op">Article</h3>
+                <h3 class="t-op">Views</h3>
+                <h3 class="t-op">Comments</h3>
+                <h3 class="t-op">Status</h3>
+            </div>
+
+            <div class="items">
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">2.9k</h3>
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 72</h3>
+                    <h3 class="t-op-nextlvl">1.5k</h3>
+                    <h3 class="t-op-nextlvl">360</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 71</h3>
+                    <h3 class="t-op-nextlvl">1.1k</h3>
+                    <h3 class="t-op-nextlvl">150</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 70</h3>
+                    <h3 class="t-op-nextlvl">1.2k</h3>
+                    <h3 class="t-op-nextlvl">420</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 69</h3>
+                    <h3 class="t-op-nextlvl">2.6k</h3>
+                    <h3 class="t-op-nextlvl">190</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 68</h3>
+                    <h3 class="t-op-nextlvl">1.9k</h3>
+                    <h3 class="t-op-nextlvl">390</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 67</h3>
+                    <h3 class="t-op-nextlvl">1.2k</h3>
+                    <h3 class="t-op-nextlvl">580</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 66</h3>
+                    <h3 class="t-op-nextlvl">3.6k</h3>
+                    <h3 class="t-op-nextlvl">160</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 65</h3>
+                    <h3 class="t-op-nextlvl">1.3k</h3>
+                    <h3 class="t-op-nextlvl">220</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="report-container" *ngIf="selectedTable === 3" class="data-table">
+        <div class="report-header">
+            <h1 class="recent-Articles">Buyout</h1> -->
+            <!-- <button class="view">View All</button> -->
+        <!-- </div>
+
+        <div class="report-body">
+            <div class="report-topic-heading">
+                <h3 class="t-op">Article</h3>
+                <h3 class="t-op">Views</h3>
+                <h3 class="t-op">Comments</h3>
+                <h3 class="t-op">Status</h3>
+            </div>
+
+            <div class="items">
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">2.9k</h3>
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 72</h3>
+                    <h3 class="t-op-nextlvl">1.5k</h3>
+                    <h3 class="t-op-nextlvl">360</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 71</h3>
+                    <h3 class="t-op-nextlvl">1.1k</h3>
+                    <h3 class="t-op-nextlvl">150</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 70</h3>
+                    <h3 class="t-op-nextlvl">1.2k</h3>
+                    <h3 class="t-op-nextlvl">420</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 69</h3>
+                    <h3 class="t-op-nextlvl">2.6k</h3>
+                    <h3 class="t-op-nextlvl">190</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 68</h3>
+                    <h3 class="t-op-nextlvl">1.9k</h3>
+                    <h3 class="t-op-nextlvl">390</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 67</h3>
+                    <h3 class="t-op-nextlvl">1.2k</h3>
+                    <h3 class="t-op-nextlvl">580</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 66</h3>
+                    <h3 class="t-op-nextlvl">3.6k</h3>
+                    <h3 class="t-op-nextlvl">160</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 65</h3>
+                    <h3 class="t-op-nextlvl">1.3k</h3>
+                    <h3 class="t-op-nextlvl">220</h3>
+                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </div> -->
+<app-aside></app-aside>
+  <div class="card-container">
+    <div class="card" (click)="showTable(1)">
+      <h3>Refinance</h3>
+      <p>Click to see </p>
+    </div>
+    <div class="card" (click)="showTable(2)">
+      <h3>New Finance</h3>
+      <p>Click to see </p>
+    </div>
+  </div>
+  
+  <div class="containerOne" *ngIf="selectedTable === 1" class="offers">
+  <h3 class="readyOfferTitle"  style="padding: 5px; text-align: center; align-content: center; margin-top: 150px;">Ready Offers</h3>
+
+<div class="readyOffer">
+
+    <table>
+  <tr>
+    <td>
+      <div class="sp-container">
+        <div id="_tvVoiceInternetOfferRow" class="sp-offercontainer sp-offercontainer--expanded" rel="home|comcast - nextgen - home~ActionButton::Starter:See Details" index="0_733655" data-offer-id="733655">
+          <div class="sp-package">
+            <h3 class="sp-package--title" id="dname733655">Starter</h3>
+            <button type="button" class="sp-package--details button--anchor offer-details-expand learnMore hideDetails" aria-expanded="true" aria-controls="details-733655" aria-live="polite" aria-describedby="details-733655">Hide Details</button>
+          </div>
+          <div class="sp-x1">
+            <div id="ctl01__offerFinderControl_TvVoiceInternetTick_0">
+              <span class="sp-tick sp-tick--x1"></span>
+            </div>
+          </div>
+          <div class="sp-channels">
+            <div class="sp-attributes">
+              <div class="sp-attribute--value">140+</div>
+              <a class="sp-channels--lineup" href="javascript:void(window.open('//www.comcast.com/Corporate/Learn/DigitalCable/TVChannelLineUp.html','_blank','width=980,height=784,menubar=no,toolbar=no,scrollbars=yes,resizable=no,location=no,status=no').focus())">View Lineup</a>
+            </div>
+            <div class="sp-channels--media">
+              <img id="ctl01__offerFinderControl__tvVoiceInternetChannelImg_0" src="//cdn.comcast.com/~/Media/ImageLibrary/qw-products/tripleplay/offerchart-X1-starter.png?vs=6" alt="tvvoiceinternet-channels-01">
+            </div>
+            <div class="sp-channels--sports"></div>
+          </div>
+          <div class="sp-inetVoice">
+            <div class="sp-attribute--value">105</div>
+            <div class="sp-attribute--highlight">Mbps</div>
+            <div class="sp-attribute--label">Unlimited Nationwide Talk &amp; Text</div>
+          </div>
+          <ul class="sp-highlight ul--nobullets">
+            <li>$200 Visa® Prepaid Card</li>
+            <li>Blast!® upgrade included for 12 months</li>
+            <li>$200 Visa® Prepaid Card</li>
+          </ul>
+          <div class="sp-pricecontainer">
+            <div class="sp-eyebrow sp-eyebrow--red">Online Exclusive!</div>
+            <div class="sp-price">$79<sup class="sp-price--cents">99/mo</sup><br></div>
+            <div class="sp-agreement">
+              <div>for the first 12 months</div>
+              <div>with 2-year <button type="button" class="button--anchor button--blue" onclick="displayAgreementOverlay(this); return false;">agreement</button>
+              </div>
+              <div class="sp-tick sp-tick--bestprice"><span class="accessibly-hidden">best price</span></div>
+            </div>
+          </div>
+          <div class="sp-legalagreement">
+            <div id="ctl01__offerFinderControl__cellPriceTVInternetVoice_0" class="price has_custom_select">
+              <div class="custom-select agreement" id="agreementDropDown">
+                <select name="ctl01$_offerFinderControl$ctl04$_dropAgreementTermsTVInternetVoice" id="_dropAgreementTermsTVInternetVoice" class="drop-1 custom-form terms agreement" style="display: none;">
+                  <option selected="selected" value="0_733655">2-year agreement</option>
+                  <option value="0_732796">No Term Agreement</option>
+                </select>
+                <ul class="dropdown">
+                  <li><a href="#" aria-haspopup="true" rel="0_733655"><span>2-year agreement</span></a>
+                    <ul style="display: none;">
+                      <li><a class="selected" href="#" rel="0_733655">2-year agreement</a></li>
+                      <li><a href="#" rel="0_732796">No Term Agreement</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" id="ctl01__offerFinderControl__linkTvInternetVoiceSelectAndCustomize_0" class="btnStartShopping button--primary" onclick="COMCAST.ShoppingCart.AddOffer('733655','false','','home|comcast - nextgen - home','');return false;" aria-describedby="dname733655">Add To Cart</button>
+            <button type="button" aria-describedby="dname733655 dr_733655" class="sp-anchor--poi button--anchor button--blue details-restrictions-tooltip tooltip-generic" data-offer-id="733655" data-details-overlay-enabled="true" data-cuitooltip-delay="3000"> Pricing &amp; Other Info.</button>
+          </div>
+        </div>
+        <div class="offer_details offer-details-display" aria-hidden="true">
+          <div class="sp-detailscontent sp-detailscontent--expanded">
+            <div class="details_content_box" id="details-733655">
+              <h3 class="accessibly-hidden">Package Details:</h3>
+              <ul class="offer_details_list ul--smallbullets">
+                <li>Get 4x the speed with Blast!® Internet included for 12 months</li>
+                <li>Fastest, most reliable in-home WiFi </li>
+                <li>The X1 Entertainment Operating System®</li>
+                <li>Top 100 shows preloaded &amp; ready to watch</li>
+                <li>Over 140 channels included</li>
+                <li>Reliable home phone service</li>
+                <li>Access to millions of hotspots nationwide</li>
+                <li>Backed by Comcast Customer Guarantee™ </li>
+              </ul>
+              <p>An <a href="http://customer.comcast.com/help-and-support/internet/data-usage-trials/" target="_blank">XFINITY Internet Data Usage Plan</a> may apply.</p>
+              <div id="dr_733655" role="tooltip" class="accessibly-hidden">Offer ends 01/18/15. Restrictions apply. Not available in all areas. Limited to new residential customers. Requires subscription to the Starter XF Triple Play with Digital Starter TV, Performance Internet, and XFINITY Voice Unlimited service. 2-year term agreement required. Early termination fee applies. Equipment, installation, taxes and fees, including regulatory recovery fees, Broadcast TV Fee (up to $3.50/mo.), Regional Sports Fee (up to $1/mo.), and other applicable charges extra, and subject to change during and after the promo. After 12 mos., the service charge for all three products increases to $99.00/mo. After promo, or if any service is cancelled or downgraded, regular rates apply. Comcast's service charge for all three products, ranges based on area, from $141.99/mo. to $147.49/mo., and for upgrading from Performance to Blast!® is $10.00 to $11.00 more per month (subject to change). TV and Internet service limited to a single outlet. May not be combined with other offers. <strong>TV:</strong> Limited Basic Service subscription required to receive other levels of service. <strong>Internet:</strong> Wi-Fi claim based on the September 2014 study by Allion Test Labs. Actual speeds vary and are not guaranteed. XFINITY Wi-Fi included with Performance Internet service and above only. Available in select areas. Requires compatible Wi-Fi enabled laptop or mobile device. <strong>Voice:</strong> $29.95 activation fee may apply. Service (including 911/emergency services) may not function after an extended power outage. Unlimited Talk &amp; Text requires download of the XFINITY Connect app. Standard data charges may apply. Check with your carrier. 30-Day Money-Back Guarantee applies to one month's recurring service charge and standard installation up to $500. Prepaid Card mailed to Comcast account holder within 18 weeks of activation of all required services and expires in 90 days. Prepaid Cards issued by Citibank, N.A., pursuant to a license from Visa U.S.A. Inc. and managed by Citi Prepaid Services. Cards will not have cash access and can be used everywhere Visa Prepaid Cards are accepted. Call for restrictions and complete details. ©2014 Comcast. All rights reserved. All trademarks are the property of their respective owners.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+    </table>
+</div>
+  </div>
+
+  <div class="containerTwo" *ngIf="selectedTable === 2" class="paymentCalac">
+  <div class="calcInner layout1140">
+    <h3 class="clacTitle"  style="padding: 10px; text-align: center; align-content: center; ">Payment Calculator</h3>
+
+    <h2>Calculator and Form for Annuity Payment on Credit</h2>
+    <div class="row calcPreferences">
+      <div class="col-xs-6">
+        <h3>Pledge Subject:</h3>
+        <ul>
+          <li *ngFor="let preference of preferences" 
+              [class.active]="preference.active" 
+              (click)="selectPreference(preference)">
+            {{ preference.label }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-6">
+        <h3>How to Calculate:</h3>
+        <p><span>Step 1.</span> Choose the subject of the pledge</p>
+        <p><span>Step 2.</span> Choose the loan amount you need</p>
+        <p><span>Step 3.</span> Choose the loan term</p>
+        <p><span>Step 4.</span> Review the payment schedule</p>
+      </div>
+    </div>
+    <div class="row calcAmount">
+      <div class="col-xs">
+        <h3>Pledge Amount:</h3>
+        <div class="amount">
+          <input type="text" id="amount" [(ngModel)]="amount" (keyup)="onAmountChange($event)" />
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <section id="content">
+          <div class="cube">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+            <div class="d"></div>
+            <div id="slider-range-min"></div>
+          </div>
+        </section>
+      </div>
+      <div class="col-xs-3">
+        <h3>Accrued Interest:</h3>
+        <p class="calcProc">{{ selectedPreference.proc }}%</p>
+      </div>
+    </div>
+    <div class="range-slider">
+      <h3>Choose the term for which you plan to take the loan (in months):</h3>
+      <input class="range-slider__range" type="range" [(ngModel)]="sliderValue" (input)="onSliderChange()" min="1" max="36" step="1">
+      <span class="range-slider__value">{{ sliderValue }}</span>
+    </div>
+    <hr />
+    <div class="row calcDecimals">
+      <div class="col-xs-4">
+        <h3>Overpayment in the First Month:</h3>
+        <p class="calcMonth">{{ calcMonth }} SAR</p>
+      </div>
+      <div class="col-xs-4">
+        <h3>Monthly Payment:</h3>
+        <p class="calcYear">{{ calcYear }} SAR</p>
+      </div>
+      <div class="col-xs-4">
+        <h3>Total Repayment Amount:</h3>
+        <p class="calcCommon">{{ calcCommon }} SAR</p>
+      </div>
+    </div>
+    <hr />
+    <div class="alignCenter">
+      <button class="butGraph" (click)="generateGraph()">Build Payment Schedule</button>
+    </div>
+    <div class="calcGraphic" *ngIf="calcGraphicVisible">
+      <!-- Dynamic content will be inserted here -->
+      <div [innerHTML]="graphContent"></div>
+    </div>
+  </div>
+  
+  </div>
+  
+
+<button class="btn btn-outline-secondary" (click)="previous()">Previous</button>

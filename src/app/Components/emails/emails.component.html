@@ -1,8 +1,10 @@
+<app-aside></app-aside>
+
 <div class="wrapper">
 	<div class="container">
 		<div class="filter">
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-sm-2">
 					<div class="show-row">
 						<select class="form-control" (change)="changeShowCount($event)">
 							<option *ngFor="let option of showOptions" [value]="option">{{ option }}</option>
@@ -10,7 +12,7 @@
 					</div>
 				</div>
 				<div class="col-sm-4"></div>
-				<div class="col-sm-4">
+				<div class="col-sm-6">
 					<div class="search-row">
 						<input type="text" (input)="filterMusic($event)" class="form-control"
 							placeholder="Enter your keyword">
@@ -31,10 +33,11 @@
 			<tbody>
 				<tr *ngFor="let item of paginatedMusicList; let i = index" [attr.data-url]="item.url" class="list">
 					<td>{{ i + 1 }}</td>
-					<td>
+					<!-- <td>
 						<div class="thumb"><img [src]="getThumbnailUrl(item.url)" class="img-responsive"></div>
-					</td>
+					</td> -->
 					<td>{{ item.title }}</td>
+					<td>{{ item.url }}</td>
 					<td>
 						<a (click)="playVideo(item.url)" class="btn btn-outline-success">Open</a>
 						<a (click)="deleteMail(item.url)" class="btn btn-outline-danger">Delete</a>

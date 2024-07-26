@@ -9,12 +9,11 @@ import { LoginService } from 'src/app/Services/login/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  private isLoggedInFlag: boolean = false; // Flag to track user login status
-
   loginForm!: FormGroup;
   errorMessage: string = '';
+  isLoggedInFlag: boolean = false;
 
-  constructor(private router:Router , private authService: LoginService , private formBuilder: FormBuilder){}
+  constructor(private router: Router, private authService: LoginService, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -33,43 +32,26 @@ export class LoginComponent {
 
   onLogin(): void {
     if (this.loginForm.invalid) {
-      return; // Do not proceed if the form is invalid
+      return; 
     }
 
     const username = this.loginForm.value.username;
     const password = this.loginForm.value.password;
 
     if (this.authService.isValidLogin(username, password)) {
-      // Redirect to dashboard or perform other actions upon successful login
       console.log('Login successful');
       this.router.navigate(['/user-dashboard']);
       this.errorMessage = '';
       this.isLoggedInFlag = true;
-
     } else {
       this.errorMessage = 'Invalid username or password';
       this.isLoggedInFlag = false;
-
-      console.error('Login failed:', this.errorMessage); // Log error message to console for debugging
+      console.error('Login failed:', this.errorMessage); 
     }
   }
 
-
-  // onLogin(){
-  //   this.router.navigate(['/user-dashboard']);
-    
-  // }
-
-    // Method to simulate user login
-    // login(): void {
-      // Perform login actions such as setting isLoggedInFlag to true
-      // this.isLoggedInFlag = true;
-    
-  
-    // Method to simulate user logout
-    // logout(): void {
-      // Perform logout actions such as setting isLoggedInFlag to false
-    //   this.isLoggedInFlag = false;
-    // }
+  closePopup(): void {
+    this.errorMessage = '';
+  }
 
 }

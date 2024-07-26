@@ -1,23 +1,24 @@
+<app-aside></app-aside>
 <div class="card-container">
     <div class="card" (click)="showTable(1)">
-      <h3>Mortgage Refinance</h3>
-      <p>Click to see </p>
+        <h3>Mortgage Refinance</h3>
+        <p>Click to see </p>
     </div>
     <div class="card" (click)="showTable(2)">
-      <h3>Equity release</h3>
-      <p>Click to see </p>
+        <h3>Equity release</h3>
+        <p>Click to see </p>
     </div>
     <div class="card" (click)="showTable(3)">
-      <h3>Direct Purchase</h3>
-      <p>Click to see </p>
+        <h3>Direct Purchase</h3>
+        <p>Click to see </p>
     </div>
     <div class="card" (click)="showTable(4)">
         <h3>MOH program</h3>
         <p>Click to see </p>
-      </div>
-  </div>
-  
-  <div class="table-container">
+    </div>
+</div>
+
+<div class="table-container">
     <!-- <table *ngIf="selectedTable === 1" class="data-table">
       <thead>
         <tr>
@@ -92,7 +93,7 @@
         </tbody>
       </table> -->
 
-      <div class="report-container" *ngIf="selectedTable === 1" class="data-table">
+    <div class="report-container" *ngIf="selectedTable === 1" class="data-table">
         <div class="report-header">
             <h1 class="recent-Articles">Mortgage Refinance Data</h1>
             <button class="view">View All</button>
@@ -100,74 +101,453 @@
 
         <div class="report-body">
             <div class="report-topic-heading">
-                <h3 class="t-op">Article</h3>
-                <h3 class="t-op">Views</h3>
-                <h3 class="t-op">Comments</h3>
+                <h3 class="t-op">Land</h3>
+                <h3 class="t-op">Buyout</h3>
+                <h3 class="t-op">Ready unite</h3>
                 <h3 class="t-op">Status</h3>
             </div>
 
             <div class="items">
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 73</h3>
-                    <h3 class="t-op-nextlvl">2.9k</h3>
+                    <h3 class="t-op-nextlvl">20 </h3>
                     <h3 class="t-op-nextlvl">210</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 72</h3>
                     <h3 class="t-op-nextlvl">1.5k</h3>
                     <h3 class="t-op-nextlvl">360</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 71</h3>
                     <h3 class="t-op-nextlvl">1.1k</h3>
                     <h3 class="t-op-nextlvl">150</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 70</h3>
                     <h3 class="t-op-nextlvl">1.2k</h3>
                     <h3 class="t-op-nextlvl">420</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 69</h3>
                     <h3 class="t-op-nextlvl">2.6k</h3>
                     <h3 class="t-op-nextlvl">190</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 68</h3>
                     <h3 class="t-op-nextlvl">1.9k</h3>
                     <h3 class="t-op-nextlvl">390</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 67</h3>
                     <h3 class="t-op-nextlvl">1.2k</h3>
                     <h3 class="t-op-nextlvl">580</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 66</h3>
                     <h3 class="t-op-nextlvl">3.6k</h3>
                     <h3 class="t-op-nextlvl">160</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 65</h3>
                     <h3 class="t-op-nextlvl">1.3k</h3>
                     <h3 class="t-op-nextlvl">220</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -182,74 +562,434 @@
 
         <div class="report-body">
             <div class="report-topic-heading">
-                <h3 class="t-op">Article</h3>
-                <h3 class="t-op">Views</h3>
-                <h3 class="t-op">Comments</h3>
+                <h3 class="t-op">Land</h3>
+                <h3 class="t-op">Buyout</h3>
+                <h3 class="t-op">Ready unite</h3>
                 <h3 class="t-op">Status</h3>
             </div>
 
             <div class="items">
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 73</h3>
-                    <h3 class="t-op-nextlvl">2.9k</h3>
+                    <h3 class="t-op-nextlvl">30 </h3>
                     <h3 class="t-op-nextlvl">210</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 72</h3>
                     <h3 class="t-op-nextlvl">1.5k</h3>
                     <h3 class="t-op-nextlvl">360</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 71</h3>
                     <h3 class="t-op-nextlvl">1.1k</h3>
                     <h3 class="t-op-nextlvl">150</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 70</h3>
                     <h3 class="t-op-nextlvl">1.2k</h3>
                     <h3 class="t-op-nextlvl">420</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 69</h3>
                     <h3 class="t-op-nextlvl">2.6k</h3>
                     <h3 class="t-op-nextlvl">190</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 68</h3>
                     <h3 class="t-op-nextlvl">1.9k</h3>
                     <h3 class="t-op-nextlvl">390</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 67</h3>
                     <h3 class="t-op-nextlvl">1.2k</h3>
                     <h3 class="t-op-nextlvl">580</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 66</h3>
                     <h3 class="t-op-nextlvl">3.6k</h3>
                     <h3 class="t-op-nextlvl">160</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 65</h3>
                     <h3 class="t-op-nextlvl">1.3k</h3>
                     <h3 class="t-op-nextlvl">220</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -264,74 +1004,436 @@
 
         <div class="report-body">
             <div class="report-topic-heading">
-                <h3 class="t-op">Article</h3>
-                <h3 class="t-op">Views</h3>
-                <h3 class="t-op">Comments</h3>
+                <h3 class="t-op">Land</h3>
+                <h3 class="t-op">Buyout</h3>
+                <h3 class="t-op">Ready unite</h3>
                 <h3 class="t-op">Status</h3>
             </div>
 
             <div class="items">
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 73</h3>
-                    <h3 class="t-op-nextlvl">2.9k</h3>
+                    <h3 class="t-op-nextlvl">40 </h3>
                     <h3 class="t-op-nextlvl">210</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 72</h3>
                     <h3 class="t-op-nextlvl">1.5k</h3>
                     <h3 class="t-op-nextlvl">360</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 71</h3>
                     <h3 class="t-op-nextlvl">1.1k</h3>
                     <h3 class="t-op-nextlvl">150</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 70</h3>
                     <h3 class="t-op-nextlvl">1.2k</h3>
                     <h3 class="t-op-nextlvl">420</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 69</h3>
                     <h3 class="t-op-nextlvl">2.6k</h3>
                     <h3 class="t-op-nextlvl">190</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 68</h3>
                     <h3 class="t-op-nextlvl">1.9k</h3>
                     <h3 class="t-op-nextlvl">390</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 67</h3>
                     <h3 class="t-op-nextlvl">1.2k</h3>
                     <h3 class="t-op-nextlvl">580</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 66</h3>
                     <h3 class="t-op-nextlvl">3.6k</h3>
                     <h3 class="t-op-nextlvl">160</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 65</h3>
                     <h3 class="t-op-nextlvl">1.3k</h3>
                     <h3 class="t-op-nextlvl">220</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="input1">Label 1</label>
+                                        <input type="text" id="input1" value="Readonly 1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input2">Label 2</label>
+                                        <input type="text" id="input2" value="Readonly 2" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input3">Label 3</label>
+                                        <input type="text" id="input3" value="Readonly 3" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="propContainer">
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span>Description</span>
+                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -346,79 +1448,243 @@
 
         <div class="report-body">
             <div class="report-topic-heading">
-                <h3 class="t-op">Article</h3>
-                <h3 class="t-op">Views</h3>
-                <h3 class="t-op">Comments</h3>
-                <h3 class="t-op">Status</h3>
+                <h3 class="t-op">Buyout</h3>
+                <h3 class="t-op">Self constaction</h3>
+                <h3 class="t-op">Off Plan Product</h3>
+                <h3 class="t-op">MOH Land</h3>
+                <h3 class="t-op">Market Ready Units</h3>
+                <h3 class="t-op">MOH Ready Units</h3>
             </div>
 
             <div class="items">
                 <div class="item1">
                     <h3 class="t-op-nextlvl">Article 73</h3>
-                    <h3 class="t-op-nextlvl">2.9k</h3>
+                    <h3 class="t-op-nextlvl">
+                        <div class="container">
+                            <div class="radio-group">
+                                <input type="radio" id="Number 1" name="color" value="Number 1" checked>
+                                <label for="Number 1">No</label>
+
+                                <input type="radio" id="Number 2" name="color" value="Number 2">
+                                <label for="Number 2">Yes</label>
+                            </div>
+                        </div>
+                    </h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+
                     <h3 class="t-op-nextlvl">210</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 72</h3>
-                    <h3 class="t-op-nextlvl">1.5k</h3>
-                    <h3 class="t-op-nextlvl">360</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">
+                        <div class="container">
+                            <div class="radio-group">
+                                <input type="radio" id="Number 1" name="color" value="Number 1" checked>
+                                <label for="Number 1">No</label>
 
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 71</h3>
-                    <h3 class="t-op-nextlvl">1.1k</h3>
-                    <h3 class="t-op-nextlvl">150</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
+                                <input type="radio" id="Number 2" name="color" value="Number 2">
+                                <label for="Number 2">Yes</label>
+                            </div>
+                        </div>
+                    </h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
 
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 70</h3>
-                    <h3 class="t-op-nextlvl">1.2k</h3>
-                    <h3 class="t-op-nextlvl">420</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 69</h3>
-                    <h3 class="t-op-nextlvl">2.6k</h3>
-                    <h3 class="t-op-nextlvl">190</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">
+                        <div class="container">
+                            <div class="radio-group">
+                                <input type="radio" id="Number 1" name="color" value="Number 1" checked>
+                                <label for="Number 1">No</label>
+
+                                <input type="radio" id="Number 2" name="color" value="Number 2">
+                                <label for="Number 2">Yes</label>
+                            </div>
+                        </div>
+                    </h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 68</h3>
-                    <h3 class="t-op-nextlvl">1.9k</h3>
-                    <h3 class="t-op-nextlvl">390</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">
+                        <div class="container">
+                            <div class="radio-group">
+                                <input type="radio" id="Number 1" name="color" value="Number 1" checked>
+                                <label for="Number 1">No</label>
+
+                                <input type="radio" id="Number 2" name="color" value="Number 2">
+                                <label for="Number 2">Yes</label>
+                            </div>
+                        </div>
+                    </h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 67</h3>
-                    <h3 class="t-op-nextlvl">1.2k</h3>
-                    <h3 class="t-op-nextlvl">580</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">
+                        <div class="container">
+                            <div class="radio-group">
+                                <input type="radio" id="Number 1" name="color" value="Number 1" checked>
+                                <label for="Number 1">No</label>
+
+                                <input type="radio" id="Number 2" name="color" value="Number 2">
+                                <label for="Number 2">Yes</label>
+                            </div>
+                        </div>
+                    </h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 66</h3>
-                    <h3 class="t-op-nextlvl">3.6k</h3>
-                    <h3 class="t-op-nextlvl">160</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">
+                        <div class="container">
+                            <div class="radio-group">
+                                <input type="radio" id="Number 1" name="color" value="Number 1" checked>
+                                <label for="Number 1">No</label>
+
+                                <input type="radio" id="Number 2" name="color" value="Number 2">
+                                <label for="Number 2">Yes</label>
+                            </div>
+                        </div>
+                    </h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 65</h3>
-                    <h3 class="t-op-nextlvl">1.3k</h3>
-                    <h3 class="t-op-nextlvl">220</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">
+                        <div class="container">
+                            <div class="radio-group">
+                                <input type="radio" id="Number 1" name="color" value="Number 1" checked>
+                                <label for="Number 1">No</label>
+
+                                <input type="radio" id="Number 2" name="color" value="Number 2">
+                                <label for="Number 2">Yes</label>
+                            </div>
+                        </div>
+                    </h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item1">
+                    <h3 class="t-op-nextlvl">Article 73</h3>
+                    <h3 class="t-op-nextlvl">
+                        <div class="container">
+                            <div class="radio-group">
+                                <input type="radio" id="Number 1" name="color" value="Number 1" checked>
+                                <label for="Number 1">No</label>
+
+                                <input type="radio" id="Number 2" name="color" value="Number 2">
+                                <label for="Number 2">Yes</label>
+                            </div>
+                        </div>
+                    </h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+
+                    <h3 class="t-op-nextlvl">210</h3>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
+                        Units</button>
+                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
+                    <div class="modal" *ngIf="isModalOpen">
+                        <div class="modal-content">
+                            <span class="close" (click)="closeModal()">&times;</span>
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
-  </div>
+</div>
 <button class="btn btn-outline-secondary" (click)="previous()">Previous</button>
-  
