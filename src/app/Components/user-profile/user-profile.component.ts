@@ -21,4 +21,8 @@ export class UserProfileComponent{
     this.router.navigate(['./user-dashboard']);
 
 }
+signOut(){
+  this.router.navigate(['./home']);
+
+}
 }

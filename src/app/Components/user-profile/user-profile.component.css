@@ -1,14 +1,14 @@
-/* Styles for user profile */
+/* Styles for user profile
 .user-profile {
     margin-top: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: center; */
     /* padding-right: 100px; */
-    align-items: center;
+    /* align-items: center; */
     /* height: 100vh; */
-  }
+  /* } */
   
-  .card {
+  /* .card {
     margin-top: 100px;
     margin-bottom: 150px;
     width: 100%;
@@ -99,4 +99,6 @@
   }
   .btn {
     margin: 10px;
-  }
+  } */
+
+  /* #10182F */
