@@ -13,9 +13,9 @@ body {
     margin-top: 170px;
     margin-bottom: 110px;
   }
-.table-container{
+/* .table-container{
     margin-bottom: 170px;
-  }
+  } */
   .card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -65,6 +65,8 @@ body {
   }
   .btn{
     margin: 10px;
+    margin-left: 140px;
+
 
   } 
 

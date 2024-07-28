@@ -9,9 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent {
-  @ViewChild('headerAvatar', { static: true }) headerAvatar!: ElementRef;
   @ViewChild('subHeadings') subHeadings!: ElementRef;
-
+  @ViewChild('headerAvatar')headerAvatar!: ElementRef;
   isDropdownActive: boolean = false;
 
 
@@ -67,16 +66,11 @@ export class UserDashboardComponent {
   //   dropdown.classList.toggle('dropdown--active');
   // }
   
-  toggleDropdown() {
-    const dropdown = this.headerAvatar.nativeElement.nextElementSibling;
-    console.log('Dropdown element:', dropdown); // Check if this is correctly finding the dropdown
 
-    if (dropdown) {
-      this.renderer.addClass(dropdown, 'dropdown--active');
-    } else {
-      console.error('Dropdown element not found.');
-    }
+  toggleDropdown() {
+    this.isDropdownActive = !this.isDropdownActive;
   }
+
   toggleSubheading(subHeading: HTMLElement) {
     subHeading.classList.toggle('navList__subheading--open');
     const subList = subHeading.nextElementSibling;

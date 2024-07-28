@@ -40,6 +40,8 @@ import { AutoLeaseFinanceComponent } from './Components/auto-lease-finance/auto-
 import { UnitsModalComponent } from './sharedComponents/units-modal/units-modal.component';
 import { AuthService } from './Services/Auth/auth.service';
 import { RealEstateMarketComponent } from './sharedComponents/real-estate-market/real-estate-market.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+
 
 @NgModule({
   declarations: [
@@ -84,6 +86,8 @@ import { RealEstateMarketComponent } from './sharedComponents/real-estate-market
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxSliderModule
+
     
   ],
   providers: [AuthService],

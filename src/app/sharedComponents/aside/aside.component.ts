@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, Renderer2, ViewChild } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
 import { Router } from '@angular/router';
@@ -12,12 +12,38 @@ export class AsideComponent {
   // @Input() isLoggedIn: boolean = false;
   @ViewChild('headerAvatar', { static: true }) headerAvatar!: ElementRef;
   @ViewChild('subHeadings') subHeadings!: ElementRef;
+  @Output() logoutEvent = new EventEmitter<void>();
 
   isDropdownActive: boolean = false;
 
 constructor(private router:Router ,private renderer: Renderer2){
 
 }
+logo(){
+  this.router.navigate(['./user-dashboard']);
+
+}
+toAccount(){
+  this.router.navigate(['./user-profile']);
+
+}
+
+toSettings(){
+  this.router.navigate(['./user-profile']);
+
+}
+toHelp(){
+  this.router.navigate(['./contact']);
+
+}
+logout() {
+  this.router.navigate(['./home']);
+
+}
+
+// logout() {
+//   this.logoutEvent.emit();
+// }
 
 toProfile(){
   this.router.navigate(['./user-profile']);

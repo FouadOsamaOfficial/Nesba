@@ -563,6 +563,13 @@
     top: 50%;
     right: -18px;
   }
+  .dropdown {
+    display: none;
+  }
+  
+  .dropdown--active {
+    display: block;
+  }
   
   .dropdown {
     position: absolute;

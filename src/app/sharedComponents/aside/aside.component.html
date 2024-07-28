@@ -1,0 +1,184 @@
+<section>
+    <article>
+        <nav class="navy">
+            <div class="links">
+                <a (click)="logo()" class="icon-logo">
+                    <span class="material-icons">NESBA</span>
+                </a>
+                <!-- <a >Link 1</a>
+          <a >Link 2</a>
+  
+          <div class="dropdown-container">
+            <details class="dropdown left">
+              <summary>
+                <span class="with-down-arrow">Jane Doe</span>
+              </summary>
+              <ul>
+                <li>
+                  <p>
+                    <span class="block bold">Jane Doe</span>
+                    <span class="block italic">jane@example.com</span>
+                  </p>
+                </li>
+                <li>
+                  <a >
+                    <span class="material-icons">account_circle</span> Account
+                  </a>
+                </li>
+                <li>
+                  <a >
+                    <span class="material-icons">settings</span> Settings
+                  </a>
+                </li>
+                <li>
+                  <a >
+                    <span class="material-icons">help</span> Help
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a  (click)="logout()">
+                    <span class="material-icons">logout</span> Logout
+                  </a>
+                </li>
+              </ul>
+            </details>
+          </div> -->
+            </div>
+
+            <div class="dropdown-container">
+                <details class="dropdown right">
+                    <summary class="avatar">
+                        <img src="https://gravatar.com/avatar/00000000000000000000000000000000?d=mp">
+                    </summary>
+                    <ul>
+                        <li>
+                            <p>
+                                <span class="block bold">Jane Doe</span>
+                                <span class="block italic">jane@example.com</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a (click)="toAccount()"> Account </a>
+                        </li>
+                        <li>
+                            <a (click)="toSettings()"> Settings </a>
+                        </li>
+                        <li>
+                            <a (click)="toHelp()"> Help </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a (click)="logout()"> Logout</a>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+        </nav>
+    </article>
+</section>
+
+
+
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <div class="logo-container">
+            <img src="../.../../../../assets/images/nesbalogo.png" alt="Brand Logo" class="logo" >
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <details>
+                    <summary>
+                        <i class="fa fa-globe fa-2x"></i>
+                        <span class="nav-text">Global Surveyors</span>
+                    </summary>
+                    <ul>
+                        <li><a href="#">Sub-item 1</a></li>
+                        <li><a href="#">Sub-item 2</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li class="dropdown">
+                <details>
+                    <summary>
+                        <i class="fa fa-comments fa-2x"></i>
+                        <span class="nav-text">Group Hub Forums</span>
+                    </summary>
+                    <ul>
+                        <li><a href="#">Sub-item 1</a></li>
+                        <li><a href="#">Sub-item 2</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-camera-retro fa-2x"></i>
+                    <span class="nav-text">Survey Photos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-film fa-2x"></i>
+                    <span class="nav-text">Surveying Tutorials</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-book fa-2x"></i>
+                    <span class="nav-text">Surveying Jobs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-cogs fa-2x"></i>
+                    <span class="nav-text">Tools & Resources</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-map-marker fa-2x"></i>
+                    <span class="nav-text">Member Map</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-info fa-2x"></i>
+                    <span class="nav-text">Documentation</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="logout">
+            <li>
+                <a href="#">
+                    <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+
+
+
+
+
+<!-- 
+   <i class="fa fa-home fa-2x"></i>
+<i class="fa fa-globe fa-2x"></i>
+ <i class="fa fa-comments fa-2x"></i>
+<i class="fa fa-camera-retro fa-2x"></i>
+<i class="fa fa-film fa-2x"></i>
+<i class="fa fa-book fa-2x"></i>
+ <i class="fa fa-cogs fa-2x"></i>
+ <i class="fa fa-map-marker fa-2x"></i>
+<i class="fa fa-info fa-2x"></i> -->

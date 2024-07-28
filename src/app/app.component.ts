@@ -6,6 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  isLoggedIn = false;
+
+  onLogin(event: boolean) {
+    this.isLoggedIn = event;
+  }
+
+  onLogout() {
+    this.isLoggedIn = false;
+  }
+
   // title = 'Nesba';
   // isLoggedIn: boolean = false; // Initially, the user is not logged in
 

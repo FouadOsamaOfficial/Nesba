@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./personal-finance.component.css']
 })
 export class PersonalFinanceComponent {
-  selectedTable: number = 0;
+  selectedTable: number = 1;
   constructor(private router:Router ) { }
 
   showTable(tableNumber: number) {
