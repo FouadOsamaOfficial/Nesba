@@ -174,7 +174,7 @@
       <div class="header__search">
         <input class="header__input" placeholder="Search..." />
       </div>
-      <div class="header__avatar" (click)="toggleDropdown()">
+      <div class="header__avatar" (click)="toggleDropdown()" #headerAvatar>
         <div class="dropdown" *ngIf="isDropdownActive">
           <ul class="dropdown__list">
             <li class="dropdown__list-item">

@@ -100,7 +100,7 @@ Dropdown Styles
   color: #333;
 }
 .dropdown-container .dropdown ul li a:hover {
-  color: #ff34b2;
+  color: #10182F;
 }
 .dropdown-container .dropdown ul li:first-of-type {
   border-radius: 10px 10px 0 0;
@@ -217,6 +217,8 @@ nav .links a {
   color: #fff;
 
 }
+
+
 
 .main-menu:hover,
 nav.main-menu.expanded {
@@ -337,7 +339,8 @@ nav.main-menu li.active>a,
 .dropdown-menu>.active>a:hover,
 .dropdown-menu>.active>a:focus,
 .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
-.dashboard-page nav.dashboard-menu ul li.active a {
+.dashboard-page nav.dashboard-menu ul li.active a ,.dropdown details
+summary:hover{
   color: #fff;
   background-color: #000000;
 }
@@ -378,7 +381,7 @@ nav.main-menu li.active>a,
 .dropdown summary::after {
   content: '\25BC';
   font-size: 0.8em;
-  margin: 5px;
+  margin: 10px;
 
 
 }
@@ -398,14 +401,16 @@ nav.main-menu li.active>a,
 
 
 
-/* .dropdown ul li a {
+.dropdown ul li a {
   display: block;
   padding: 10px 20px;
-  color: #333;
+  color: #fff;
   text-decoration: none;
-} */
+  text-align: center;
+}
 
-/* .dropdown ul li a:hover {
-  background: #f1f1f1;
-  color: #000;
-} */
+.dropdown ul li a:hover {
+  background: #e8e8e8;
+  color: #10182F;
+  
+}
