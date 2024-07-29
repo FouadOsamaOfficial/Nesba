@@ -11,13 +11,13 @@
           <div class="dropdown-container">
             <details class="dropdown left">
               <summary>
-                <span class="with-down-arrow">Jane Doe</span>
+                <span class="with-down-arrow">Abd elaziz</span>
               </summary>
               <ul>
                 <li>
                   <p>
-                    <span class="block bold">Jane Doe</span>
-                    <span class="block italic">jane@example.com</span>
+                    <span class="block bold">Abd elaziz</span>
+                    <span class="block italic">abdelaziz@example.com</span>
                   </p>
                 </li>
                 <li>
@@ -89,7 +89,7 @@
         </div>
         <ul>
             <li>
-                <a >
+                <a  (click)="toDashboard()">
                     <i class="fa fa-home fa-2x"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>
@@ -98,11 +98,11 @@
                 <details>
                     <summary>
                         <i class="fa fa-money fa-2x"></i>
-                        <span class="nav-text">Funding</span>
+                        <span (click)="toFunding()" class="nav-text">Funding</span>
                     </summary>
                     <ul>
-                        <li><a >Previous Funding</a></li>
-                        <li><a >Funding Tracker</a></li>
+                        <li><a (click)="toPreviousFunding()">Previous Funding</a></li>
+                        <li><a (click)="toFundingTracker()">Funding Tracker</a></li>
                     </ul>
                 </details>
             </li>
@@ -110,29 +110,29 @@
                 <details>
                     <summary>
                         <i class="fa fa-credit-card fa-2x"></i>
-                        <span class="nav-text">New Financing</span>
+                        <span (click)="toNewFinancing()" class="nav-text">New Financing</span>
                     </summary>
                     <ul>
-                        <li><a >Finance Products</a></li>
-                        <li><a >Cards</a></li>
-                        <li><a >Investment</a></li>
+                        <li><a (click)="toFinanceProducts()">Finance Products</a></li>
+                        <li><a (click)="toCards()">Cards</a></li>
+                        <li><a (click)="toInvestment()">Investment</a></li>
                     </ul>
                 </details>
             </li>
             <li>
-                <a >
+                <a  (click)="toEmails()">
                     <i class="fa fa-envelope-o fa-2x"></i>
                     <span class="nav-text">Recent Emails</span>
                 </a>
             </li>
             <li>
-                <a >
+                <a (click)="toUpcomingEvents()">
                     <i class="fa fa-calendar-o fa-2x"></i>
                     <span class="nav-text">Upcoming Events</span>
                 </a>
             </li>
             <li>
-                <a >
+                <a (click)="toDocument()">
                     <i class="fa fa-file-text-o fa-2x"></i>
                     <span class="nav-text">New Document</span>
                 </a>
@@ -159,7 +159,7 @@
 
         <ul class="logout">
             <li>
-                <a >
+                <a (click)="logout()">
                     <i class="fa fa-power-off fa-2x"></i>
                     <span class="nav-text">Logout</span>
                 </a>

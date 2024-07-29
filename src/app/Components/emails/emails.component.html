@@ -41,7 +41,7 @@
 					<td>
 						<a (click)="playVideo(item.url)" class="btn btn-outline-success"> <i class="fa fa-envelope-open-o fa-1x"></i></a>
 						<a (click)="deleteMail(item.url)" class="btn btn-outline-danger"><i class="fa fa-trash-o fa-1x"></i></a>
-						<a (click)="replayMail(item.url)" class="btn btn-outline-secondary"><i class="fa fa-reply"></i></a>
+						<a (click)="replayMail(item.url)" class="btn btn-outline-secondary"><i class="fa fa-reply fa-x1"></i></a>
 					</td>
 			
 				</tr>
@@ -52,9 +52,10 @@
 				<li *ngFor="let page of pages" [class.active]="page === currentPage" (click)="goToPage(page)">{{ page }}
 				</li>
 			</ul>
-			<button class="btn btn-outline-secondary" (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+			<button class="btn btn-outline-secondary" (click)="prevPage()" [disabled]="currentPage === 1"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
 			<button class="btn btn-outline-success" (click)="nextPage()"
-				[disabled]="currentPage === totalPages">Next</button>
+				[disabled]="currentPage === totalPages"> <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+			</button>
 		</div>
 	</div>
 </div>

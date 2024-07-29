@@ -11,4 +11,8 @@ export class PreviousFundingComponent {
   previous(){
     this.router.navigate(['./funding']);
   }
+  toNewFinancing(){
+    this.router.navigate(['./services']);
+
+  }
 }

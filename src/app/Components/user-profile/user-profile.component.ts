@@ -19,7 +19,9 @@ export class UserProfileComponent{
   }
 
   logout() {
-    this.logoutEvent.emit();
+    // this.logoutEvent.emit();
+    this.router.navigate(['./home']);
+
   }
   previous() {
     this.router.navigate(['./user-dashboard']);

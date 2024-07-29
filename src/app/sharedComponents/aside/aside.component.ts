@@ -16,39 +16,67 @@ export class AsideComponent {
 
   isDropdownActive: boolean = false;
 
-constructor(private router:Router ,private renderer: Renderer2){
+  constructor(private router: Router, private renderer: Renderer2) {
 
-}
-logo(){
-  this.router.navigate(['./user-dashboard']);
+  }
+  logo() {
+    this.router.navigate(['./user-dashboard']);
+  }
+  toAccount() {
+    this.router.navigate(['./user-profile']);
+  }
+  toSettings() {
+    this.router.navigate(['./user-profile']);
+  }
+  toHelp() {
+    this.router.navigate(['./contact']);
+  }
+  logout() {
+    this.router.navigate(['./home']);
+  }
+  toDashboard() {
+    this.router.navigate(['./user-dashboard']);
+  }
+  toFunding() {
+    this.router.navigate(['./funding']);
+  }
+  toPreviousFunding() {
+    this.router.navigate(['./previous-funding']);
+  }
+  toFundingTracker() {
+    this.router.navigate(['./funding-tracker']);
+  }
+  toNewFinancing() {
+    this.router.navigate(['./services']);
+  }
+  toFinanceProducts() {
+    this.router.navigate(['./finance-products']);
+  }
+  toCards() {
+    this.router.navigate(['./cards']);
+  }
+  toInvestment() {
+    this.router.navigate(['./investment']);
+  }
+  toEmails(){
+    this.router.navigate(['./emails']);
+  }
+  toUpcomingEvents(){
+    this.router.navigate(['./events']);
+  }
+  toDocument(){
+    this.router.navigate(['./documents']);
+  }
 
-}
-toAccount(){
-  this.router.navigate(['./user-profile']);
 
-}
+  // logout() {
+  //   this.logoutEvent.emit();
+  // }
 
-toSettings(){
-  this.router.navigate(['./user-profile']);
+  toProfile() {
+    this.router.navigate(['./user-profile']);
 
-}
-toHelp(){
-  this.router.navigate(['./contact']);
-
-}
-logout() {
-  this.router.navigate(['./home']);
-
-}
-
-// logout() {
-//   this.logoutEvent.emit();
-// }
-
-toProfile(){
-  this.router.navigate(['./user-profile']);
-
-}
+  }
   toggleDropdown() {
     const dropdown = this.headerAvatar.nativeElement.nextElementSibling;
     console.log('Dropdown element:', dropdown); // Check if this is correctly finding the dropdown
