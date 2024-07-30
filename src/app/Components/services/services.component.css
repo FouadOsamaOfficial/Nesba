@@ -4,7 +4,10 @@
 }
 .container{
     margin-top: 100px;
-    margin-bottom: 350px;
+    margin-bottom: 150px;
+    /* transition: margin-left 300ms; */
+    margin-left: 250px;
+
 }
 .card {
     border: none;
@@ -32,6 +35,6 @@
 
   .btn{
     margin: 10px;
-    margin-left: 140px;
+    margin-left: 250px;
 
   }

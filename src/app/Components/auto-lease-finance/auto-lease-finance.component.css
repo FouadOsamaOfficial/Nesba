@@ -11,6 +11,11 @@
 }
 .readyOfferTitle{
     margin-top: 50px;
+    margin-left: 250px;
+    /* width: 100%; */
+}
+.mortgageTitle{
+    margin-left: 43px;
 }
 .button--anchor {
     background: none;
@@ -309,7 +314,7 @@
     margin-bottom: 75px;
   }
   
-  #mortgage_calculator_form .calc_container , .readyOfferTitle {
+  #mortgage_calculator_form .calc_container  {
     width: 80%;
     margin-left: 10%;
   }
@@ -426,7 +431,7 @@
 
 .btn {
     margin: 10px;
-    margin-left: 140px;
+    margin-left: 250px;
 
 }
 

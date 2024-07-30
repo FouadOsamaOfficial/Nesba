@@ -99,9 +99,9 @@
   text-align: center;
 }
 
-  .btn{
+  .previous{
     margin: 10px;
-    margin-left: 140px;
+    /* margin-left: 140px; */
 
   }
 
@@ -351,6 +351,7 @@
     width: 100%;
     padding: 1rem 2rem 1.2rem 1.2rem;
     transition: margin-left 300ms;
+    /* margin-left: 250px; */
     /* margin-top: 20px !important; */
   
   }
