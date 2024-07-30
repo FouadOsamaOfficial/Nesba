@@ -1,4 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=josefin+Sans:wght@400;500;600;700&display=swap'); */
+.cardsHeader {
+    margin-top: 50px;
+    text-align: center;
+}
 
 * {
     margin: 0;
@@ -15,7 +18,7 @@
     margin-top: 50px;
     /* background: #000; */
     min-width: -webkit-fill-available;
-/* margin: 50px; */
+    /* margin: 50px; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -30,6 +33,15 @@
     background-color: transparent;
     border: none;
 
+}
+
+.cardTypes {
+    margin-top: 100px;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #10182F;
+    font-weight: bold;
 }
 
 .card-inner {
@@ -129,13 +141,13 @@
 
 .card-cvv div {
     flex: 1;
-    
+
 }
 
 .card-cvv img {
     width: 100%;
     display: flex;
-    line-height: 0;    
+    line-height: 0;
 }
 
 .card-cvv p {
@@ -168,7 +180,7 @@
     transform: rotateY(-180deg);
 }
 
-.row .Table{
+.row .Table {
     display: flex;
     justify-items: center;
     justify-content: center !important;
@@ -180,8 +192,4 @@
     padding: 5px;
     margin-left: 140px;
 
-  }
-
-
-
-  
+}

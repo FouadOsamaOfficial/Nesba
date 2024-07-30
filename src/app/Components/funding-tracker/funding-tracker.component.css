@@ -94,6 +94,11 @@
     color: red;
   } */
 
+.fundingTrackerHeader{
+  margin-top: 50px;
+  text-align: center;
+}
+
   .btn{
     margin: 10px;
     margin-left: 140px;
@@ -149,7 +154,7 @@
   
   
    .container{
-    margin-top: 120px !important;
+    margin-top: 50px !important;
   
   } 
    :root {
@@ -169,7 +174,7 @@
     box-sizing: border-box;
   } */
   body {
-      margin-top: 180px !important;
+      margin-top: 100px !important;
     background-color: var(--bg);
     overflow-x: hidden;
   }

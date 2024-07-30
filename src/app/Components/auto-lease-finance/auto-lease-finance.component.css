@@ -1,10 +1,17 @@
+.autoLessHeader{
+    margin-top: 50px;
+    text-align: center;
+}
 .readyOffer {
     /* margin-top: 150px; */
     justify-content: center;
     justify-items: center;
     display: flex;
-}
 
+}
+.readyOfferTitle{
+    margin-top: 50px;
+}
 .button--anchor {
     background: none;
     border: none;

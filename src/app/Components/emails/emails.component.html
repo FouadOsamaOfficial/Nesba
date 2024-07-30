@@ -1,71 +1,78 @@
 <app-aside></app-aside>
-
+<h2 class="emailHeadr">EMAILS</h2>
 <div class="wrapper">
-	<div class="container">
-		<div class="filter">
-			<div class="row">
-				<div class="col-sm-2">
-					<div class="show-row">
-						<select class="form-control" (change)="changeShowCount($event)">
-							<option *ngFor="let option of showOptions" [value]="option">{{ option }}</option>
-						</select>
-					</div>
-				</div>
-				<div class="col-sm-4"></div>
-				<div class="col-sm-6">
-					<div class="search-row">
-						<input type="text" (input)="filterMusic($event)" class="form-control"
-							placeholder="Enter your keyword">
-					</div>
-				</div>
-			</div>
-		</div>
-		<table class="table table-responsive table-hover">
-			<thead>
-				<tr>
-					<th>No</th>
-					<th>Title</th>
-					<th>Mail</th>
-					<th>Option</th>
-
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let item of paginatedMusicList; let i = index" [attr.data-url]="item.url" class="list">
-					<td>{{ i + 1 }}</td>
-					<!-- <td>
-						<div class="thumb"><img [src]="getThumbnailUrl(item.url)" class="img-responsive"></div>
-					</td> -->
-					<td>{{ item.title }}</td>
-					<td>{{ item.url }}</td>
-					<td>
-						<a (click)="playVideo(item.url)" class="btn btn-outline-success"> <i class="fa fa-envelope-open-o fa-1x"></i></a>
-						<a (click)="deleteMail(item.url)" class="btn btn-outline-danger"><i class="fa fa-trash-o fa-1x"></i></a>
-						<a (click)="replayMail(item.url)" class="btn btn-outline-secondary"><i class="fa fa-reply fa-x1"></i></a>
-					</td>
-			
-				</tr>
-			</tbody>
-		</table>
-		<div class="text-center controller">
-			<ul class="pagination">
-				<li *ngFor="let page of pages" [class.active]="page === currentPage" (click)="goToPage(page)">{{ page }}
-				</li>
-			</ul>
-			<button class="btn btn-outline-secondary" (click)="prevPage()" [disabled]="currentPage === 1"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
-			<button class="btn btn-outline-success" (click)="nextPage()"
-				[disabled]="currentPage === totalPages"> <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-			</button>
-		</div>
-	</div>
-</div>
-<div class="video_box" *ngIf="showVideo">
-	<div class="video_inner">
-		<div class="modal-close" (click)="closeVideo()">&times;</div>
-		<div class="video_body">
-			<iframe [src]="currentVideoUrl" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</div>
+  <div class="container">
+    <div class="filter">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="show-row">
+            <select class="form-control" (change)="changeShowCount($event)">
+              <option *ngFor="let option of showOptions" [value]="option">{{ option }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-6">
+          <div class="search-row">
+            <input type="text" (input)="filterEmails($event)" class="form-control" placeholder="Enter your keyword">
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table table-responsive table-hover">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Subject</th>
+          <th>Sender</th>
+          <th>Body</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let email of paginatedEmails; let i = index" [attr.data-id]="email.id" class="list">
+          <td>{{ i + 1 }}</td>
+          <td>{{ email.subject }}</td>
+          <td>{{ email.sender }}</td>
+          <td>{{ email.body }}</td>
+          <td>
+            <a (click)="openEmail(email.id)" class="btn btn-outline-success">
+              <i class="fa fa-envelope-open-o fa-1x"></i>
+            </a>
+            <a (click)="deleteEmail(email.id)" class="btn btn-outline-danger">
+              <i class="fa fa-trash-o fa-1x"></i>
+            </a>
+            <a (click)="replayEmail(email.id)" class="btn btn-outline-secondary">
+              <i class="fa fa-reply fa-x1"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="text-center controller">
+      <ul class="pagination">
+        <li *ngFor="let page of pages" [class.active]="page === currentPage" (click)="goToPage(page)">
+          {{ page }}
+        </li>
+      </ul>
+      <button class="btn btn-outline-secondary" (click)="prevPage()" [disabled]="currentPage === 1">
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+      </button>
+      <button class="btn btn-outline-success" (click)="nextPage()" [disabled]="currentPage === totalPages">
+        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
 </div>
 
-<button class="btn btn-outline-secondary" (click)="previous()">Previous</button>
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2>{{ selectedEmail?.subject }}</h2>
+    <p><strong>Sender:</strong> {{ selectedEmail?.sender }}</p>
+    <p><strong>Body:</strong> {{ selectedEmail?.body }}</p>
+    <!-- Add more details as needed -->
+  </div>
+</div>
+
+<button class="btn btn-outline-secondary previous" (click)="previous()">Previous</button>

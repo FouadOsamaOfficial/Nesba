@@ -30,7 +30,7 @@ import { SecurityComponent } from './sharedComponents/security/security.componen
 import { DocumentsComponent } from './Components/documents/documents.component';
 import { SpendingComponent } from './Components/spending/spending.component';
 import { EventsComponent } from './Components/events/events.component';
-import { EmailsComponent, SafeUrlPipe } from './Components/emails/emails.component';
+import { EmailsComponent } from './Components/emails/emails.component';
 import { ComingSoonComponent } from './sharedComponents/coming-soon/coming-soon.component';
 import { DebitComponent } from './Components/debit/debit.component';
 import { CreditComponent } from './Components/credit/credit.component';
@@ -74,7 +74,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     ComingSoonComponent,
     DebitComponent,
     CreditComponent,
-    SafeUrlPipe,
+    // SafeUrlPipe,
     MortgageFinanceComponent,
     PersonalFinanceComponent,
     AutoLeaseFinanceComponent,

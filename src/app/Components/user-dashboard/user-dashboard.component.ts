@@ -12,6 +12,7 @@ export class UserDashboardComponent {
   @ViewChild('subHeadings') subHeadings!: ElementRef;
   @ViewChild('headerAvatar')headerAvatar!: ElementRef;
   isDropdownActive: boolean = false;
+  // isDropdownActive = false;
 
 
   constructor( private router:Router ,private renderer: Renderer2){}
@@ -67,21 +68,25 @@ export class UserDashboardComponent {
   // }
   
 
+  // toggleDropdown() {
+  //   this.isDropdownActive = !this.isDropdownActive;
+  // }
+
+  // toggleSubheading(subHeading: HTMLElement) {
+  //   subHeading.classList.toggle('navList__subheading--open');
+  //   const subList = subHeading.nextElementSibling;
+  //   if (subList) {
+  //     subList.classList.toggle('subList--hidden');
+  //   }
+  // }
+
+
+
   toggleDropdown() {
     this.isDropdownActive = !this.isDropdownActive;
   }
-
-  toggleSubheading(subHeading: HTMLElement) {
-    subHeading.classList.toggle('navList__subheading--open');
-    const subList = subHeading.nextElementSibling;
-    if (subList) {
-      subList.classList.toggle('subList--hidden');
-    }
-  }
-
   renderChart() {
     const chart = am4core.create("chartdiv", am4charts.XYChart);
-    // Chart configuration
   }
 
   onMenuClick() {

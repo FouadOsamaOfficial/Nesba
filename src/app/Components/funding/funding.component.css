@@ -9,8 +9,13 @@
   
 
 } */
+.fundingHeader{
+  margin-top: 50px;
+  text-align: center;
+
+}
 .container {
-  margin-top: 300px;
+  margin-top: 150px;
   /* margin-left: 270px;  */
   position: relative;
   /* display: flex; */
