@@ -1,8 +1,3 @@
-/* @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css); */
-/* @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300); */
-
-
-
 /* 
 -----------------
 Dropdown Styles 
@@ -79,8 +74,6 @@ Dropdown Styles
 .dropdown-container .dropdown ul li {
   list-style-type: none;
   display: block;
-  /* If you use divider & borders, it's best to use top borders */
-  /*border-top: 1px solid #ccc;*/
 }
 .dropdown-container .dropdown ul li:first-of-type {
   border: none;
@@ -111,10 +104,6 @@ Dropdown Styles
 .dropdown-container .dropdown ul li.divider {
   border: none;
   border-bottom: 1px solid #333;
-  /* 
-   * removes border from Li after the divider element
-   * best used in combination with top borders on other LIs 
-   */
 }
 .dropdown-container .dropdown ul li.divider ~ li {
   border: none;
@@ -129,7 +118,6 @@ IGNORE: CODEPEN STYLES
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  /* padding: 60px 0; */
   margin: 0;
   font-size: 13pt;
   scrollbar-gutter: stable;
@@ -137,7 +125,6 @@ body {
 
 a {
   text-decoration: none;
-  /* color: #ff34b2; */
   cursor: pointer;
 }
 
@@ -145,45 +132,19 @@ section {
   width: 100%;
   margin: 0 0 5px 0; 
 }
-/* section blockquote {
-  padding: 10px 15px;
-  border-radius: 6px;
-  background: #f2f2f2;
-  margin: 0 0 0 0;
-  width: 100%;
-  border-left: 5px solid #ff34b2;
-}
-section article {
-  box-shadow: 0 0 10px #00000030;
-  border-radius: 6px;
-  margin: 0 0;
-} */
-
 .navy {
   background: #10182F;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 6px;
-  
+  border-radius: 6px; 
 }
-/* nav .links {
-  display: flex;
-  align-items: center;
-}
-nav .links a {
-  text-decoration: none;
-  color: #fff;
-  padding: 10px 15px;
-} */
+
 .navy .links a.icon-logo {
   font-size: 1.5rem;
   line-height: 1;
   color: #ffffff;
-  /* padding: 10px 15px; */
   margin-left: 260px;
-
-
 }
 
 .block {
@@ -198,10 +159,6 @@ nav .links a {
   font-style: italic;
 }
 
-
-
-
-
 .fa-2x {
   font-size: 2em;
 }
@@ -215,11 +172,8 @@ nav .links a {
   vertical-align: middle;
   font-size: 27px;
   color: #fff;
-
+  align-content: center;
 }
-
-
-
 .main-menu:hover,
 nav.main-menu.expanded {
   width: 250px;
@@ -359,47 +313,20 @@ summary:hover{
   src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
 
-/* .main-menu, .main-menu li, .main-menu li a {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-} */
-
-
-
-
 
 .dropdown summary {
   list-style: none;
   cursor: pointer;
-  /* padding: 10px 20px; */
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   color: #fff;
-  /* border-bottom: 1px solid #ccc; */
 }
 
 .dropdown summary::after {
   content: '\25BC';
   font-size: 0.8em;
   margin: 10px;
-
-
 }
-
-/* .dropdown ul {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background: #fff;
-  padding: 0;
-  list-style: none;
-  margin: 0;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-} */
-
-
 
 .dropdown ul li a {
   display: block;

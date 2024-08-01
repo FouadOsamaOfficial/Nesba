@@ -1,171 +1,318 @@
+/* Base Styles */
 a {
-    text-decoration: none;
-  }
-  .eventsHeader{
-    margin-top: 50px;
-    text-align: center;
-  }
-  .container {
-    margin-top: 100px;
-    margin-bottom: 50px;
-    margin-right: 10px;
-    display: flex;
-  }
-  
-  .thumbnail-date-day {
-    color: rgb(255, 255, 255);
-  }
-  
-  .thumbnail-date-month {
-    color: rgb(255, 255, 255);
-  }
-  
-  /* div {
-    display: block;
-  } */
-  
-  div,
-  span {
-    box-sizing: initial;
-    line-height: 1;
-  }
-  
-  .thumbnail {
-    -webkit-touch-callout: none;
-    border-radius: 3px;
-    box-sizing: initial;
-    height: 52px;
-    min-width: 52px;
-    overflow: hidden;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 52px;
-  }
-  
-  .grey {
-    background-color: #bababaa7;
-  }
-  
-  .thumbnail .thumbnail-date span,
-  .thumbnail .thumbnail-date span {
-    display: inline-block;
-    line-height: 1;
-  }
-  
-  .thumbnail .thumbnail-date .thumbnail-date-day {
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: 4px;
-    position: relative;
-    text-align: center;
-    top: 4px;
-    width: 100%;
-  }
-  
-  .thumbnail .thumbnail-date .thumbnail-date-month {
-    font-size: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-  }
-  
-  .tags-list-town {
-    background-color: #198754;
-  }
-  
-  .tags-list span {
-    border-radius: 2px;
-    color: #fff;
-    cursor: default;
-    display: inline-block;
-    font-size: 12px;
-    line-height: 1;
-    margin-bottom: 4px;
-    margin-right: 5px;
-    padding: 4px 6px;
-    position: relative;
-  }
-  
-  .text-over {
-    font-size: 1.3em;
-    font-weight: 900;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .card {
-    border: 0 !important;
-    border-radius: 0 !important;
-  }
-  
-  .card-img-top {
-    border-radius: 0 !important;
-  }
-  
-  .image-container {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0 0 0 / 57%);
-    z-index: 1;
-  }
-  
-  .image-container .card-img-top {
-    position: relative;
-    z-index: 0;
-  }
-  
-  .tags-list-town {
-    background-color: #9c27b0;
-  }
-  /* Top left text */
-  .bottom-left {
-    position: absolute;
-    bottom: 14px;
-    left: 16px;
-    z-index: 999;
-  }
-  
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    color: #fff;
-    font-size: 10px;
-    z-index: 999;
-  }
-  
-  .top-right {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    z-index: 999;
-  }
-  
-  .thumbnail {
-    box-shadow: 0.5rem 0.5rem #00000085, -0.5rem -0.5rem #cccccca3;
-  }
-  
-  .card {
-    border: 1px solid #eee;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-  }
-  .tags-list span {
-    font-size: 14px !important;
-  }
-  
-  .btn {
-    margin: 10px;
-    margin-left: 140px;
+  text-decoration: none;
+}
 
+.eventsHeader {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.thumbnail-date-day {
+  color: rgb(255, 255, 255);
+}
+
+.thumbnail-date-month {
+  color: rgb(255, 255, 255);
+}
+
+div,
+span {
+  box-sizing: initial;
+  line-height: 1;
+}
+
+.thumbnail {
+  -webkit-touch-callout: none;
+  border-radius: 3px;
+  box-sizing: initial;
+  height: 52px;
+  min-width: 52px;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 52px;
+}
+
+.grey {
+  background-color: #bababaa7;
+}
+
+.thumbnail .thumbnail-date span {
+  display: inline-block;
+  line-height: 1;
+}
+
+.thumbnail .thumbnail-date .thumbnail-date-day {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 4px;
+  position: relative;
+  text-align: center;
+  top: 4px;
+  width: 100%;
+}
+
+.thumbnail .thumbnail-date .thumbnail-date-month {
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.tags-list-town {
+  background-color: #198754;
+}
+
+.tags-list span {
+  border-radius: 2px;
+  color: #fff;
+  cursor: default;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 4px;
+  margin-right: 5px;
+  padding: 4px 6px;
+  position: relative;
+}
+
+.text-over {
+  font-size: 1.3em;
+  font-weight: 900;
+  color: #fff;
+  padding: 20px;
+}
+
+.card {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.card-img-top {
+  border-radius: 0 !important;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.57);
+  z-index: 1;
+}
+
+.image-container .card-img-top {
+  position: relative;
+  z-index: 0;
+}
+
+.tags-list-town {
+  background-color: #9c27b0;
+}
+
+/* Top left text */
+.bottom-left {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  z-index: 999;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: #fff;
+  font-size: 10px;
+  z-index: 999;
+}
+
+.top-right {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 999;
+}
+
+.thumbnail {
+  box-shadow: 0.5rem 0.5rem #00000085, -0.5rem -0.5rem #cccccca3;
+}
+
+.card {
+  border: 1px solid #eee;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.tags-list span {
+  font-size: 14px !important;
+}
+
+.btn {
+  margin: 10px;
+  margin-left: 250px;
+}
+
+/* Media Queries for Different Screen Sizes */
+
+/* Large Devices (desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin-right: 20px;
   }
+
+  .btn {
+    margin-left: 150px;
+  }
+
+  .card-img-top {
+    width: 100%;
+  }
+}
+
+/* Medium Devices (tablets, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .btn {
+    margin-left: 100px;
+  }
+
+  .thumbnail {
+    height: 42px;
+    width: 42px;
+  }
+
+  .thumbnail .thumbnail-date-day {
+    font-size: 20px;
+  }
+
+  .thumbnail .thumbnail-date-month {
+    font-size: 8px;
+  }
+}
+
+/* Small Devices (landscape phones, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-left: 50px;
+  }
+
+  .thumbnail {
+    height: 36px;
+    width: 36px;
+  }
+
+  .thumbnail .thumbnail-date-day {
+    font-size: 18px;
+  }
+
+  .thumbnail .thumbnail-date-month {
+    font-size: 7px;
+  }
+}
+
+/* Extra Small Devices (portrait phones, less than 768px) */
+@media only screen and (max-width: 576px) {
+  .container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    margin-left: 20px;
+  }
+
+  .thumbnail {
+    height: 30px;
+    width: 30px;
+  }
+
+  .thumbnail .thumbnail-date-day {
+    font-size: 16px;
+  }
+
+  .thumbnail .thumbnail-date-month {
+    font-size: 6px;
+  }
+
+  .text-over {
+    font-size: 1em;
+    padding: 10px;
+  }
+}
+
+/* iPhone SE/5/5s/5c and similar small devices (320px - 568px) */
+@media only screen and (max-width: 568px) {
+  .container {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    margin-left: 10px;
+  }
+
+  .thumbnail {
+    height: 28px;
+    width: 28px;
+  }
+
+  .thumbnail .thumbnail-date-day {
+    font-size: 14px;
+  }
+
+  .thumbnail .thumbnail-date-month {
+    font-size: 5px;
+  }
+}
+
+/* iPhone X/XS/11 Pro and similar (375px - 812px) */
+@media only screen and (max-width: 812px) {
+  .container {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    margin-left: 20px;
+  }
+
+  .thumbnail {
+    height: 32px;
+    width: 32px;
+  }
+
+  .thumbnail .thumbnail-date-day {
+    font-size: 16px;
+  }
+
+  .thumbnail .thumbnail-date-month {
+    font-size: 6px;
+  }
+}

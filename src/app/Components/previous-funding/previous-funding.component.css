@@ -33,7 +33,7 @@
 
   .btn{
     margin: 10px;
-    margin-left: 140px;
+    margin-left: 250px;
 
   }
 
@@ -111,7 +111,7 @@
   body {
       margin-top: 100px !important;
     background-color: var(--bg);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
   img {
     width: 100%;

@@ -1,5 +1,14 @@
+/* Global Styles */
 * {
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #131313;
 }
 
 .debitsHeader {
@@ -16,130 +25,114 @@
 
 .page-contain {
   display: flex;
-  /* min-height: 100vh; */
   align-items: center;
   justify-content: center;
-  /* background: #e7f3f1; */
-  /* border: 0.75em solid white; */
   padding: 2em;
-  /* font-family: "Open Sans", sans-serif; */
 }
 
 .data-card {
-  /* float: right; */
   display: flex;
   flex-direction: column;
   width: 95em;
   min-height: 20.75em;
   overflow: hidden;
-  border-radius: 0.5em;
-  text-decoration: none;
   border-radius: 25px;
   background: white;
   margin: 1em;
   padding: 2.75em 2.5em;
-  box-shadow: 0 1.5em 2.5em -0.5em rgba(#000000, 0.1);
+  box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.45s ease, background 0.45s ease;
+}
 
-  h3 {
-    color: #2e3c40;
-    font-size: 3.5em;
-    font-weight: 600;
-    line-height: 1;
-    padding-bottom: 0.5em;
-    margin: 0 0 0.142857143em;
-    border-bottom: 2px solid #753bbd;
-    transition: color 0.45s ease, border 0.45s ease;
-  }
+.data-card h3 {
+  color: #2e3c40;
+  font-size: 3.5em;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin: 0 0 0.142857143em;
+  border-bottom: 2px solid #753bbd;
+  transition: color 0.45s ease, border 0.45s ease;
+}
 
-  h4 {
-    color: #627084;
-    text-transform: uppercase;
-    font-size: 1.125em;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    margin: 0 0 1.777777778em;
-    transition: color 0.45s ease;
-  }
+.data-card h4 {
+  color: #627084;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin: 0 0 1.777777778em;
+  transition: color 0.45s ease;
+}
 
-  p {
-    opacity: 0;
-    color: #ffffff;
-    font-weight: 600;
-    line-height: 1.8;
-    margin: 0 0 1.25em;
-    transform: translateY(-1em);
-    transition: opacity 0.45s ease, transform 0.5s ease;
-  }
+.data-card p {
+  opacity: 0;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.8;
+  margin: 0 0 1.25em;
+  transform: translateY(-1em);
+  transition: opacity 0.45s ease, transform 0.5s ease;
+}
 
-  .link-text {
-    display: block;
-    color: #753bbd;
-    font-size: 1.125em;
-    font-weight: 600;
-    line-height: 1.2;
-    margin: auto 0 0;
-    transition: color 0.45s ease;
+.data-card .link-text {
+  display: block;
+  color: #753bbd;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: auto 0 0;
+  transition: color 0.45s ease;
+}
 
-    svg {
-      margin-left: 0.5em;
-      transition: transform 0.6s ease;
+.data-card .link-text svg {
+  margin-left: 0.5em;
+  transition: transform 0.6s ease;
+}
 
-      path {
-        transition: fill 0.45s ease;
-      }
-    }
-  }
+.data-card .link-text svg path {
+  transition: fill 0.45s ease;
+}
 
-  &:hover {
-    background: #753bbd;
-    transform: scale(1.02);
+.data-card:hover {
+  background: #753bbd;
+  transform: scale(1.02);
+}
 
-    h3 {
-      color: #ffffff;
-      border-bottom-color: #a754c4;
-    }
+.data-card:hover h3 {
+  color: #ffffff;
+  border-bottom-color: #a754c4;
+}
 
-    h4 {
-      color: #ffffff;
-    }
+.data-card:hover h4 {
+  color: #ffffff;
+}
 
-    p {
-      opacity: 1;
-      transform: none;
-    }
+.data-card:hover p {
+  opacity: 1;
+  transform: none;
+}
 
-    .link-text {
-      color: #ffffff;
+.data-card:hover .link-text {
+  color: #ffffff;
+}
 
-      svg {
-        animation: point 1.25s infinite alternate;
+.data-card:hover .link-text svg {
+  animation: point 1.25s infinite alternate;
+}
 
-        path {
-          fill: #ffffff;
-        }
-      }
-    }
-  }
+.data-card:hover .link-text svg path {
+  fill: #ffffff;
 }
 
 @keyframes point {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(0.125em);
   }
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #131313;
 }
 
 .container {
@@ -166,53 +159,19 @@ body {
   height: 100%;
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
-}
-
-.container .card:before {
   background: #0056b8;
-
 }
 
-.containerOne .card:before {
-  background: #2596be;
-
-}
-
-.containerTwo .card:before {
-  background: #d02b2f;
-
-}
-
-.containerThree .card:before {
-  background: #645dc7;
-
-}
-
-.containerFour .card:before {
-  background: #383b3a;
-
-}
-
-.containerFive .card:before {
-  background: #171b4e;
-}
-
-.containerSix .card:before {
-  background: #1b1c1c;
-}
-
-.containerSeven .card:before {
-  background: #97b7d0;
-}
-
-.containerEight .card:before {
-  background: #2c2649;
-}
-
-.containerNien .card:before {
-  background: #9a9a9a;
-}
-
+/* Additional Card Colors */
+.containerOne .card:before { background: #2596be; }
+.containerTwo .card:before { background: #d02b2f; }
+.containerThree .card:before { background: #645dc7; }
+.containerFour .card:before { background: #383b3a; }
+.containerFive .card:before { background: #171b4e; }
+.containerSix .card:before { background: #1b1c1c; }
+.containerSeven .card:before { background: #97b7d0; }
+.containerEight .card:before { background: #2c2649; }
+.containerNien .card:before { background: #9a9a9a; }
 
 .container .card:hover:before {
   clip-path: circle(300px at 80% -20%);
@@ -226,7 +185,7 @@ body {
   font-size: 5em;
   font-weight: 800;
   font-style: italic;
-  color: rgba(255, 255, 25, 0.05)
+  color: rgba(255, 255, 25, 0.05);
 }
 
 .container .card .imgBx {
@@ -242,7 +201,6 @@ body {
 .container .card:hover .imgBx {
   top: 0%;
   transform: translateY(0%);
-
 }
 
 .container .card .imgBx img {
@@ -277,26 +235,13 @@ body {
 
 .container .card .contentBx .size,
 .container .card .contentBx .color {
-  /* display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 20px;
-    transition: 0.5s;opacity: 0;
-    visibility: hidden;
-    padding-top: 0;
-    padding-bottom: 0; */
-
   display: grid;
   justify-content: center;
   align-items: center;
   padding: 8px 20px;
   transition: 0.5s;
   opacity: 0;
-  /* padding: 1px; */
-  /* margin: 0px; */
   visibility: hidden;
-  /* padding-top: 0; */
-
 }
 
 .container .card:hover .contentBx .size {
@@ -323,29 +268,10 @@ body {
 }
 
 .container .card .contentBx .size span {
-  /* width: 26px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline;
-    color: #111;
-    background: #fff;
-    margin: 0 5px;
-    transition: 0.5s;
-    color: #111;
-    border-radius: 4px;
-    cursor: pointer; */
-
-
-  /* width: 26px; */
-  /* height: 26px; */
   text-align: center;
-  /* line-height: 26px; */
   font-size: 12px;
   display: inline;
   color: #111;
-  /* background: #fff; */
   margin: 0 5px;
   transition: 0.5s;
   border-radius: 4px;
@@ -397,11 +323,128 @@ body {
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
-
 }
 
 .btn {
   margin: 10px;
   margin-left: 140px;
+}
 
+/* Media Queries for Different Screen Sizes */
+
+/* Large Devices (desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .data-card {
+    width: 75em;
+    padding: 2em;
+  }
+}
+
+/* Medium Devices (tablets, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .data-card {
+    width: 60em;
+    padding: 1.5em;
+  }
+
+  .container .card {
+    width: 260px;
+    height: 420px;
+  }
+}
+
+/* Small Devices (landscape phones, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .data-card {
+    width: 45em;
+    padding: 1.5em;
+  }
+
+  .container .card {
+    width: 220px;
+    height: 360px;
+  }
+
+  .data-card h3 {
+    font-size: 3em;
+  }
+
+  .data-card h4 {
+    font-size: 1em;
+  }
+}
+
+/* Extra Small Devices (portrait phones, less than 768px) */
+@media only screen and (max-width: 576px) {
+  .data-card {
+    width: 35em;
+    padding: 1em;
+  }
+
+  .container .card {
+    width: 200px;
+    height: 320px;
+  }
+
+  .data-card h3 {
+    font-size: 2.5em;
+  }
+
+  .data-card h4 {
+    font-size: 0.875em;
+  }
+
+  .data-card p {
+    font-size: 0.875em;
+  }
+}
+
+/* iPhone SE/5/5s/5c and similar small devices (320px - 568px) */
+@media only screen and (max-width: 568px) {
+  .data-card {
+    width: 25em;
+    padding: 0.75em;
+  }
+
+  .container .card {
+    width: 180px;
+    height: 280px;
+  }
+
+  .data-card h3 {
+    font-size: 2em;
+  }
+
+  .data-card h4 {
+    font-size: 0.75em;
+  }
+
+  .data-card p {
+    font-size: 0.75em;
+  }
+}
+
+/* iPhone X/XS/11 Pro and similar (375px - 812px) */
+@media only screen and (max-width: 812px) {
+  .data-card {
+    width: 20em;
+    padding: 0.5em;
+  }
+
+  .container .card {
+    width: 160px;
+    height: 240px;
+  }
+
+  .data-card h3 {
+    font-size: 1.5em;
+  }
+
+  .data-card h4 {
+    font-size: 0.625em;
+  }
+
+  .data-card p {
+    font-size: 0.625em;
+  }
 }

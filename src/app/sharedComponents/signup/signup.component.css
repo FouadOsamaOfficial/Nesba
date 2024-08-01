@@ -7,10 +7,7 @@
 }
 
 body {
-
   background-color: #4b111b ;
-/* background-color: #a4243b; */
-
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -39,7 +36,6 @@ margin-inline: auto !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   border-radius: 20px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);

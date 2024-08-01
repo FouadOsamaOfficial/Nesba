@@ -1,9 +1,9 @@
 <div class="grid">
     <header class="header">
       <i class="fa fa-bars header__menu"></i>
-      <div class="header__search">
+      <!-- <div class="header__search">
         <input class="header__input" placeholder="Search..." />
-      </div>
+      </div> -->
       <div class="header__avatar" (click)="toggleDropdown()" #headerAvatar>
         <div class="dropdown" *ngIf="isDropdownActive">
           <ul class="dropdown__list">
@@ -253,70 +253,70 @@
         </div>
       </div>
       <div class="main-overview">
-        <div class="overviewCard">
+        <div class="overviewCard" (click)="goToDocuments()">
           <div class="overviewCard-icon overviewCard-icon--document">
              <i class="fa fa-file-alt"></i>
           </div>
           <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
 
-          <div class="overviewCard-description" (click)="goToDocuments()">
+          <div class="overviewCard-description" >
             <h3 class="overviewCard-title text-light1">New <strong>Document</strong></h3>
             <p class="overviewCard-subtitle">Europe Trip</p>
           </div>
         </div>
-        <div class="overviewCard">
+        <div class="overviewCard" (click)="goToEvents()">
           <div class="overviewCard-icon overviewCard-icon--calendar">
              <i class="fa fa-calendar-check"></i>
           </div>
           <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
-          <div class="overviewCard-description" (click)="goToEvents()">
+          <div class="overviewCard-description" >
             <h3 class="overviewCard-title text-light1">Upcoming <strong>Event</strong></h3>
             <p class="overviewCard-subtitle">Chili Cookoff</p>
           </div>
         </div>
-        <div class="overviewCard">
+        <div class="overviewCard" (click)="goToEmails()">
           <div class="overviewCard-icon overviewCard-icon--mail">
              <!-- <i class="fa fa-envelope"></i> -->
           </div>
           <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
 
-          <div class="overviewCard-description" (click)="goToEmails()">
+          <div class="overviewCard-description" >
             <h3 class="overviewCard-title text-light1">Recent <strong>Emails</strong></h3>
             <p class="overviewCard-subtitle">+10</p>
           </div>
         </div>
 
-        <div class="overviewCard">
+        <div class="overviewCard" (click)="goingToNewFinancing()">
             <div class="overviewCard-icon overviewCard-icon--photo">
                <i class="fa fa-file-image"></i>
             </div>
             <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
 
-            <div class="overviewCard-description" (click)="goingToNewFinancing()">
+            <div class="overviewCard-description" >
               <h3 class="overviewCard-title text-light1">New  <strong>financing</strong></h3>
               <p class="overviewCard-subtitle">Choose Plane</p>
             </div>
           </div>
 
 
-          <div class="overviewCard">
+          <div class="overviewCard"  (click)="goingToFunding()">
             <div class="overviewCard-icon overviewCard-icon--photo">
                <i class="fa fa-file-image"></i>
             </div>
             <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
 
-            <div class="overviewCard-description" (click)="goingToFunding()">
+            <div class="overviewCard-description">
               <h3 class="overviewCard-title text-light1">Funding <strong></strong></h3>
               <p class="overviewCard-subtitle">$1,000,000</p>
             </div>
           </div>
      
       </div> <!-- /.main__overview -->
-      <div class="main__cards">
+      <div class="main__cards" (click)="goToEvents()">
         <div class="card">
           <div class="card__header">
             <div class="card__header-title text-light">Your <strong>Events</strong>
-              <a class="card__header-link text-bold" (click)="goToEvents()">View All</a>
+              <a class="card__header-link text-bold" >View All</a>
             </div>
             <div class="settings">
               <div class="settings__block"><i class="fa fa-edit"></i></div>

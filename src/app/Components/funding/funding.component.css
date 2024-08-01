@@ -1,14 +1,4 @@
 
-
-
-/* .sidenav {
-  position: absolute;
-  min-height: 100%;
-  box-sizing: content-box;
-  overflow: hidden;
-  
-
-} */
 .fundingHeader{
   margin-top: 50px;
   text-align: center;
@@ -44,6 +34,5 @@
   
   .btn {
     margin: 10px;
-    /* margin-left: 140px; */
-
+margin-left: 250px;
   }

@@ -68,40 +68,40 @@ export class UserDashboardComponent {
   // }
   
 
-  // toggleDropdown() {
-  //   this.isDropdownActive = !this.isDropdownActive;
-  // }
-
-  // toggleSubheading(subHeading: HTMLElement) {
-  //   subHeading.classList.toggle('navList__subheading--open');
-  //   const subList = subHeading.nextElementSibling;
-  //   if (subList) {
-  //     subList.classList.toggle('subList--hidden');
-  //   }
-  // }
-
-
-
   toggleDropdown() {
     this.isDropdownActive = !this.isDropdownActive;
   }
+
+  toggleSubheading(subHeading: HTMLElement) {
+    subHeading.classList.toggle('navList__subheading--open');
+    const subList = subHeading.nextElementSibling;
+    if (subList) {
+      subList.classList.toggle('subList--hidden');
+    }
+  }
+
+
+
+  // toggleDropdown() {
+  //   this.isDropdownActive = !this.isDropdownActive;
+  // }
   renderChart() {
     const chart = am4core.create("chartdiv", am4charts.XYChart);
   }
 
-  onMenuClick() {
-    const sidenav = document.querySelector('.sidenav');
-    const grid = document.querySelector('.grid');
-    sidenav?.classList.toggle('sidenav--active');
-    grid?.classList.toggle('grid--noscroll');
-  }
+  // onMenuClick() {
+  //   const sidenav = document.querySelector('.sidenav');
+  //   const grid = document.querySelector('.grid');
+  //   sidenav?.classList.toggle('sidenav--active');
+  //   grid?.classList.toggle('grid--noscroll');
+  // }
 
-  onCloseClick() {
-    const sidenav = document.querySelector('.sidenav');
-    const grid = document.querySelector('.grid');
-    sidenav?.classList.remove('sidenav--active');
-    grid?.classList.remove('grid--noscroll');
-  }
+  // onCloseClick() {
+  //   const sidenav = document.querySelector('.sidenav');
+  //   const grid = document.querySelector('.grid');
+  //   sidenav?.classList.remove('sidenav--active');
+  //   grid?.classList.remove('grid--noscroll');
+  // }
 
   
 

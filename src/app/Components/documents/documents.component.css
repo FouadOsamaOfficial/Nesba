@@ -1,65 +1,74 @@
+/* Global Styles */
 body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
-}
-.documentsHeader{
+  }
+  
+  .documentsHeader {
 	margin-top: 50px;
 	text-align: center;
-}
-.form-container {
-	/* width: 200vw;
-	height: 100vh; */
-	/* background-color: #7b2cbf; */
+  }
+  
+  .form-container {
 	display: flex;
-   	justify-content: center;
+	justify-content: center;
 	align-items: center;
-}
-.upload-files-container {
-    background-color: #f7fff7;
-    margin-top: 100px;
-    width: 550px;
-    padding: 30px 60px;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
-    margin-bottom: 150px;
-}
-.drag-file-area {
-        border: 2px dashed #7b2cbf;
-        border-radius: 40px;
-        margin: 10px 0 15px;
-        padding: 30px 50px;
-        width: 450px;
-        text-align: center;
-}
-.drag-file-area .upload-icon {
+  }
+  
+  .upload-files-container {
+	background-color: #f7fff7;
+	margin-top: 100px;
+	width: 550px;
+	padding: 30px 60px;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
+	margin-bottom: 150px;
+  }
+  
+  .drag-file-area {
+	border: 2px dashed #7b2cbf;
+	border-radius: 40px;
+	margin: 10px 0 15px;
+	padding: 30px 50px;
+	width: 450px;
+	text-align: center;
+  }
+  
+  .drag-file-area .upload-icon {
 	font-size: 50px;
-}
-.drag-file-area h3 {
+  }
+  
+  .drag-file-area h3 {
 	font-size: 26px;
 	margin: 15px 0;
-}
-.drag-file-area label {
+  }
+  
+  .drag-file-area label {
 	font-size: 19px;
-}
-.drag-file-area label .browse-files-text {
+  }
+  
+  .drag-file-area label .browse-files-text {
 	color: #7b2cbf;
 	font-weight: bolder;
 	cursor: pointer;
-}
-.browse-files span {
+  }
+  
+  .browse-files span {
 	position: relative;
 	top: -25px;
-}
-.default-file-input {
+  }
+  
+  .default-file-input {
 	opacity: 0;
-}
-.cannot-upload-message {
+  }
+  
+  .cannot-upload-message {
 	background-color: #ffc6c4;
 	font-size: 17px;
 	display: flex;
@@ -69,22 +78,31 @@ body {
 	border-radius: 5px;
 	color: #BB0000;
 	display: none;
-}
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-.cannot-upload-message span, .upload-button-icon {
+  }
+  
+  @keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  .cannot-upload-message span,
+  .upload-button-icon {
 	padding-right: 10px;
-}
-.cannot-upload-message span:last-child {
+  }
+  
+  .cannot-upload-message span:last-child {
 	padding-left: 20px;
 	cursor: pointer;
-}
-.file-block {
+  }
+  
+  .file-block {
 	color: #f7fff7;
 	background-color: #7b2cbf;
-  	transition: all 1s;
+	transition: all 1s;
 	width: 390px;
 	position: relative;
 	display: none;
@@ -95,22 +113,28 @@ body {
 	padding: 10px 20px;
 	border-radius: 25px;
 	cursor: pointer;
-}
-.file-info {
+  }
+  
+  .file-info {
 	display: flex;
 	align-items: center;
 	font-size: 15px;
-}
-.file-icon {
+  }
+  
+  .file-icon {
 	margin-right: 10px;
-}
-.file-name, .file-size {
+  }
+  
+  .file-name,
+  .file-size {
 	padding: 0 3px;
-}
-.remove-file-icon {
+  }
+  
+  .remove-file-icon {
 	cursor: pointer;
-}
-.progress-bar {
+  }
+  
+  .progress-bar {
 	display: flex;
 	position: absolute;
 	bottom: 0;
@@ -119,8 +143,9 @@ body {
 	height: 5px;
 	border-radius: 25px;
 	background-color: #4BB543;
-}
-.upload-button {
+  }
+  
+  .upload-button {
 	font-family: 'Montserrat';
 	background-color: #7b2cbf;
 	color: #f7fff7;
@@ -132,9 +157,132 @@ body {
 	margin: 10px;
 	padding: 7.5px 50px;
 	cursor: pointer;
-}
-.btn {
-    margin: 10px;
-	margin-left: 140px;
-
   }
+  
+  .btn {
+	margin: 10px;
+	margin-left: 250px;
+  }
+  
+  /* Media Queries for Different Screen Sizes */
+  
+  /* Large Devices (desktops, 1200px and up) */
+  @media only screen and (max-width: 1200px) {
+	.upload-files-container {
+	  width: 500px;
+	  padding: 25px 50px;
+	}
+  
+	.drag-file-area {
+	  width: 400px;
+	}
+  }
+  
+  /* Medium Devices (tablets, 992px and up) */
+  @media only screen and (max-width: 992px) {
+	.upload-files-container {
+	  width: 450px;
+	  padding: 20px 40px;
+	}
+  
+	.drag-file-area {
+	  width: 350px;
+	}
+  }
+  
+  /* Small Devices (landscape phones, 768px and up) */
+  @media only screen and (max-width: 768px) {
+	.upload-files-container {
+	  width: 400px;
+	  padding: 15px 30px;
+	}
+  
+	.drag-file-area {
+	  width: 300px;
+	}
+  
+	.drag-file-area .upload-icon {
+	  font-size: 40px;
+	}
+  
+	.drag-file-area h3 {
+	  font-size: 22px;
+	}
+  
+	.drag-file-area label {
+	  font-size: 17px;
+	}
+  }
+  
+  /* Extra Small Devices (portrait phones, less than 768px) */
+  @media only screen and (max-width: 576px) {
+	.upload-files-container {
+	  width: 350px;
+	  padding: 10px 20px;
+	}
+  
+	.drag-file-area {
+	  width: 250px;
+	}
+  
+	.drag-file-area .upload-icon {
+	  font-size: 35px;
+	}
+  
+	.drag-file-area h3 {
+	  font-size: 20px;
+	}
+  
+	.drag-file-area label {
+	  font-size: 15px;
+	}
+  }
+  
+  /* iPhone SE/5/5s/5c and similar small devices (320px - 568px) */
+  @media only screen and (max-width: 568px) {
+	.upload-files-container {
+	  width: 300px;
+	  padding: 5px 15px;
+	}
+  
+	.drag-file-area {
+	  width: 200px;
+	}
+  
+	.drag-file-area .upload-icon {
+	  font-size: 30px;
+	}
+  
+	.drag-file-area h3 {
+	  font-size: 18px;
+	}
+  
+	.drag-file-area label {
+	  font-size: 13px;
+	}
+  }
+  
+  /* iPhone X/XS/11 Pro and similar (375px - 812px) */
+  @media only screen and (max-width: 812px) {
+	.upload-files-container {
+	  width: 280px;
+	  padding: 5px 10px;
+	}
+  
+	.drag-file-area {
+	  width: 180px;
+	}
+  
+	.drag-file-area .upload-icon {
+	  font-size: 25px;
+	}
+  
+	.drag-file-area h3 {
+	  font-size: 16px;
+	}
+  
+	.drag-file-area label {
+	  font-size: 11px;
+	}
+  }
+  

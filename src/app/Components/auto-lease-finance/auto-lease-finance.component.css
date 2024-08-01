@@ -1,20 +1,18 @@
-.autoLessHeader{
+/* Default Styles (For large screens) */
+.autoLessHeader {
     margin-top: 50px;
     text-align: center;
 }
 .readyOffer {
-    /* margin-top: 150px; */
     justify-content: center;
     justify-items: center;
     display: flex;
-
 }
-.readyOfferTitle{
+.readyOfferTitle {
     margin-top: 50px;
     margin-left: 250px;
-    /* width: 100%; */
 }
-.mortgageTitle{
+.mortgageTitle {
     margin-left: 43px;
 }
 .button--anchor {
@@ -23,11 +21,9 @@
     padding: 0;
     margin: 0;
 }
-
 .button--anchor:hover {
     text-decoration: underline;
 }
-
 .button--primary {
     box-sizing: border-box;
     border: 1px solid #c49530;
@@ -42,19 +38,15 @@
     font-size: 13px;
     text-align: center;
 }
-
 .button--blue {
     color: #1471da;
 }
-
 .ul--nobullets {
     list-style: none;
 }
-
 .ul--smallbullets {
     list-style: none;
 }
-
 .ul--smallbullets li {
     background: url("//cdn.comcast.com/~/Media/ngbf_comcast_com/Products/Deals/Images/bullet_grey_dark.gif") no-repeat scroll 0 5px;
     padding: 0 0 0 12px;
@@ -62,31 +54,25 @@
     line-height: 18px;
     font-size: 12px;
 }
-
 .accessibly-hidden {
     display: none;
 }
-
 .sp-container {
     width: 927px;
     margin: 25px auto;
     font-size: 14px;
     box-sizing: border-box;
 }
-
 .sp-container .sp-offercontainer {
     border: 1px solid #d4d4d4;
     border-radius: 5px;
 }
-
 .sp-container .sp-offercontainer--expanded {
     border-radius: 5px 5px 0 0;
 }
-
 .sp-container a {
     color: #1471da;
 }
-
 .sp-container .sp-package {
     width: 111px;
     background-color: #f6f6f6;
@@ -96,24 +82,20 @@
     padding: 10px;
     border-right: 1px solid #d4d4d4;
 }
-
 .sp-container .sp-package--title {
     font-size: 14px;
     font-weight: bold;
     margin: 0;
     padding: 0;
 }
-
 .sp-container .sp-tick {
     display: block;
     background-image: url("//cdn.comcast.com/~/Media/ngbf_comcast_com/Common/Images/june_hp_product_sprite.png");
     background-repeat: no-repeat;
 }
-
 .sp-container .sp-package--details {
     font-size: 11px;
 }
-
 .sp-container .sp-x1 {
     display: table-cell;
     vertical-align: middle;
@@ -121,19 +103,16 @@
     padding: 10px;
     border-left: 1px solid #d4d4d4;
 }
-
 .sp-container .sp-x1 .sp-tick--x1 {
     width: 40px;
     height: 20px;
     background-position: -656px -430px;
 }
-
 .sp-container .sp-x1 .sp-tick--bestprice {
     background-position: -564px -409px;
     width: 42px;
     height: 32px;
 }
-
 .sp-container .sp-channels {
     width: 229px;
     display: table-cell;
@@ -142,7 +121,6 @@
     padding: 10px;
     border-right: 1px solid #d4d4d4;
 }
-
 .sp-container .sp-attributes {
     width: 78px;
     display: table-cell;
@@ -150,7 +128,6 @@
     box-sizing: border-box;
     padding: 0;
 }
-
 .sp-container .sp-attribute--value {
     font-weight: bold;
     font-size: 30px;
@@ -160,14 +137,12 @@
     box-sizing: border-box;
     padding: 0;
 }
-
 .sp-container .sp-channels--lineup {
     display: block;
     clear: left;
     font-size: 11px;
     text-decoration: none;
 }
-
 .sp-container .sp-channels--media {
     width: 125px;
     display: table-cell;
@@ -175,7 +150,6 @@
     box-sizing: border-box;
     padding: 0;
 }
-
 .sp-container .sp-inetVoice {
     width: 123px;
     display: table-cell;
@@ -184,18 +158,15 @@
     padding: 10px;
     border-left: 1px solid #d4d4d4;
 }
-
 .sp-container .sp-attribute--label {
     font-weight: bold;
     font-size: 11px;
 }
-
 .sp-container .sp-attribute--highlight {
     font-weight: bold;
     font-size: 13px;
     margin: 5px 2px 13px 0;
 }
-
 .sp-container .sp-highlight {
     display: table-cell;
     vertical-align: middle;
@@ -204,18 +175,15 @@
     width: auto;
     margin: 0;
 }
-
 .sp-container .sp-highlight li {
     padding: 10px;
     border-bottom: 1px solid #d4d4d4;
     font-size: 11px;
     font-weight: bold;
 }
-
 .sp-container .sp-highlight li:last-child {
     border-bottom: none;
 }
-
 .sp-container .sp-pricecontainer {
     width: 114px;
     display: table-cell;
@@ -223,7 +191,6 @@
     box-sizing: border-box;
     padding: 0 0 0 10px;
 }
-
 .sp-container .sp-legalagreement {
     width: 163px;
     display: table-cell;
@@ -231,50 +198,41 @@
     box-sizing: border-box;
     padding: 10px;
 }
-
 .sp-container .sp-legalagreement .button--primary {
     margin: 0 0 15px 0;
 }
-
 .sp-container .sp-eyebrow {
     font-size: 11px;
     font-weight: bold;
     text-transform: uppercase;
 }
-
 .sp-container .sp-eyebrow--red {
     color: #c8001d;
 }
-
 .sp-container .sp-price {
     font-size: 26px;
     font-weight: bold;
     position: relative;
 }
-
 .sp-container .sp-price--cents {
     font-weight: bold;
     font-size: 13px;
     top: -8px;
     margin: 0 0 0 2px;
 }
-
 .sp-container .sp-agreement {
     font-size: 10px;
 }
-
 .sp-container .sp-anchor--poi {
     float: right;
     font-size: 11px;
 }
-
 .sp-container .sp-detailscontent {
     font-size: 12px;
     box-sizing: border-box;
     padding: 20px 25px;
     background-color: #fff;
 }
-
 .sp-container .sp-detailscontent .ul--smallbullets {
     width: 100%;
     overflow: hidden;
@@ -282,108 +240,85 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .sp-container .sp-detailscontent .ul--smallbullets li {
     float: left;
     width: 45%;
 }
-
 .sp-container .sp-detailscontent--expanded {
     border: 1px solid #d4d4d4;
     border-top: none;
 }
-
-
-
-
-
-
 #mortgage_calculator_form {
     width: 100%;
     margin-top: 100px;
     padding: 40px;
     display: inline-block;
-    /* background: #fff;
-    border: 2px solid #dedede; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); */
-  }
-  
-  #mortgage_calculator_form h2 , .readyOfferTitle {
+}
+#mortgage_calculator_form h2 , .readyOfferTitle {
     color: #093A7C;
     font-weight: bold;
     margin-bottom: 75px;
-  }
-  
-  #mortgage_calculator_form .calc_container  {
+}
+#mortgage_calculator_form .calc_container {
     width: 80%;
     margin-left: 10%;
-  }
-  
-  #mortgage_calculator_form .calc_results {
+}
+#mortgage_calculator_form .calc_results {
     display: flex;
     justify-content: center; /* Centers the circles horizontally */
-    flex-wrap: wrap; /* Allows wrapping to new lines if needed */
+    flex-wrap: wrap;
     margin-bottom: 20px;
-  }
-  
-  #mortgage_calculator_form .calc_inputs {
+}
+#mortgage_calculator_form .calc_inputs {
     display: flex;
-    justify-content: space-around; /* Space out the sliders evenly */
+    justify-content: space-around;
     margin-bottom: 20px;
-  }
-  
-  #mortgage_calculator_form .one-fourth {
-    width: 25%; /* Adjust width to fit 4 items in a row */
+}
+#mortgage_calculator_form .one-fourth {
+    width: 25%;
     display: flex;
     justify-content: center;
-  }
-  
-  .result_container {
+}
+.result_container {
     background: #fff;
     padding: 10px 0px;
     width: 220px;
     height: 220px;
     border-radius: 100%;
     border: 3px solid #e8e8e8;
-    text-align: center; /* Center text inside the circle */
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease;
-  }
-  
-  .result_container:hover {
+}
+.result_container:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  .result_text {
+}
+.result_text {
     font-size: 1.5em;
     font-weight: bold;
     color: #093A7C;
-  }
-  
-  .calc_inputs .ngx-slider {
-    width: 100%; /* Ensure sliders use available space */
+}
+.calc_inputs .ngx-slider {
+    width: 100%;
     margin-bottom: 10px;
-  }
-  
-  #loan_slider .ngx-slider .ngx-slider-bar {
+}
+#loan_slider .ngx-slider .ngx-slider-bar {
     background-color: #ddd;
     height: 10px;
     border-radius: 2em;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-  }
-  
-  #loan_slider .ngx-slider .ngx-slider-bar .ngx-slider-track {
+}
+#loan_slider .ngx-slider .ngx-slider-bar .ngx-slider-track {
     background-color: #093A7C;
     height: 100%;
     border-radius: 2em;
     transition: width 0.4s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  #loan_slider .ngx-slider .ngx-slider-pointer {
+}
+#loan_slider .ngx-slider .ngx-slider-pointer {
     background-color: #ef9c2d;
     width: 28px;
     height: 28px;
@@ -391,47 +326,94 @@
     border: 3px solid #fff;
     transition: left 0.4s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  #loan_slider .ngx-slider .ngx-slider-pointer:hover {
+}
+#loan_slider .ngx-slider .ngx-slider-pointer:hover {
     background-color: #ef9c2d;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-  }
-  
-  #loan_amt_input,
-  #rate_input,
-  #term_input {
+}
+#loan_amt_input,
+#rate_input,
+#term_input {
     /* border-radius: 2em; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 5px;
     border: 1px solid #ddd;
     transition: box-shadow 0.3s ease;
-  }
-  
-  #loan_amt_input:focus,
-  #rate_input:focus,
-  #term_input:focus {
+}
+#loan_amt_input:focus,
+#rate_input:focus,
+#term_input:focus {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  @media (max-width: 768px) {
-    #mortgage_calculator_form .one-fourth {
-      width: 100%; /* Full width on smaller screens */
-      margin-bottom: 20px;
-    }
-  }
-  
-
+}
 #loan_amt_input,
 #rate_input,
 #term_input {
     border-radius: 10px;
     border: none;
 }
-
 .btn {
     margin: 10px;
     margin-left: 250px;
-
 }
 
+/* Media Queries for Different Screen Sizes */
+
+/* Large Devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .sp-container {
+        width: 927px;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .sp-container {
+        width: 90%;
+    }
+    .readyOfferTitle {
+        margin-left: 100px;
+    }
+    .btn {
+        margin-left: 100px;
+    }
+}
+
+/* Small Devices (large phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .sp-container {
+        width: 100%;
+    }
+    .readyOfferTitle {
+        margin-left: 50px;
+    }
+    .btn {
+        margin-left: 50px;
+    }
+}
+
+/* Extra Small Devices (phones, less than 600px) */
+@media (max-width: 599px) {
+    .sp-container {
+        width: 100%;
+        padding: 10px;
+    }
+    .readyOfferTitle {
+        margin-left: 0;
+        text-align: center;
+    }
+    .btn {
+        margin-left: 0;
+        text-align: center;
+    }
+    .calc_container {
+        width: 100%;
+        margin-left: 0;
+    }
+    .calc_inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .one-fourth {
+        width: 100%;
+    }
+}
