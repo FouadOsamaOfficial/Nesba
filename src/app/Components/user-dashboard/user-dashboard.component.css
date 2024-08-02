@@ -261,9 +261,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
-    width: 12px;
+    /* font-size: 12px; */
+    /* color: rgba(255, 255, 255, 0.5); */
+    width: 20px;
+    height: 20px;
+    position: fixed;
   }
   .navList__subheading-title {
     margin: 0 15px;

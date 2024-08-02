@@ -5,248 +5,243 @@
         <input class="header__input" placeholder="Search..." />
       </div> -->
       <div class="header__avatar" (click)="toggleDropdown()" #headerAvatar>
-        <div class="dropdown" *ngIf="isDropdownActive">
+        <div class="dropdown" [ngClass]="{'dropdown--active': isDropdownActive}">
           <ul class="dropdown__list">
-            <li class="dropdown__list-item">
+            <li class="dropdown__list-item" >
               <span class="dropdown__icon"><i class="fa fa-user"></i></span>
-              <span class="dropdown__title">my profile</span>
+              <span class="dropdown__title" (click)="toProfile()">my profile</span>
             </li>
             <li class="dropdown__list-item">
-              <span class="dropdown__icon"><i class="fa fa-clipboard-list"></i></span>
-              <span class="dropdown__title">my account</span>
+              <span class="dropdown__icon"><i class="fa fa-clipboard"></i></span>
+              <span class="dropdown__title" (click)="toProfile()">my account</span>
             </li>
             <li class="dropdown__list-item">
-              <span class="dropdown__icon"><i class="fa fa-sign-out-alt"></i></span>
-              <span class="dropdown__title">log out</span>
+              <span class="dropdown__icon"><i class="fa fa-sign-out"></i></span>
+              <span class="dropdown__title" (click)="logout()">log out</span>
             </li>
           </ul>
         </div>
       </div>
     </header>
-  
-    <aside class="sidenav">
-      <div class="sidenav__brand" >
-        <i class="fa fa-feather-alt sidenav__brand-icon"></i>
-        <a class="sidenav__brand-link" >Ne<span class="text-light">sba</span></a>
-        <i class="fa fa-times sidenav__brand-close"></i>
-      </div>
-    <a class="button" (click)="toProfile()">
-      <div class="sidenav__profile">
-        <div class="sidenav__profile-avatar"></div>
-        <div class="sidenav__profile-title text-light">Abd EL-Aziz</div>
-      </div>
-    </a>
 
-      <div class="row row--align-v-center row--align-h-center">
-        <ul class="navList">
-          <li class="navList__heading">documents<i class="fa fa-file-alt"></i></li>
-            <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-briefcase-medical"></i></span>
-              <span class="navList__subheading-title">Funding</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">new funding </li>
-              <li class="subList__item">last funding</li>
-              <li class="subList__item">current funding</li>
-            </ul>
-          </li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-plane-departure"></i></span>
-              <span class="navList__subheading-title">Loan</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">domestic</li>
-              <li class="subList__item">foreign</li>
-              <li class="subList__item">misc</li>
-            </ul>
-          </li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-angry"></i></span>
-              <span class="navList__subheading-title">Mortgage</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">current</li>
-              <li class="subList__item">archives</li>
-            </ul>
-          </li>
+    
   
-          <li class="navList__heading">messages</li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-envelope"></i></span>
-              <span class="navList__subheading-title">inbox</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">primary</li>
-              <li class="subList__item">social</li>
-              <li class="subList__item">promotional</li>
-            </ul>
-          </li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-eye"></i></span>
-              <span class="navList__subheading-title">unread</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">primary</li>
-              <li class="subList__item">social</li>
-              <li class="subList__item">promotional</li>
-            </ul>
-          </li>
-           <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-book-open"></i></span>
-              <span class="navList__subheading-title">archives</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">primary</li>
-              <li class="subList__item">social</li>
-              <li class="subList__item">promotional</li>
-            </ul>
-          </li>
-  
-          <li class="navList__heading">photo album<i class="fa fa-image"></i></li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-mountain"></i></span>
-              <span class="navList__subheading-title">vacation</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">cambodia</li>
-              <li class="subList__item">new york</li>
-            </ul>
-          </li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-wine-glass-alt"></i></span>
-              <span class="navList__subheading-title">anniversary</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">dive trip</li>
-              <li class="subList__item">hikathon</li>
-              <li class="subList__item">buffalo river</li>
-            </ul>
-          </li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-graduation-cap"></i></span>
-              <span class="navList__subheading-title">university</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">wild horse saloon</li>
-              <li class="subList__item">service corps</li>
-              <li class="subList__item">graduation</li>
-              <li class="subList__item">internships</li>
-            </ul>
-          </li>
-  
-          <li class="navList__heading">statistics<i class="fa fa-chart-bar"></i></li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-credit-card"></i></span>
-              <span class="navList__subheading-title">finances</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">mortgage</li>
-              <li class="subList__item">investments</li>
-              <li class="subList__item">spend log</li>
-              <li class="subList__item">owed</li>
-            </ul>
-          </li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-phone"></i></span>
-              <span class="navList__subheading-title">call stats</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">last month</li>
-              <li class="subList__item">bi-weekly</li>
-              <li class="subList__item">yesterday</li>
-              <li class="subList__item">today</li>
-            </ul>
-          </li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-plane"></i></span>
-              <span class="navList__subheading-title">trip logs</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">amsterdam</li>
-              <li class="subList__item">buenos aires</li>
-              <li class="subList__item">cambodia</li>
-              <li class="subList__item">greenland</li>
-            </ul>
-          </li>
-          
-          <li class="navList__heading">Events<i class="fa fa-calendar-alt"></i></li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-wine-glass-alt"></i></span>
-              <span class="navList__subheading-title">New Feature</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">past</li>
-              <li class="subList__item">present</li>
-              <li class="subList__item">future</li>
-            </ul>
-          </li>
-          <li>
-            <div class="navList__subheading row row--align-v-center">
-              <span class="navList__subheading-icon"><i class="fa fa-school"></i></span>
-              <span class="navList__subheading-title">User discounts</span>
-            </div>
-            <ul class="subList subList--hidden">
-              <li class="subList__item">weirdos</li>
-              <li class="subList__item">smarties</li>
-              <li class="subList__item">nerds</li>
-            </ul>
-          </li>
-          <li>
-                <div class="navList__subheading row row--align-v-center">
-                  <span class="navList__subheading-icon"><i class="fa fa-users"></i></span>
-                  <span class="navList__subheading-title">Governments Statment</span>
-                </div>
-                <ul class="subList subList--hidden">
-                  <li class="subList__item">tech</li>
-                  <li class="subList__item">automotive</li>
-                  <li class="subList__item">UX research</li>
-                  <li class="subList__item">development</li>
-                </ul>
-              </li>
+<!-- user-dashboard.component.html -->
+<aside class="sidenav">
+  <div class="sidenav__brand">
+    <i class="fa fa-feather-alt sidenav__brand-icon"></i>
+    <a class="sidenav__brand-link">Ne<span class="text-light">sba</span></a>
+    <i class="fa fa-times sidenav__brand-close"></i>
+  </div>
+  <a class="button" (click)="toProfile()">
+    <div class="sidenav__profile" *ngIf="userData">
+      <div class="sidenav__profile-avatar"></div>
+      <div class="sidenav__profile-title text-light">{{ userData.firstName }}</div>
+    </div>
+  </a>
+
+  <div class="row row--align-v-center row--align-h-center">
+    <ul class="navList">
+      <li class="navList__heading">Funding<i class="fa fa-money"></i></li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('funding')">
+          <span class="navList__subheading-icon"><i class="fa fa-eye"></i></span>
+          <span class="navList__subheading-title">Funding Tracker</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.funding}">
+          <li class="subList__item" (click)="toFundingTracker()">Funding Tracker</li>
+          <!-- <li class="subList__item">previous funding </li>
+          <li class="subList__item">current funding</li> -->
         </ul>
-      </div>
-    </aside>
+      </li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('loan')">
+          <span class="navList__subheading-icon"><i class="fa fa-hand-lizard-o"></i></span>
+          <span class="navList__subheading-title">Previous Funding</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.loan}">
+          <li class="subList__item" (click)="toPreviousFunding()">Funded</li>
+          <li class="subList__item"(click)="goingToNewFinancing()">New Financing</li>
+          <!-- <li class="subList__item">misc</li> -->
+        </ul>
+      </li>
+      <!-- <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('mortgage')">
+          <span class="navList__subheading-icon"><i class="fa fa-money"></i></span>
+          <span class="navList__subheading-title">Mortgage</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.mortgage}">
+          <li class="subList__item">current</li>
+          <li class="subList__item">archives</li>
+        </ul>
+      </li> -->
+
+      <li class="navList__heading">New Financing<i class="fa fa-file"></i></li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('inbox')">
+          <span class="navList__subheading-icon"><i class="fa fa-envelope"></i></span>
+          <span class="navList__subheading-title">Investments</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.inbox}">
+          <li class="subList__item"  (click)="toMutualFunds()">Mutual Funds</li>
+          <li class="subList__item" (click)="toTadawul()">Tadawul</li>
+          <li class="subList__item" (click)="toSavingWallet()">Saving Wallet</li>
+        </ul>
+      <!-- </li> -->
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('unread')">
+          <span class="navList__subheading-icon"><i class="fa fa-eye"></i></span>
+          <span class="navList__subheading-title">Cards</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.unread}">
+          <li class="subList__item" (click)="toCards()">Choosing New Card</li>
+          <li class="subList__item" (click)="toDebits()">Debits</li>
+          <li class="subList__item" (click)="toCredits()">Credits</li>
+        </ul>
+      </li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('archives')">
+          <span class="navList__subheading-icon"><i class="fa fa-book"></i></span>
+          <span class="navList__subheading-title">Finance Products</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.archives}">
+          <li class="subList__item" (click)="toMortgageFinance()">Mortgage finance</li>
+          <li class="subList__item" (click)="toPersonalFinance()">Personal Finance</li>
+          <li class="subList__item" (click)="toAutoLeaseFinance()">Auto Lease Finance</li>
+        </ul>
+      </li>
+      <li class="navList__heading"> Emails<i class="fa fa-envelope-o"></i></li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('vacation')">
+          <span class="navList__subheading-icon"><i class="fa  fa-envelope-o"></i></span>
+          <span class="navList__subheading-title">Recent Mails</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.vacation}">
+          <li class="subList__item" (click)="goToEmails()">Emails</li>
+          <li class="subList__item"(click)="toDeletedMails()">Deleted Mails </li>
+          <li class="subList__item" (click)="toReplayedMails()">Replayed Mails </li>
+        </ul>
+      </li>
+      <!-- <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('anniversary')">
+          <span class="navList__subheading-icon"><i class="fa fa-glass"></i></span>
+          <span class="navList__subheading-title">anniversary</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.anniversary}">
+          <li class="subList__item">dive trip</li>
+          <li class="subList__item">hikathon</li>
+          <li class="subList__item">buffalo river</li>
+        </ul>
+      </li> -->
+      <!-- <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('university')">
+          <span class="navList__subheading-icon"><i class="fa fa-graduation-cap"></i></span>
+          <span class="navList__subheading-title">university</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.university}">
+          <li class="subList__item">wild horse island</li>
+          <li class="subList__item">australia trip</li>
+        </ul>
+      </li> -->
+      <li class="navList__heading"> Events<i class="fa fa-newspaper-o"></i></li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('finances')">
+          <span class="navList__subheading-icon"><i class="fa fa-podcast"></i></span>
+          <span class="navList__subheading-title">Upcoming Events</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.finances}">
+          <li class="subList__item" (click)="goUpcomingEvents()">This Year</li>
+          <li class="subList__item" (click)="goUpcomingEvents()">This Quarter</li>
+          <li class="subList__item" (click)="goUpcomingEvents()">More Sooner</li>
+        </ul>
+      </li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('callStats')">
+          <span class="navList__subheading-icon"><i class="fa fa-table"></i></span>
+          <span class="navList__subheading-title">last Events</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.callStats}">
+          <li class="subList__item" (click)="toLastEvents()">Last Year </li>
+          <li class="subList__item" (click)="toLastEvents()">Last Quarter</li>
+          <!-- <li class="subList__item"></li> -->
+        </ul>
+      </li>
+      <!-- <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('tripLogs')">
+          <span class="navList__subheading-icon"><i class="fa fa-car"></i></span>
+          <span class="navList__subheading-title">trip logs</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.tripLogs}">
+          <li class="subList__item">today</li>
+          <li class="subList__item">yesterday</li>
+          <li class="subList__item">last week</li>
+        </ul>
+      </li> -->
+      <li class="navList__heading">Documents<i class="fa fa-file"></i></li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('newFeature')">
+          <span class="navList__subheading-icon"><i class="fa fa-file-text-o"></i></span>
+          <span class="navList__subheading-title">New Decuments</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.newFeature}">
+          <li class="subList__item" (click)="toDecuments()">Added Documents</li>
+          <li class="subList__item" (click)="toReviwedDocuments()">Reviwed Documents</li>
+          <li class="subList__item" (click)="toDocumentsStatus()">Documents Status</li>
+        </ul>
+      </li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('userDiscounts')">
+          <span class="navList__subheading-icon"><i class="fa fa-book"></i></span>
+          <span class="navList__subheading-title">Old Documents</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.userDiscounts}">
+          <li class="subList__item"  (click)="toOldDocuments()">Last Year</li>
+          <li class="subList__item"  (click)="toOldDocuments()">last Quarter</li>
+          <!-- <li class="subList__item"></li> -->
+        </ul>
+      </li>
+      <li class="navList__heading">Sittings<i class="fa fa-tasks"></i></li>
+      <li>
+        <div class="navList__subheading row row--align-v-center" (click)="toggleDropdowns('govStatement')">
+          <span class="navList__subheading-icon"><i class="fa fa-cogs"></i></span>
+          <span class="navList__subheading-title"> Sittings</span>
+        </div>
+        <ul class="subList" [ngClass]="{'subList--hidden': !dropdowns.govStatement}">
+          <li class="subList__item" (click)="toProfile()">User Profile</li>
+          <li class="subList__item"(click)="logout()">Logout</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</aside>
+
   
     <main class="main">
       <div class="main-header">
         <div class="main-header__intro-wrapper">
-          <div class="main-header__welcome">
-            <div class="main-header__welcome-title text-light">Welcome, <strong>Abd EL-Aziz</strong></div>
+          <div class="main-header__welcome" *ngIf="userData">
+            <div class="main-header__welcome-title text-light">Welcome, <strong>{{userData.fullName}}</strong></div>
             <div class="main-header__welcome-subtitle text-light">How are you today?</div>
           </div>
           <div class="quickview">
             <div class="quickview__item">
-              <div class="quickview__item-total">41</div>
+              <div class="quickview__item-total">3</div>
               <div class="quickview__item-description">
                 <i class="fa fa-calendar-alt"></i>
                 <span class="text-light">Events</span>
               </div>
             </div>
             <div class="quickview__item">
-              <div class="quickview__item-total">64</div>
+              <div class="quickview__item-total">14</div>
               <div class="quickview__item-description">
                 <i class="fa fa-comment"></i>
-                <span class="text-light">Messages</span>
+                <span class="text-light">Emails</span>
               </div>
             </div>
             <div class="quickview__item">
               <div class="quickview__item-total">27&deg;</div>
               <div class="quickview__item-description">
                 <i class="fa fa-map-marker-alt"></i>
-                <span class="text-light">Austin</span>
+                <span class="text-light">Suadi Arbia</span>
               </div>
             </div>
           </div>

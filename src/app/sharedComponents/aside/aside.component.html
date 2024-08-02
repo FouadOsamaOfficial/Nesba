@@ -54,8 +54,8 @@
                     <ul>
                         <li>
                             <p>
-                                <span class="block bold">ABD EL-AZIZ</span>
-                                <span class="block italic">abdelaziz@hotmail.com</span>
+                                <span class="block bold">{{ userData?.firstName}}</span>
+                                <span class="block italic">{{ userData?.email }}</span>
                             </p>
                         </li>
                         <li>
@@ -78,18 +78,15 @@
     </article>
 </section>
 
-
-
-
 <body>
     <div class="area"></div>
     <nav class="main-menu">
         <div class="logo-container">
-            <img src="../.../../../../assets/images/nesbalogo.png" alt="Brand Logo" class="logo" >
+            <img src="../.../../../../assets/images/nesbalogo.png" alt="Brand Logo" class="logo">
         </div>
         <ul>
             <li>
-                <a  (click)="toDashboard()">
+                <a (click)="toDashboard()">
                     <i class="fa fa-home fa-2x"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>
@@ -120,7 +117,7 @@
                 </details>
             </li>
             <li>
-                <a  (click)="toEmails()">
+                <a (click)="toEmails()">
                     <i class="fa fa-envelope-o fa-2x"></i>
                     <span class="nav-text">Recent Emails</span>
                 </a>
@@ -138,19 +135,19 @@
                 </a>
             </li>
             <li>
-                <a >
+                <a>
                     <i class="fa fa-cogs fa-2x"></i>
                     <span class="nav-text">Tools & Resources</span>
                 </a>
             </li>
             <li>
-                <a >
+                <a>
                     <i class="fa fa-map-marker fa-2x"></i>
                     <span class="nav-text">Member Map</span>
                 </a>
             </li>
             <li>
-                <a >
+                <a>
                     <i class="fa fa-info fa-2x"></i>
                     <span class="nav-text">Documentation</span>
                 </a>
@@ -167,19 +164,3 @@
         </ul>
     </nav>
 </body>
-
-
-
-
-
-
-<!-- 
-   <i class="fa fa-home fa-2x"></i>
-<i class="fa fa-globe fa-2x"></i>
- <i class="fa fa-comments fa-2x"></i>
-<i class="fa fa-camera-retro fa-2x"></i>
-<i class="fa fa-film fa-2x"></i>
-<i class="fa fa-book fa-2x"></i>
- <i class="fa fa-cogs fa-2x"></i>
- <i class="fa fa-map-marker fa-2x"></i>
-<i class="fa fa-info fa-2x"></i> -->

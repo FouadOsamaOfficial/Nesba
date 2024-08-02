@@ -7,7 +7,7 @@
     <div class="container-fluid d-flex align-items-center">
       <div class="row">
         <div class="col-lg-12 col-md-8">
-          <h1 class=" display-2 text-balck">Hello ABD EL-AZIZ</h1>
+          <h1 class=" display-2 text-balck">Hello {{ userData.fullName }}</h1>
           <p class="text-black mt-0 mb-5">This is your profile page. You can see all the information that back of your government data </p>
           <a href="" class="btn btn-outline" style="background-color: #10182F; border: none; color: white;">Edit profile</a>
         </div>
@@ -18,7 +18,7 @@
     <div class="row">
       <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
         <div class="card card-profile shadow">
-          <div class="row justify-content-center ">
+          <div class="row justify-content-center">
             <div class="col-lg-3 order-lg-2">
               <div class="card-profile-image">
                 <a href="javascript:void(0)">
@@ -27,47 +27,19 @@
               </div>
             </div>
           </div>
-          <!-- <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-            <div class="d-flex justify-content-between">
-              <a href="javascript:void(0)" class="btn btn-sm btn-info mr-4">Connect</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">Message</a>
-            </div>
-          </div> -->
           <div class="card-body pt-0 pt-md-4">
-            <!-- <div class="row">
-              <div class="col">
-                <div class="card-profile-stats d-flex justify-content-center mt-md-5">
-                  <div>
-                    <span class="heading">22</span>
-                    <span class="description">Friends</span>
-                  </div>
-                  <div>
-                    <span class="heading">10</span>
-                    <span class="description">Photos</span>
-                  </div>
-                  <div>
-                    <span class="heading">89</span>
-                    <span class="description">Comments</span>
-                  </div>
-                </div>
-              </div>
-            </div> -->
             <div class="text-center">
-              <h3>
-                ABD EL-AZIZ ALHOWIDI <span class="font-weight-light">, 38</span>
-              </h3>
+              <h3>{{ userData.fullName }} <span class="font-weight-light">, {{ userData.birthDate| date }}</span></h3>
               <div class="h5 font-weight-300">
-                <i class="ni location_pin mr-2"></i>Riyadh, Saudi Arabia 
+                <i class="ni location_pin mr-2"></i>{{ userData.city }}, {{ userData.country }}
               </div>
               <div class="h5 mt-4">
-                <i class="ni business_briefcase-24 mr-2"></i>Accountent 
+                <i class="ni business_briefcase-24 mr-2"></i>{{ userData.workSector }}
               </div>
               <div>
-                <i class="ni education_hat mr-2">Alrajhi Bank</i>
+                <i class="ni education_hat mr-2">{{ userData.employer }}</i>
               </div>
               <hr class="my-4" />
-              <!-- <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p> -->
-              <!-- <a href="javascript:void(0)">Show more</a> -->
               <button class="btn btn-outline-danger" (click)="logout()">Sign-Out</button>
             </div>
           </div>
@@ -87,19 +59,19 @@
           </div>
           <div class="card-body">
             <form>
-              <h6 class="heading-small text-muted mb-4">Abd El-Aziz information</h6>
+              <h6 class="heading-small text-muted mb-4">Personal Information</h6>
               <div class="pl-lg-4">
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-username">Username</label>
-                      <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="Abdulaziz Alhowidi">
+                      <input type="text" id="input-username" class="form-control form-control-alternative" [(ngModel)]="userData.fullName" name="fullName">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-email">Email address</label>
-                      <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="Abdulaziz@hotmail.com">
+                      <input type="email" id="input-email" class="form-control form-control-alternative" [(ngModel)]="userData.email" name="email">
                     </div>
                   </div>
                 </div>
@@ -107,37 +79,37 @@
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-first-name">First name</label>
-                      <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Abdulaziz ">
+                      <input type="text" id="input-first-name" class="form-control form-control-alternative" [(ngModel)]="userData.firstName" name="firstName">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-last-name">Last name</label>
-                      <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Alhowidi">
+                      <input type="text" id="input-last-name" class="form-control form-control-alternative" [(ngModel)]="userData.lastName" name="lastName">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-last-name">Birth date</label>
-                      <input type="date" id="input-last-name" class="form-control form-control-alternative" placeholder="Birth date" value="12/01/1990">
+                      <label class="form-control-label" for="input-birth-date">Birth date</label>
+                      <input type="date" id="input-birth-date" class="form-control form-control-alternative" [(ngModel)]="userData.birthDate" name="birthDate">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-last-name">Marital status</label>
-                      <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Marital status" value="married">
+                      <label class="form-control-label" for="input-marital-status">Marital status</label>
+                      <input type="text" id="input-marital-status" class="form-control form-control-alternative" [(ngModel)]="userData.maritalStatus" name="maritalStatus">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-last-name">Family members</label>
-                      <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Family members" value="3">
+                      <label class="form-control-label" for="input-family-members">Family members</label>
+                      <input type="number" id="input-family-members" class="form-control form-control-alternative" [(ngModel)]="userData.familyMembers" name="familyMembers">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-last-name">House ownership</label>
-                      <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="House ownership" value="No">
+                      <label class="form-control-label" for="input-house-ownership">House ownership</label>
+                      <input type="text" id="input-house-ownership" class="form-control form-control-alternative" [(ngModel)]="userData.houseOwnership" name="houseOwnership">
                     </div>
                   </div>
                 </div>
@@ -150,7 +122,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label class="form-control-label" for="input-address">Address</label>
-                      <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Building no 45 , st all suaid" type="text">
+                      <input id="input-address" class="form-control form-control-alternative" [(ngModel)]="userData.address" name="address" type="text">
                     </div>
                   </div>
                 </div>
@@ -158,31 +130,31 @@
                   <div class="col-lg-4">
                     <div class="form-group">
                       <label class="form-control-label" for="input-city">City</label>
-                      <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="Riyadh">
+                      <input type="text" id="input-city" class="form-control form-control-alternative" [(ngModel)]="userData.city" name="city">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
                       <label class="form-control-label" for="input-country">Country</label>
-                      <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="Riyadh, Saudi Arabia">
+                      <input type="text" id="input-country" class="form-control form-control-alternative" [(ngModel)]="userData.country" name="country">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-country">Postal code</label>
-                      <input type="text" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code" value="12211">
+                      <label class="form-control-label" for="input-postal-code">Postal code</label>
+                      <input type="text" id="input-postal-code" class="form-control form-control-alternative" [(ngModel)]="userData.postalCode" name="postalCode">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-phone-nmuber">Phone Number</label>
-                      <input type="text" id="input-phone-nmuber" class="form-control form-control-alternative" placeholder="Phone Number" value="+966555445041">
+                      <label class="form-control-label" for="input-phone-number">Phone Number</label>
+                      <input type="text" id="input-phone-number" class="form-control form-control-alternative" [(ngModel)]="userData.phoneNumber" name="phoneNumber">
                     </div>
-                  </div> 
-                    <div class="col-lg-4">
+                  </div>
+                  <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Landline-number">Landline Number</label>
-                      <input type="text" id="input-Landline-number" class="form-control form-control-alternative" placeholder="Landline Number" value="+9612-345-6789">
+                      <label class="form-control-label" for="input-landline-number">Landline Number</label>
+                      <input type="text" id="input-landline-number" class="form-control form-control-alternative" [(ngModel)]="userData.landlineNumber" name="landlineNumber">
                     </div>
                   </div>
                 </div>
@@ -195,44 +167,41 @@
                   <div class="col-md-4">
                     <div class="form-group">
                       <label class="form-control-label" for="input-work-sector">Work Sector</label>
-                      <input type="text" id="input-work-sector" class="form-control form-control-alternative" placeholder="Work- Sector" value="Accountent" >
+                      <input type="text" id="input-work-sector" class="form-control form-control-alternative" [(ngModel)]="userData.workSector" name="workSector">
                     </div>
                   </div>
-              
-               
                   <div class="col-lg-4">
                     <div class="form-group">
                       <label class="form-control-label" for="input-employer">Employer</label>
-                      <input type="text" id="input-employer" class="form-control form-control-alternative" placeholder="Employer" value="alrajhi bank">
+                      <input type="text" id="input-employer" class="form-control form-control-alternative" [(ngModel)]="userData.employer" name="employer">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-started-from">Started from </label>
-                      <input type="date" id="input-started-from" class="form-control form-control-alternative" placeholder="started-from" value="">
+                      <label class="form-control-label" for="input-started-from">Started from</label>
+                      <input type="date" id="input-started-from" class="form-control form-control-alternative" [(ngModel)]="userData.startedFrom" name="startedFrom">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Basic-salary">Basic Salary</label>
-                      <input type="text" id="input-Basic-salary" class="form-control form-control-alternative" placeholder="Basic-salary" value="12,000 SAR">
+                      <label class="form-control-label" for="input-basic-salary">Basic Salary</label>
+                      <input type="text" id="input-basic-salary" class="form-control form-control-alternative" [(ngModel)]="userData.basicSalary" name="basicSalary">
                     </div>
                   </div>
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Allowance">Allowance</label>
-                      <input type="text" id="input-Allowance" class="form-control form-control-alternative" placeholder="Allowance" value="700 SAR">
+                      <label class="form-control-label" for="input-allowance">Allowance</label>
+                      <input type="text" id="input-allowance" class="form-control form-control-alternative" [(ngModel)]="userData.allowance" name="allowance">
                     </div>
-                  </div> 
-                    <div class="col-lg-4">
+                  </div>
+                  <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Bank Name">Bank Name</label>
-                      <input type="text" id="input-Bank Name" class="form-control form-control-alternative" placeholder="Bank Name" value="Alrajhi Bank">
+                      <label class="form-control-label" for="input-bank-name">Bank Name</label>
+                      <input type="text" id="input-bank-name" class="form-control form-control-alternative" [(ngModel)]="userData.bankName" name="bankName">
                     </div>
                   </div>
                 </div>
               </div>
-
               <hr class="my-4" />
               <!-- Expenses information -->
               <h6 class="heading-small text-muted mb-4">Expenses information</h6>
@@ -240,73 +209,72 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Food&Beverages">Food&Beverages</label>
-                      <input type="text" id="input-Food&Beverages" class="form-control form-control-alternative" placeholder="Food&Beverages" value="1200 SAR" >
+                      <label class="form-control-label" for="input-food-beverages">Food & Beverages</label>
+                      <input type="text" id="input-food-beverages" class="form-control form-control-alternative" [(ngModel)]="userData.foodAndBeverages" name="foodBeverages">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Hosing">Hosing</label>
-                      <input type="text" id="input-Hosing" class="form-control form-control-alternative" placeholder="Hosing" value="3000 SAR">
+                      <label class="form-control-label" for="input-housing">Housing</label>
+                      <input type="text" id="input-housing" class="form-control form-control-alternative" [(ngModel)]="userData.housing" name="housing">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Utilities">Utilities </label>
-                      <input type="text" id="input-Utilities" class="form-control form-control-alternative" placeholder="Utilities" value="700 SAR">
+                      <label class="form-control-label" for="input-utilities">Utilities</label>
+                      <input type="text" id="input-utilities" class="form-control form-control-alternative" [(ngModel)]="userData.utilities" name="utilities">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Health-care & insurance">Health care & insurance</label>
-                      <input type="text" id="input-Health care & insurance" class="form-control form-control-alternative" placeholder="Health care & insurance" value="900 SAR">
+                      <label class="form-control-label" for="input-health-care-insurance">Health care & insurance</label>
+                      <input type="text" id="input-health-care-insurance" class="form-control form-control-alternative" [(ngModel)]="userData.healthCareAndInsurance" name="healthCareInsurance">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Transport">Transport</label>
-                      <input type="text" id="input-Transport" class="form-control form-control-alternative" placeholder="Transport" value="300 SAR">
-                    </div>
-                  </div> 
-                    <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-Communications">Communications</label>
-                      <input type="text" id="input-Communications" class="form-control form-control-alternative" placeholder="Communications" value="170 SAR">
+                      <label class="form-control-label" for="input-transport">Transport</label>
+                      <input type="text" id="input-transport" class="form-control form-control-alternative" [(ngModel)]="userData.transport" name="transport">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Educations-Fees">Educations Fees</label>
-                      <input type="text" id="input-Educations-Fees" class="form-control form-control-alternative" placeholder="Educations Fees" value="0 SAR">
+                      <label class="form-control-label" for="input-communications">Communications</label>
+                      <input type="text" id="input-communications" class="form-control form-control-alternative" [(ngModel)]="userData.communications" name="communications">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Home-Servants">Home Servants</label>
-                      <input type="text" id="input-Home-Servants" class="form-control form-control-alternative" placeholder="Home Servants" value="2000 SAR">
+                      <label class="form-control-label" for="input-education-fees">Education Fees</label>
+                      <input type="text" id="input-education-fees" class="form-control form-control-alternative" [(ngModel)]="userData.educationFees" name="educationFees">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Fees-on-expats">Fees on expats</label>
-                      <input type="text" id="input-Fees-on-expats" class="form-control form-control-alternative" placeholder="Fees on expats" value="500 SAR">
+                      <label class="form-control-label" for="input-home-servants">Home Servants</label>
+                      <input type="text" id="input-home-servants" class="form-control form-control-alternative" [(ngModel)]="userData.homeServants" name="homeServants">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Other-future-expenses">Other future expenses</label>
-                      <input type="text" id="input-Other-future-expenses" class="form-control form-control-alternative" placeholder="Other future expenses" value="1000 SAR">
+                      <label class="form-control-label" for="input-fees-on-expats">Fees on expats</label>
+                      <input type="text" id="input-fees-on-expats" class="form-control form-control-alternative" [(ngModel)]="userData.feesOnExpats" name="feesOnExpats">
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-Insurance">Insurance</label>
-                      <input type="text" id="input-Insurance" class="form-control form-control-alternative" placeholder="Insurance" value="1200 SAR">
+                      <label class="form-control-label" for="input-other-future-expenses">Other future expenses</label>
+                      <input type="text" id="input-other-future-expenses" class="form-control form-control-alternative" [(ngModel)]="userData.otherFutureExpenses" name="otherFutureExpenses">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-insurance">Insurance</label>
+                      <input type="text" id="input-insurance" class="form-control form-control-alternative" [(ngModel)]="userData.insurance" name="insurance">
                     </div>
                   </div>
                 </div>
               </div>
-
               <hr class="my-4" />
               <!-- Description -->
               <!-- <h6 class="heading-small text-muted mb-4">About me</h6>

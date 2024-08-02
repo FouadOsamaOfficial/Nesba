@@ -1,24 +1,32 @@
-import { Component, ElementRef, EventEmitter, Input, Output, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
 import { Router } from '@angular/router';
+import {  UserData, UserDataService } from 'src/app/Services/User-Data/user-data.service';
 
 @Component({
   selector: 'app-aside',
   templateUrl: './aside.component.html',
   styleUrls: ['./aside.component.css']
 })
-export class AsideComponent {
+export class AsideComponent implements OnInit {
   // @Input() isLoggedIn: boolean = false;
   @ViewChild('headerAvatar', { static: true }) headerAvatar!: ElementRef;
   @ViewChild('subHeadings') subHeadings!: ElementRef;
-  @Output() logoutEvent = new EventEmitter<void>();
+  // @Output() logoutEvent = new EventEmitter<void>();
 
   isDropdownActive: boolean = false;
+  userData: UserData | undefined
 
-  constructor(private router: Router, private renderer: Renderer2) {
+  constructor(private router: Router, private renderer: Renderer2 ,private userDataService: UserDataService) {
 
   }
+
+ngOnInit(): void {
+  this.userDataService.getUserData().subscribe(data => {
+    this.userData = data;
+  });
+}
   logo() {
     this.router.navigate(['./user-dashboard']);
   }
@@ -114,3 +122,7 @@ export class AsideComponent {
     grid?.classList.remove('grid--noscroll');
   }
 }
+function ngOnInit() {
+  throw new Error('Function not implemented.');
+}
+

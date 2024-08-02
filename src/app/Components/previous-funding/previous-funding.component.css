@@ -1,56 +1,13 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    margin-top: 150px;
-  }
-  
-
-  main {
-    
-    padding: 20px;
-    margin-bottom: 200px;
-  }
-  
-  .funding-data {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .data-item {
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    padding: 20px;
-  }
-  
-  .data-item h2 {
-    color: black;
-  }
-  .data-item .totalFund{
-    color: red;
-  } */
 
   .btn{
     margin: 10px;
     margin-left: 250px;
-
   }
-
-
   header {
     color: black;
     padding: 20px;
     text-align: center;
   }
-  
-
-
-
-/* .container {
-  margin-top: 30px;
-  margin-left: 270px; 
-} */
 .previousFundingHeader{
   text-align: center;
   margin-top: 50px;
@@ -61,6 +18,7 @@
     transition: 0.3s;
     padding: 20px;
     text-align: center;
+    border-radius: 30px;
   }
   
   .card:hover {
@@ -100,14 +58,7 @@
     --main: #292c6d;
     --shadow: rgba(17, 17, 26, 0.1) 2px 0px 16px;
   } 
-    /* { 
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    list-style-type: none;
-    box-sizing: border-box;
-  } */
+
   body {
       margin-top: 100px !important;
     background-color: var(--bg);
@@ -120,9 +71,7 @@
   #menu-toggle {
     display: none;
   }
-  /* #menu-toggle:checked ~ .sidebar {
-    left: -345px;
-  } */
+
   #menu-toggle:checked ~ .main-content {
     margin-left: 0;
     width: 100vw;
