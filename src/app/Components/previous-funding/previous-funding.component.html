@@ -35,11 +35,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <div class="card">
-              <span type="button" >
-                <i class="fas fa-chart-line"></i>
-                <h2> Funded</h2>
-                <p>$1,000,000</p>
+            <div class="card" *ngIf="currentFundedData">
+              <span type="button">
+                <h2>{{ currentFundedData.month }} {{ currentFundedData.year }}</h2>
+                <p class="totalFund">Total Funds: ${{ currentFundedData.totalFunds }}</p>
+                <!-- <p>Loan Type: {{ currentFundedData.loanType }}</p> -->
               </span>
             </div>
           </div>
@@ -54,33 +54,23 @@
           </div>
        
         </div>
-        <table class="table table-striped  table-hover">
+        <table class="table table-striped table-hover">
           <thead style="background: #10182F !important;">
             <tr>
               <th scope="col">No</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">Month</th>
+              <th scope="col">Year</th>
+              <th scope="col">Total Funds</th>
+              <th scope="col">Loan Type</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
+            <tr *ngFor="let item of FundedData">
+              <th scope="row">{{ item.id }}</th>
+              <td>{{ item.month }}</td>
+              <td>{{ item.year }}</td>
+              <td>${{ item.totalFunds }}</td>
+              <td>{{ item.loanType }}</td>
             </tr>
           </tbody>
         </table>

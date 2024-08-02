@@ -41,6 +41,8 @@ import { UnitsModalComponent } from './sharedComponents/units-modal/units-modal.
 import { AuthService } from './Services/Auth/auth.service';
 import { RealEstateMarketComponent } from './sharedComponents/real-estate-market/real-estate-market.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { OldEventsComponent } from './Components/old-events/old-events.component';
+import { OldDocumentsComponent } from './Components/old-documents/old-documents.component';
 
 
 @NgModule({
@@ -80,6 +82,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     AutoLeaseFinanceComponent,
     UnitsModalComponent,
     RealEstateMarketComponent,
+    OldEventsComponent,
+    OldDocumentsComponent,
   ],
   imports: [
     BrowserModule,
