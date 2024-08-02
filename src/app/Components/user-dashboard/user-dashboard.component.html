@@ -1,10 +1,13 @@
 <div class="grid">
     <header class="header">
-      <i class="fa fa-bars header__menu"></i>
       <!-- <div class="header__search">
         <input class="header__input" placeholder="Search..." />
       </div> -->
-      <div class="header__avatar" (click)="toggleDropdown()" #headerAvatar>
+      <i class="fa fa-bars header__menu"></i>
+
+      <div  (click)="toggleDropdown()" #headerAvatar>
+        <img class="header__avatar" [src]="userData?.userImg" alt="User Image" >
+
         <div class="dropdown" [ngClass]="{'dropdown--active': isDropdownActive}">
           <ul class="dropdown__list">
             <li class="dropdown__list-item" >
@@ -29,13 +32,13 @@
 <!-- user-dashboard.component.html -->
 <aside class="sidenav">
   <div class="sidenav__brand">
-    <i class="fa fa-feather-alt sidenav__brand-icon"></i>
+    <!-- <i class="fa fa-feather-alt sidenav__brand-icon"></i> -->
     <a class="sidenav__brand-link">Ne<span class="text-light">sba</span></a>
     <i class="fa fa-times sidenav__brand-close"></i>
   </div>
   <a class="button" (click)="toProfile()">
     <div class="sidenav__profile" *ngIf="userData">
-      <div class="sidenav__profile-avatar"></div>
+        <img class="sidenav__profile-avatar" [src]="userData.userImg" alt="User Image">
       <div class="sidenav__profile-title text-light">{{ userData.firstName }}</div>
     </div>
   </a>
@@ -250,7 +253,7 @@
       <div class="main-overview">
         <div class="overviewCard" (click)="goToDocuments()">
           <div class="overviewCard-icon overviewCard-icon--document">
-             <i class="fa fa-file-alt"></i>
+             <!-- <i class="fa fa-file-alt"></i> -->
           </div>
           <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
 
@@ -261,7 +264,7 @@
         </div>
         <div class="overviewCard" (click)="goToEvents()">
           <div class="overviewCard-icon overviewCard-icon--calendar">
-             <i class="fa fa-calendar-check"></i>
+             <!-- <i class="fa fa-calendar-check"></i> -->
           </div>
           <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
           <div class="overviewCard-description" >
@@ -283,7 +286,7 @@
 
         <div class="overviewCard" (click)="goingToNewFinancing()">
             <div class="overviewCard-icon overviewCard-icon--photo">
-               <i class="fa fa-file-image"></i>
+               <!-- <i class="fa fa-file-image"></i> -->
             </div>
             <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
 
@@ -296,7 +299,7 @@
 
           <div class="overviewCard"  (click)="goingToFunding()">
             <div class="overviewCard-icon overviewCard-icon--photo">
-               <i class="fa fa-file-image"></i>
+               <!-- <i class="fa fa-file-image"></i> -->
             </div>
             <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
 

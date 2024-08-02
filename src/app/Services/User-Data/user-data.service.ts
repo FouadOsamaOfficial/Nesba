@@ -37,6 +37,7 @@ export interface UserData {
   houseOwnership: string;
   insurance: string;
   about: string;
+  userImg:string;
 }
 @Injectable({
   providedIn: 'root'
@@ -80,7 +81,8 @@ export class UserDataService {
     otherCurrentExpenses: '0 SAR',
     houseOwnership: 'Owned',
     insurance: 'Full Coverage',
-    about:''
+    about:'',
+    userImg: 'assets/images/userImg.jpeg',
   };
 
   getUserData(): Observable<UserData> {

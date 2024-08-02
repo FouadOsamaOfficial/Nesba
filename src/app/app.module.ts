@@ -43,6 +43,7 @@ import { RealEstateMarketComponent } from './sharedComponents/real-estate-market
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { OldEventsComponent } from './Components/old-events/old-events.component';
 import { OldDocumentsComponent } from './Components/old-documents/old-documents.component';
+import { NotFoundComponent } from './Components/not-found/not-found.component';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { OldDocumentsComponent } from './Components/old-documents/old-documents.
     RealEstateMarketComponent,
     OldEventsComponent,
     OldDocumentsComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

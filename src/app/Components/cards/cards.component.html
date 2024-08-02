@@ -137,24 +137,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Debit</td>
-                        <td>06/2017</td>
-                        <td>06/2024</td>
+                    <tr *ngFor="let card of cards">
+                        <th scope="row">{{ card.id }}</th>
+                        <td>{{card.cardType}}</td>
+                        <td>{{card.receiptTime}}</td>
+                        <td>{{card.expirationTime}}</td>
+                    
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Debit</td>
-                        <td>02/2016</td>
-                        <td>02/2023</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Credit</td>
-                        <td>07/2018</td>
-                        <td>07/2025</td>
-                    </tr>
+           
                 </tbody>
             </table>
 
