@@ -3,32 +3,32 @@
 <h2 class="creditHeader">CREDITS</h2>
 
 <h2 class="userInfo">Depends On User Data</h2>
-<section class="page-contain">
+<section class="page-contain" *ngIf="userData">
     <a  class="data-card">
-      <h3>Abdulaziz Alhowidi</h3>
+      <h3>{{userData.firstName}}</h3>
       <h4>Financial Details</h4>
       <div class="row">
         <div class="col">
-            <p >Cash back : Available </p>
-           <p >Balance transfer : 10,000 KSA</p>
+            <p >Cash back : {{userData.cashBack}} </p>
+           <p >Balance transfer : {{userData.balanceTtransfer}}</p>
         </div>
       <div class="col">
-        <p >0% APR :</p>
-        <p >Rewards :</p>
+        <p >0% APR : {{userData.apr}}</p>
+        <p >Rewards : {{userData.rewards}}</p>
       </div>
      <div class="col">
-        <p >Travel :</p>
-        <p >Business :</p>
+        <p >Travel : {{userData.travel}}</p>
+        <p >Business : {{userData.business}}</p>
 
      </div>
      <div class="col">
-        <p >Student :</p>
-        <p >No annual fee :</p>
+        <p >Student : {{userData.student}}</p>
+        <p >No annual fee : {{userData.noAnnualFee}}</p>
 
      </div>
      <div class="col">
-        <p >Airline :</p>
-        <p >No foreign transaction fees :</p>
+        <p >Airline : {{userData.airline}}</p>
+        <p >No foreign transaction fees : {{userData.noForeignFransactionFees}}</p>
 
      </div>
     </div>

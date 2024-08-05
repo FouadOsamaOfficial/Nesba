@@ -1,3 +1,50 @@
+/* Modal background */
+.modal {
+	display: block;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.5);
+  }
+  
+  /* Modal content */
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	max-width: 600px;
+  }
+  
+  /* Close button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  /* Modal preview images */
+  .modal-preview {
+	max-width: 100%;
+	height: auto;
+  }
+  
+
+
+
 /* Global Styles */
 body {
 	margin: 0;
@@ -11,12 +58,14 @@ body {
 	text-align: center;
   }
   
+  /* Form Container */
   .form-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
   }
   
+  /* Upload Files Container */
   .upload-files-container {
 	background-color: #f7fff7;
 	margin-top: 100px;
@@ -28,9 +77,10 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
-	margin-bottom: 150px;
+	margin-bottom: 30px; /* Adjusted for spacing between uploader and table */
   }
   
+  /* Drag File Area */
   .drag-file-area {
 	border: 2px dashed #7b2cbf;
 	border-radius: 40px;
@@ -38,6 +88,11 @@ body {
 	padding: 30px 50px;
 	width: 450px;
 	text-align: center;
+	position: relative;
+  }
+  
+  .drag-file-area.drag-over {
+	background-color: #e2e6ea;
   }
   
   .drag-file-area .upload-icon {
@@ -77,7 +132,6 @@ body {
 	padding: 5px 10px 5px 30px;
 	border-radius: 5px;
 	color: #BB0000;
-	display: none;
   }
   
   @keyframes fadeIn {
@@ -99,13 +153,14 @@ body {
 	cursor: pointer;
   }
   
+  /* File Block */
   .file-block {
 	color: #f7fff7;
 	background-color: #7b2cbf;
 	transition: all 1s;
-	width: 390px;
+	/* width: 390px; */
 	position: relative;
-	display: none;
+	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
@@ -143,10 +198,11 @@ body {
 	height: 5px;
 	border-radius: 25px;
 	background-color: #4BB543;
+	transition: width 0.5s ease;
   }
   
+  /* Upload Button */
   .upload-button {
-	font-family: 'Montserrat';
 	background-color: #7b2cbf;
 	color: #f7fff7;
 	display: flex;
@@ -154,19 +210,117 @@ body {
 	font-size: 18px;
 	border: none;
 	border-radius: 20px;
-	margin: 10px;
-	padding: 7.5px 50px;
+	/* margin: 10px; */
+	/* padding: 7.5px 50px; */
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+	background-color: #5a1f8c;
+  }
+
+  .file-preview {
+	max-width: 50px;
+	max-height: 50px;
+	object-fit: cover;
+	/* background-repeat: no-repeat; */
+	border-radius: 5px;
+  }
+  
+  .file-block {
+	margin-top: 20px;
+  }
+  
+  /* Label */
+  .label {
+	display: block;
+	margin-top: 10px;
+	font-size: 16px;
+  }
+  
+  /* Browse Files Text */
+  .browse-files {
+	color: #007bff;
 	cursor: pointer;
   }
   
+  /* File Block */
+  .file-block {
+	margin-top: 20px;
+  }
+  
+  /* Table Container */
+  .table-container {
+	/* margin: 0 auto; */
+    max-width: 1100px;
+    border-radius: 30px !important;
+    margin-inline: auto;
+
+ }
+  
+  /* Table */
+  .table {
+	/* border: none; */
+	box-shadow: 3px 3px 10px rgb(188, 188, 188);
+	padding: 0px 20px 20px 20px;
+	border-collapse: collapse;
+	/* margin: 0px auto; */
+	border-radius: 20px;
+overflow: hidden;
+	border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  .table thead {
+	background-color: #10182F;
+	color: #fff;
+  }
+  
+  .table tbody tr:hover {
+	background-color: #f1f1f1;
+  }
+  
+  /* Remove File Icon */
+  .remove-file-icon {
+	color: #dc3545;
+	cursor: pointer;
+	font-size: 24px;
+  }
+  
+  /* Button */
   .btn {
 	margin: 10px;
 	margin-left: 250px;
   }
-  
+  /* .fa{
+color: red;
+
+	cursor: pointer;
+  } */
+
+
+  .fa-envelope-open-o{
+	color: green;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 20px;
+  }
+
+  .fa-trash-o {
+	color: red;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 20px;
+
+  }
   /* Media Queries for Different Screen Sizes */
-  
-  /* Large Devices (desktops, 1200px and up) */
   @media only screen and (max-width: 1200px) {
 	.upload-files-container {
 	  width: 500px;
@@ -178,7 +332,6 @@ body {
 	}
   }
   
-  /* Medium Devices (tablets, 992px and up) */
   @media only screen and (max-width: 992px) {
 	.upload-files-container {
 	  width: 450px;
@@ -190,7 +343,6 @@ body {
 	}
   }
   
-  /* Small Devices (landscape phones, 768px and up) */
   @media only screen and (max-width: 768px) {
 	.upload-files-container {
 	  width: 400px;
@@ -214,7 +366,6 @@ body {
 	}
   }
   
-  /* Extra Small Devices (portrait phones, less than 768px) */
   @media only screen and (max-width: 576px) {
 	.upload-files-container {
 	  width: 350px;
@@ -238,7 +389,6 @@ body {
 	}
   }
   
-  /* iPhone SE/5/5s/5c and similar small devices (320px - 568px) */
   @media only screen and (max-width: 568px) {
 	.upload-files-container {
 	  width: 300px;
@@ -262,7 +412,6 @@ body {
 	}
   }
   
-  /* iPhone X/XS/11 Pro and similar (375px - 812px) */
   @media only screen and (max-width: 812px) {
 	.upload-files-container {
 	  width: 280px;

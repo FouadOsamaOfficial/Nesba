@@ -1,3 +1,4 @@
+import { string } from '@amcharts/amcharts4/core';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 export interface UserData {
@@ -38,6 +39,16 @@ export interface UserData {
   insurance: string;
   about: string;
   userImg:string;
+  cashBack:string;
+  balanceTtransfer:string;
+  apr:string;
+ rewards:string;
+ travel:string;
+ business:string;
+ student:string;
+ noAnnualFee:string;
+ airline:string;
+ noForeignFransactionFees:string;
 }
 @Injectable({
   providedIn: 'root'
@@ -83,6 +94,16 @@ export class UserDataService {
     insurance: 'Full Coverage',
     about:'',
     userImg: 'assets/images/userImg.jpeg',
+    cashBack:'yes',
+    balanceTtransfer:'150,000 SAR',
+    apr:'2%',
+   rewards:'yes',
+   travel:'yes',
+   business:'no',
+   student:'no',
+   noAnnualFee:'no',
+   airline:'saudi arabia',
+   noForeignFransactionFees:'yes',
   };
 
   getUserData(): Observable<UserData> {

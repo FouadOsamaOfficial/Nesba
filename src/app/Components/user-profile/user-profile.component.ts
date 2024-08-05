@@ -52,7 +52,17 @@ export class UserProfileComponent implements OnInit{
     houseOwnership: '',
     insurance: '',
     about:'',
-    userImg:''
+    userImg:'',
+    cashBack:'',
+    balanceTtransfer:' ',
+    apr:'',
+   rewards:'',
+   travel:'',
+   business:'',
+   student:'',
+   noAnnualFee:'',
+   airline:' ',
+   noForeignFransactionFees:'',
   };
   constructor(private fb: FormBuilder , private router:Router , private userDataService: UserDataService) {
 

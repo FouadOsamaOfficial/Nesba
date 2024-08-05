@@ -3,6 +3,7 @@ import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
 import { Router } from '@angular/router';
 import { UserData, UserDataService } from 'src/app/Services/User-Data/user-data.service';
+import { DocumentsService } from 'src/app/Services/Documents/documents.service';
 type DropdownKeys = 'funding' | 'loan' | 'mortgage' | 'inbox' | 'unread' | 'archives' | 'vacation' | 'anniversary' | 'university' | 'finances' | 'callStats' | 'tripLogs' | 'newFeature' | 'userDiscounts' | 'govStatement';
 
 @Component({
@@ -20,6 +21,7 @@ export class UserDashboardComponent {
   userData: UserData | undefined;
 
 
+  documents: { name: string, size: string, date: Date, type?: string, preview?: string }[] = [];
 
   dropdowns: Record<DropdownKeys, boolean> = {
     funding: false,
@@ -38,7 +40,7 @@ export class UserDashboardComponent {
     userDiscounts: false,
     govStatement: false,
   };
-  constructor(private router: Router, private renderer: Renderer2,private userDataService: UserDataService) { }
+  constructor(private router: Router, private renderer: Renderer2,private userDataService: UserDataService , private documentsService: DocumentsService) { }
 
 
   toggleDropdowns(dropdown: DropdownKeys) {
@@ -148,14 +150,11 @@ export class UserDashboardComponent {
   toReviwedDocuments() { }
   toDocumentsStatus() { }
   toOldDocuments(){}
-  // @HostListener('document:click', ['$event'])
-  // clickOutsideDropdown(event: MouseEvent) {
-  //   if (this.isDropdownActive && !this.headerAvatar.nativeElement.contains(event.target)) {
-  //     this.isDropdownActive = false;
-  //   }
-  // }
+
 
   ngOnInit(): void {
+    this.documents = this.documentsService.getFiles();
+
     this.userDataService.getUserData().subscribe(data => {
       this.userData = data;
       console.log('User Data:', this.userData); // For debugging
@@ -163,34 +162,7 @@ export class UserDashboardComponent {
 
     this.renderChart();
     
-
   }
-
-  // toggleDropdown() {
-  //   const dropdown = this.headerAvatar.nativeElement.nextElementSibling;
-  //   dropdown.classList.toggle('dropdown--active');
-  // }
-
-  // toggleDropdown() {
-  //   const dropdown = this.headerAvatar.nativeElement;
-  //   console.log('Dropdown element:', dropdown);
-
-  //   if (dropdown) {
-  //     this.renderer.addClass(dropdown, 'dropdown--active');
-  //     console.log("done")
-  //   } else {
-  //     console.error('Dropdown element not found.');
-  //   }
-  // }
-  // toggleSubheading(subHeading: HTMLElement) {
-  //   subHeading.classList.toggle('navList__subheading--open');
-  //   const subList = subHeading.nextElementSibling;
-  //   if (subList) {
-  //     subList.classList.toggle('subList--hidden');
-  //   }
-  // }
-
-  // dropdownItems = ['Profile', 'Settings', 'Logout'];
 
   toggleDropdown() {
     this.isDropdownActive = !this.isDropdownActive;
@@ -214,5 +186,7 @@ export class UserDashboardComponent {
     sidenav?.classList.remove('sidenav--active');
     grid?.classList.remove('grid--noscroll');
   }
-
+  removeExtension(fileName: string): string {
+    return fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
+  }
 }

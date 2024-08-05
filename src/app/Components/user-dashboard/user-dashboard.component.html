@@ -310,11 +310,11 @@
           </div>
      
       </div> <!-- /.main__overview -->
-      <div class="main__cards" (click)="goToEvents()">
+      <div class="main__cards" >
         <div class="card">
           <div class="card__header">
             <div class="card__header-title text-light">Your <strong>Events</strong>
-              <a class="card__header-link text-bold" >View All</a>
+              <a class="card__header-link text-bold"(click)="goToEvents()" >View All</a>
             </div>
             <div class="settings">
               <div class="settings__block"><i class="fa fa-edit"></i></div>
@@ -379,7 +379,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card" >
           <div class="card__header">
             <div class="card__header-title text-light">Recent <strong>Documents</strong>
               <a class="card__header-link text-bold" (click)="goToDocuments()">View All</a>
@@ -389,28 +389,25 @@
               <div class="settings__block"><i class="fa fa-cog"></i></div>
             </div>
           </div>
-          <div class="card">
+          <div class="card" >
             <div class="documents">
-              <div class="document">
-                <div class="document__img"></div>
-                <div class="document__title">tesla-patents</div>
-                <div class="document__date">07/16/2018</div>
+              <div class="document" *ngFor="let doc of documents | slice:0:4">
+                <div class="document__img">
+           			<ng-container *ngIf="doc.preview">
+                  <img *ngIf="doc.preview.includes('image')" [src]="doc.preview" alt="Preview" class="document__img" />
+                  <img *ngIf="doc.preview.includes('pdf')" [src]="doc.preview" alt="Preview" class="document__img" />
+                  <img *ngIf="doc.preview.includes('excel')" [src]="doc.preview" alt="Preview" class="document__img" />
+                </ng-container>
+                </div>
+                <div class="document__title">{{ removeExtension(doc.name) }}</div>
+                <div class="document__date">{{doc.date | date:'yyyy-MM'}}</div>
               </div>
-              <div class="document">
+              <!-- <div class="document">
                 <div class="document__img"></div>
                 <div class="document__title">yearly-budget</div>
                 <div class="document__date">09/04/2018</div>
-              </div>
-              <div class="document">
-                <div class="document__img"></div>
-                <div class="document__title">top-movies</div>
-                <div class="document__date">10/10/2018</div>
-              </div>
-              <div class="document">
-                <div class="document__img"></div>
-                <div class="document__title">trip-itinerary</div>
-                <div class="document__date">11/01/2018</div>
-              </div>
+              </div> -->
+        <!-- <img src="../../../assets/images/backgound-finanace.jpeg" alt=""> -->
             </div>
           </div>
         </div>

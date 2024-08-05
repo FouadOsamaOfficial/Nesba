@@ -1,4 +1,9 @@
-   html, body {
+
+/* .document .preview{
+  width: 50px;
+  height: 50px;
+} */
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -609,8 +614,11 @@
     background-color: #fff;
     cursor: pointer;
   }
-  
-  .documents {
+  .documents .file-preview
+ {
+  width: 50px;
+  height: 50px;
+ }  .documents {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
     grid-auto-rows: 214px;
