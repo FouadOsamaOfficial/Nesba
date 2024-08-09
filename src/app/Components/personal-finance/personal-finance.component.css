@@ -55,14 +55,14 @@ body {
 }
 
 .data-table th, .data-table td {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 8px;
-  text-align: left;
+  /* text-align: left; */
 }
 
-.data-table th {
+/* .data-table th {
   background-color: #f4f4f4;
-}
+} */
 
 .btn {
   margin: 10px;
@@ -107,7 +107,7 @@ body {
   width: 1120px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 
 .t-op {

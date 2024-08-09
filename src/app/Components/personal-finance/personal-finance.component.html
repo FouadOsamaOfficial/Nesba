@@ -24,7 +24,26 @@
             <!-- <button class="view">View All</button> -->
         </div>
 
-        <div class="report-body">
+        <table>
+            <thead class="report-body">
+              <tr class="report-topic-heading">
+                <th class="t-op" >Field</th>
+                <th class="t-op">Current Loan</th>
+                <th class="t-op">Proposed Loan</th>
+                <th class="t-op" >Difference</th>
+              </tr>
+            </thead>
+            <tbody class="items">
+              <tr class="item1" *ngFor="let item of refinanceData">
+                <td class="t-op-nextlvl">{{ item.field }}</td>
+                <td class="t-op-nextlvl">{{ item.current }}</td>
+                <td class="t-op-nextlvl">{{ item.proposed }}</td>
+                <td class="t-op-nextlvl">{{ item.difference }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        <!-- <div class="report-body">
             <div class="report-topic-heading">
                 <h3 class="t-op">Article</h3>
                 <h3 class="t-op">Views</h3>
@@ -97,7 +116,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="report-container" *ngIf="selectedTable === 2" class="data-table">
@@ -106,80 +125,24 @@
             <!-- <button class="view">View All</button> -->
         </div>
 
-        <div class="report-body">
-            <div class="report-topic-heading">
-                <h3 class="t-op">Article</h3>
-                <h3 class="t-op">Views</h3>
-                <h3 class="t-op">Comments</h3>
-                <h3 class="t-op">Status</h3>
-            </div>
-
-            <div class="items">
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 73</h3>
-                    <h3 class="t-op-nextlvl">2.9k</h3>
-                    <h3 class="t-op-nextlvl">210</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 72</h3>
-                    <h3 class="t-op-nextlvl">1.5k</h3>
-                    <h3 class="t-op-nextlvl">360</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 71</h3>
-                    <h3 class="t-op-nextlvl">1.1k</h3>
-                    <h3 class="t-op-nextlvl">150</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 70</h3>
-                    <h3 class="t-op-nextlvl">1.2k</h3>
-                    <h3 class="t-op-nextlvl">420</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 69</h3>
-                    <h3 class="t-op-nextlvl">2.6k</h3>
-                    <h3 class="t-op-nextlvl">190</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 68</h3>
-                    <h3 class="t-op-nextlvl">1.9k</h3>
-                    <h3 class="t-op-nextlvl">390</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 67</h3>
-                    <h3 class="t-op-nextlvl">1.2k</h3>
-                    <h3 class="t-op-nextlvl">580</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 66</h3>
-                    <h3 class="t-op-nextlvl">3.6k</h3>
-                    <h3 class="t-op-nextlvl">160</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 65</h3>
-                    <h3 class="t-op-nextlvl">1.3k</h3>
-                    <h3 class="t-op-nextlvl">220</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-            </div>
-        </div>
+        <table>
+            <thead class="report-body">
+              <tr class="report-topic-heading">
+                <th class="t-op" >Category</th>
+                <th class="t-op">Amount </th>
+                <th class="t-op">Date </th>
+                <th class="t-op" >Description</th>
+              </tr>
+            </thead>
+            <tbody class="items">
+              <tr class="item1" *ngFor="let newFinance of newFinanceData">
+                <td>{{ newFinance.category }}</td>
+                <td>{{ newFinance.amount | currency }}</td>
+                <td>{{ newFinance.date }}</td>
+                <td>{{ newFinance.description }}</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 
     <div class="report-container" *ngIf="selectedTable === 3" class="data-table">
@@ -189,79 +152,26 @@
         </div>
 
         <div class="report-body">
-            <div class="report-topic-heading">
-                <h3 class="t-op">Article</h3>
-                <h3 class="t-op">Views</h3>
-                <h3 class="t-op">Comments</h3>
-                <h3 class="t-op">Status</h3>
-            </div>
-
+            <!-- <div class="report-topic-heading">
+              <div class="t-op">Buyout Transactions</div>
+            </div> -->
+          
             <div class="items">
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 73</h3>
-                    <h3 class="t-op-nextlvl">2.9k</h3>
-                    <h3 class="t-op-nextlvl">210</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 72</h3>
-                    <h3 class="t-op-nextlvl">1.5k</h3>
-                    <h3 class="t-op-nextlvl">360</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 71</h3>
-                    <h3 class="t-op-nextlvl">1.1k</h3>
-                    <h3 class="t-op-nextlvl">150</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 70</h3>
-                    <h3 class="t-op-nextlvl">1.2k</h3>
-                    <h3 class="t-op-nextlvl">420</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 69</h3>
-                    <h3 class="t-op-nextlvl">2.6k</h3>
-                    <h3 class="t-op-nextlvl">190</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 68</h3>
-                    <h3 class="t-op-nextlvl">1.9k</h3>
-                    <h3 class="t-op-nextlvl">390</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 67</h3>
-                    <h3 class="t-op-nextlvl">1.2k</h3>
-                    <h3 class="t-op-nextlvl">580</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 66</h3>
-                    <h3 class="t-op-nextlvl">3.6k</h3>
-                    <h3 class="t-op-nextlvl">160</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
-                <div class="item1">
-                    <h3 class="t-op-nextlvl">Article 65</h3>
-                    <h3 class="t-op-nextlvl">1.3k</h3>
-                    <h3 class="t-op-nextlvl">220</h3>
-                    <h3 class="t-op-nextlvl label-tag">Published</h3>
-                </div>
-
+              <div class="item1">
+                <div class="t-op-nextlvl">Transaction Date</div>
+                <div class="t-op-nextlvl">Transaction Amount</div>
+                <div class="t-op-nextlvl">Buyout Percentage</div>
+                <div class="t-op-nextlvl">Total Buyout</div>
+              </div>
+              
+              <div *ngFor="let buyout of buyouts" class="item1">
+                <div>{{ buyout.transactionDate }}</div>
+                <div>{{ buyout.transactionAmount | currency }}</div>
+                <div>{{ buyout.buyoutPercentage }}%</div>
+                <div>{{ buyout.totalBuyout | currency }}</div>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
   </div>
 <button class="btn btn-outline-secondary" (click)="previous()">Previous</button>
