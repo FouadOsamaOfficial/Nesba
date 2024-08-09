@@ -541,8 +541,11 @@ html, body {
     transform: translateX(-50%);
     border-radius: 50%;
     /* color: #FFF; */
-    background-color: #1BBAE1;
+    background-color: #10182F;
     z-index: 1;
+  }
+  .fa-calendar{
+    color: #fff;
   }
   .card__row:nth-child(even) .card__icon {
     background-color: #e74c3c;

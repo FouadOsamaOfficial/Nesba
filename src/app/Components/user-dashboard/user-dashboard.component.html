@@ -311,7 +311,7 @@
      
       </div> <!-- /.main__overview -->
       <div class="main__cards" >
-        <div class="card">
+        <div class="card" >
           <div class="card__header">
             <div class="card__header-title text-light">Your <strong>Events</strong>
               <a class="card__header-link text-bold"(click)="goToEvents()" >View All</a>
@@ -321,62 +321,19 @@
               <div class="settings__block"><i class="fa fa-cog"></i></div>
             </div>
           </div>
-          <div class="card__main">
+          <div class="card__main" *ngFor="let event of events | slice:0:5">
             <div class="card__row">
-              <div class="card__icon"><i class="fa fa-gift"></i></div>
+              <div class="card__icon"><i class="fa fa-calendar"></i></div>
               <div class="card__time">
-                <div>today</div>
+                <div>{{event.thumbnailDateDay}} {{event.thumbnailDateMonth}}</div>
               </div>
               <div class="card__detail">
-                <div class="card__source text-bold">Ahmed G</div>
-                <div class="card__description">Going away party at 8:30pm. Bring a friend!</div>
-                <div class="card__note">1404 Gibson St</div>
+                <div class="card__source text-bold">{{event.title}} </div>
+                <div class="card__description">{{event.description}}</div>
+                <div class="card__note">{{event.location}}</div>
               </div>
             </div>
-            <div class="card__row">
-              <div class="card__icon"><i class="fa fa-plane"></i></div>
-              <div class="card__time">
-                <div>Tuesday</div>
-              </div>
-              <div class="card__detail">
-                <div class="card__source text-bold">Abd EL-Aziz H</div>
-                <div class="card__description">Flying to Bora Bora at 4:30pm</div>
-                <div class="card__note">Delta, Gate 27B</div>
-              </div>
-            </div>
-            <div class="card__row">
-              <div class="card__icon"><i class="fa fa-book"></i></div>
-              <div class="card__time">
-                <div>Thursday</div>
-              </div>
-              <div class="card__detail">
-                <div class="card__source text-bold">National Institute of Comarial </div>
-                <div class="card__description">Join the institute for an in-depth look at Stephen Hawking</div>
-                <div class="card__note">7:30pm, Carnegie Center for Science</div>
-              </div>
-            </div>
-            <div class="card__row">
-              <div class="card__icon"><i class="fa fa-heart"></i></div>
-              <div class="card__time">
-                <div>Friday</div>
-              </div>
-              <div class="card__detail">
-                <div class="card__source text-bold">loan update of the National Bank </div>
-                <div class="card__description">Join us and contribute to your favorite local charity.</div>
-                <div class="card__note">6:45pm, Austin Convention Ctr</div>
-              </div>
-            </div>
-            <div class="card__row">
-              <div class="card__icon"><i class="fa fa-heart"></i></div>
-              <div class="card__time">
-                <div>Saturday</div>
-              </div>
-              <div class="card__detail">
-                <div class="card__source text-bold">news about mortgage</div>
-                <div class="card__description">See the Blue Angels fly with roaring thunder</div>
-                <div class="card__note">11:00pm, Jacksonville Airforce Base</div>
-              </div>
-            </div>
+
           </div>
         </div>
         <div class="card" >

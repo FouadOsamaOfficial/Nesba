@@ -4,6 +4,7 @@ import * as am4charts from '@amcharts/amcharts4/charts';
 import { Router } from '@angular/router';
 import { UserData, UserDataService } from 'src/app/Services/User-Data/user-data.service';
 import { DocumentsService } from 'src/app/Services/Documents/documents.service';
+import { EventData, EventsService } from 'src/app/Services/Events/events.service';
 type DropdownKeys = 'funding' | 'loan' | 'mortgage' | 'inbox' | 'unread' | 'archives' | 'vacation' | 'anniversary' | 'university' | 'finances' | 'callStats' | 'tripLogs' | 'newFeature' | 'userDiscounts' | 'govStatement';
 
 @Component({
@@ -16,12 +17,12 @@ export class UserDashboardComponent {
   @ViewChild('funding') funding!: ElementRef;
 
   isDropdownActive: boolean = false;
-  // isDropdownActive = false;
 
   userData: UserData | undefined;
-
-
   documents: { name: string, size: string, date: Date, type?: string, preview?: string }[] = [];
+
+  events: EventData[] = []; // Define the property
+
 
   dropdowns: Record<DropdownKeys, boolean> = {
     funding: false,
@@ -40,7 +41,7 @@ export class UserDashboardComponent {
     userDiscounts: false,
     govStatement: false,
   };
-  constructor(private router: Router, private renderer: Renderer2,private userDataService: UserDataService , private documentsService: DocumentsService) { }
+  constructor(private eventsService: EventsService,private router: Router, private renderer: Renderer2,private userDataService: UserDataService , private documentsService: DocumentsService) { }
 
 
   toggleDropdowns(dropdown: DropdownKeys) {
@@ -157,8 +158,9 @@ export class UserDashboardComponent {
 
     this.userDataService.getUserData().subscribe(data => {
       this.userData = data;
-      console.log('User Data:', this.userData); // For debugging
+      console.log('User Data:', this.userData); 
     });
+    this.events = this.eventsService.getEvents(); 
 
     this.renderChart();
     
