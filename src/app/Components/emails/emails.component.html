@@ -65,13 +65,18 @@
   </div>
 </div>
 
+<!-- Email Modal -->
 <div class="modal" *ngIf="showModal">
   <div class="modal-content">
     <span class="close" (click)="closeModal()">&times;</span>
     <h2>{{ selectedEmail?.subject }}</h2>
     <p><strong>Sender:</strong> {{ selectedEmail?.sender }}</p>
-    <p><strong>Body:</strong> {{ selectedEmail?.body }}</p>
-    <!-- Add more details as needed -->
+    <p *ngIf="viewMode"><strong>Body:</strong> {{ selectedEmail?.body }}</p>
+    <form (ngSubmit)="sendReply()" *ngIf="replyMode">
+      <textarea [(ngModel)]="replyBody" name="replyBody" required></textarea>
+      <button type="submit" class="btn btn-outline-success">Send Reply</button>
+    </form>
+    <button *ngIf="viewMode" (click)="switchToReplyMode()" class="btn btn-outline-secondary reply">Reply</button>
   </div>
 </div>
 

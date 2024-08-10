@@ -8,7 +8,6 @@ import { EmailService, EmailItem } from '../../Services/email/email.service';
   styleUrls: ['./emails.component.css']
 })
 export class EmailsComponent implements OnInit {
-
   emails: EmailItem[] = [];
   filteredEmails: EmailItem[] = [];
   paginatedEmails: EmailItem[] = [];
@@ -17,8 +16,11 @@ export class EmailsComponent implements OnInit {
   currentPage = 1;
   totalPages = 1;
   pages: number[] = [];
-  selectedEmail: EmailItem | null = null; // Track the selected email for modal display
-  showModal: boolean = false; // Control the visibility of the modal
+  selectedEmail: EmailItem | null = null;
+  showModal = false;
+  viewMode = true; // Control view and reply mode
+  replyMode = false;
+  replyBody = ''; // Store reply message
 
   constructor(
     private router: Router,
@@ -76,21 +78,40 @@ export class EmailsComponent implements OnInit {
   }
 
   replayEmail(id: string) {
-    const email = this.emailService.getEmailById(id);
-    if (email) {
-      console.log(`Replaying email: ${email.subject}`);
-      // Implement the reply logic here
+    this.selectedEmail = this.emailService.getEmailById(id) || null;
+    if (this.selectedEmail) {
+      this.showModal = true;
+      this.viewMode = false; // Switch to reply mode
+      this.replyMode = true;
     }
   }
 
   openEmail(id: string) {
-    this.selectedEmail = this.emails.find(email => email.id === id) || null;
-    this.showModal = true;
+    this.selectedEmail = this.emailService.getEmailById(id) || null;
+    if (this.selectedEmail) {
+      this.showModal = true;
+      this.viewMode = true; // Switch to view mode
+      this.replyMode = false;
+    }
   }
 
   closeModal() {
     this.showModal = false;
     this.selectedEmail = null;
+    this.replyBody = '';
+  }
+
+  sendReply() {
+    if (this.selectedEmail) {
+      console.log(`Replying to: ${this.selectedEmail.subject} with message: ${this.replyBody}`);
+      // Implement the actual sending logic here
+      this.closeModal();
+    }
+  }
+
+  switchToReplyMode() {
+    this.viewMode = false;
+    this.replyMode = true;
   }
 
   previous() {

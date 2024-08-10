@@ -13,6 +13,7 @@ type DropdownKeys = 'funding' | 'loan' | 'mortgage' | 'inbox' | 'unread' | 'arch
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent {
+  faces = Array.from({ length: 20 }, (_, i) => i);
   @ViewChild('headerAvatar', { static: true }) headerAvatar!: ElementRef;
   @ViewChild('funding') funding!: ElementRef;
 
@@ -191,4 +192,6 @@ export class UserDashboardComponent {
   removeExtension(fileName: string): string {
     return fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
   }
+
+  
 }

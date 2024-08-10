@@ -1,3 +1,17 @@
 <app-aside></app-aside>
 
-<p>spending works!</p>
+<div class="custom-cursor"></div>
+
+<div class="title">
+  <span>WE ARE CREATING SOMETHING BEST</span>
+</div>
+
+<div class="holder">
+  <div class="cylinder">
+    <div class="face" *ngFor="let i of faces" [ngStyle]="{'--index': i}">
+      COMING SOON
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-outline-secondary" (click)="previous()">Previous</button>

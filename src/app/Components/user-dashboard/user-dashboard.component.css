@@ -730,4 +730,54 @@ html, body {
     }
   }
 
+  .custom-cursor {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    opacity: 0.3;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+  }
+  
+  .title {
+    margin-top: 20px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 18px;
+    margin-bottom: 100px;
+  }
+  
+  .title span {
+    background: radial-gradient(circle, #c2c2c2 30%, #2c2c2c 100%); /* Darker gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .comingSoonBody {
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 30px;
+    margin-bottom: 100px;
+    position: relative;
+    display: inline-block;
+    perspective: 1000px; 
+  }
+  
+  .comingSoonBody span {
+    background: radial-gradient(circle, #c2c2c2 30%, #2c2c2c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform 0.5s, text-shadow 0.5s; 
+  }
+  
+  .comingSoonBody:hover span {
+    transform: rotateX(10deg) rotateY(10deg); 
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+  }
+  
   
