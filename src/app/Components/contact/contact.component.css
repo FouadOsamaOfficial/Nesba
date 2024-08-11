@@ -20,9 +20,17 @@
   transition: all 0.3s ease-in-out;
 }
 
+body {
+  position: relative;
+}
+
+app-header {
+  z-index: 10; 
+}
+
 .contact-container {
   position: relative;
-  margin-top: 150px;
+  margin-top: 0; 
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -34,21 +42,25 @@
   height: 100%;
   background-image: url("../../../assets/images/contact-us-image.jpeg");
   background-size: cover;
-  align-items: center;
   background-repeat: no-repeat;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .logo {
-
   width: 10rem;
   padding: 1.5rem;
 }
 
 .right-col {
   background: var(--bg-color);
-  width: 50vw;
+  width: 55vw; 
   height: 100vh;
   padding: 5rem 3.5rem;
+  margin-left: 45vw;
+  z-index: 1; 
 }
 
 h1, label, button, .description {
@@ -58,11 +70,12 @@ h1, label, button, .description {
 }
 
 h1 {
-  color:var(--h1-color);
+  color: var(--h1-color);
   text-transform: uppercase;
   font-size: 2.5rem;
   letter-spacing: 0.5rem;
   font-weight: 300;
+  margin-top: 200px;
 }
 
 p {
@@ -151,8 +164,8 @@ button:active {
 }
 
 .description {
-    margin-left: 1.25rem;
-  }
+  margin-left: 1.25rem;
+}
 
 .theme-switch {
   display: inline-block;
@@ -162,7 +175,7 @@ button:active {
 }
 
 .theme-switch input {
-  display:none;
+  display: none;
 }
 
 .slider {
@@ -210,10 +223,8 @@ input:checked + .slider:before {
   text-transform: uppercase;
   font-family: 'Jost';
   color: var(--secondary-color);
-  }
+}
 
-
-  #success-msg {
+#success-msg {
   transition-delay: 3s;
-  }
-
+}
