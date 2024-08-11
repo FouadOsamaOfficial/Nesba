@@ -31,6 +31,9 @@ import { PersonalFinanceComponent } from './Components/personal-finance/personal
 import { AutoLeaseFinanceComponent } from './Components/auto-lease-finance/auto-lease-finance.component';
 import { RealEstateMarketComponent } from './sharedComponents/real-estate-market/real-estate-market.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { GuestFinanceProductsComponent } from './Components/guest-finance-products/guest-finance-products.component';
+import { GuestCardsComponent } from './Components/guest-cards/guest-cards.component';
+import { GuestInvestmentComponent } from './Components/guest-investment/guest-investment.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent  },
@@ -63,6 +66,9 @@ const routes: Routes = [
 { path: 'personal-finance' , component:PersonalFinanceComponent },
 { path: 'auto-lease-finance' , component:AutoLeaseFinanceComponent },
 { path: 'real-estate-market' , component:RealEstateMarketComponent },
+{ path: 'guest-finance-products' , component:GuestFinanceProductsComponent },
+{ path: 'guest-cards' , component:GuestCardsComponent },
+{ path: 'guest-investment' , component:GuestInvestmentComponent },
 { path: 'not-found', component: NotFoundComponent },
 { path: '**', redirectTo: '/not-found' },
 

@@ -44,6 +44,9 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { OldEventsComponent } from './Components/old-events/old-events.component';
 import { OldDocumentsComponent } from './Components/old-documents/old-documents.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { GuestFinanceProductsComponent } from './Components/guest-finance-products/guest-finance-products.component';
+import { GuestCardsComponent } from './Components/guest-cards/guest-cards.component';
+import { GuestInvestmentComponent } from './Components/guest-investment/guest-investment.component';
 
 
 @NgModule({
@@ -86,6 +89,9 @@ import { NotFoundComponent } from './Components/not-found/not-found.component';
     OldEventsComponent,
     OldDocumentsComponent,
     NotFoundComponent,
+    GuestFinanceProductsComponent,
+    GuestCardsComponent,
+    GuestInvestmentComponent,
   ],
   imports: [
     BrowserModule,

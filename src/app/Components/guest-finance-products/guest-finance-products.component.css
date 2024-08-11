@@ -1,0 +1,134 @@
+body {
+    padding: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.progress-bg {
+    margin: 0 auto;
+    width: 65%;
+    height: 78px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: inset 0 0 10px #ccc;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.progress-bar {
+    height: 78px;
+    border-radius: 10px;
+    float: left;
+    width: 0%;
+    /* Start with 0% for animation */
+    background-color: #1c314a;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1c314a), to(#27425f));
+    background: -webkit-linear-gradient(top, #1c314a, #27425f);
+    background: -moz-linear-gradient(top, #1c314a, #27425f);
+    background: -ms-linear-gradient(top, #1c314a, #27425f);
+    background: -o-linear-gradient(top, #1c314a, #27425f);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-animation: progress-bar 2s ease forwards;
+    -moz-animation: progress-bar 2s ease forwards;
+    -o-animation: progress-bar 2s ease forwards;
+    animation: progress-bar 2s ease forwards;
+}
+
+.progress-bg h3.goal,
+.progress-bg h3.raised {
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 78px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline;
+    position: relative;
+    z-index: 2;
+}
+
+.progress-bg h3.raised {
+    color: #fff;
+    margin: 14px 25px 0 50px;
+    padding: 0 25px 0 0;
+}
+
+.progress-bg h3.goal {
+    color: #b2b2b2;
+    float: right;
+    padding: 0 25px 0 0;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.progress-bg h3.raised {
+    animation: fadein 4s;
+}
+
+@keyframes progress-bar {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+
+.logo {
+    width: 150px;
+    height: auto;
+    /* float: left; */
+    position: relative;
+}
+ .info {justify-content: center;
+    margin: 20px;
+    position: relative;
+    /* color: #fff; */
+    padding-bottom: 40px;
+}
+.info h2 , h4 , h6 {
+    margin: 10px;
+}
+
+
+.info h4{
+    text-align: center;
+}
+.row{
+    justify-content: center;
+
+}
+ .previous{
+    margin: 10px;
+    padding: 6px;
+    width: 100px;
+
+    /* margin-left: 150px; */
+    /* float: left; */
+    justify-self: left;
+
+}
+
+ .signup{
+    margin: 10px;
+    padding: 6px;
+    width: 100px;
+
+    /* margin-right: 150px; */
+    /* float: left; */
+    justify-self: right;
+}
