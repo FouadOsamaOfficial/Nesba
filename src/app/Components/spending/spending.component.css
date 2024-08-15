@@ -30,6 +30,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    cursor: pointer;
   }
   
   .holder {
@@ -46,6 +47,8 @@ body {
     width: 100%;
     transform-style: preserve-3d;
     animation: spin 30s infinite linear;
+    cursor: pointer;
+
   }
   
   .face {
