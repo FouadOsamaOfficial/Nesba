@@ -98,7 +98,7 @@ export class EquityReleaseService {
       notes: 'Option to buy back property'
     },
     {
-      provider: 'Provider N',
+      provider: 'Provider x',
       typeOfPlan: 'Home Reversion Plan',
       interestRate: '4.0%',
       initialAmountReleased: '$40,000',

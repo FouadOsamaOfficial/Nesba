@@ -20,154 +20,43 @@
 </div>
 
 <div class="table-container">
-    <!-- <table *ngIf="selectedTable === 1" class="data-table">
-      <thead>
-        <tr>
-          <th>Land</th>
-          <th>Buyout</th>
-          <th>Ready unite</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1.1</td>
-          <td>Data 1.2</td>
-          <td>Data 1.3</td>
-        </tr>
-      </tbody>
-    </table>
-  
-    <table *ngIf="selectedTable === 2" class="data-table">
-      <thead>
-        <tr>
-            <th>Land</th>
-            <th>Buyout</th>
-            <th>Ready unite</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 2.1</td>
-          <td>Data 2.2</td>
-          <td>Data 2.3</td>
-        </tr>
-      </tbody>
-    </table>
-  
-    <table *ngIf="selectedTable === 3" class="data-table">
-      <thead>
-        <tr>
-            <th>Land</th>
-            <th>Buyout</th>
-            <th>Ready unite</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 3.1</td>
-          <td>Data 3.2</td>
-          <td>Data 3.3</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table *ngIf="selectedTable === 4" class="data-table">
-        <thead>
-          <tr>
-              <th>Buyout</th>
-              <th>Self constaction</th>
-              <th>Off plan product</th>
-              <th>MOH land</th>
-              <th>Market Ready units</th>
-              <th>MOH Ready units</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Data 3.1</td>
-            <td>Data 3.2</td>
-            <td>Data 3.3</td>
-            <td>Data 3.4</td>
-            <td>Data 3.5</td>
-            <td>Data 3.6</td>
-          </tr>
-        </tbody>
-      </table> -->
 
     <div class="report-container" *ngIf="selectedTable === 1" class="data-table">
-        
+
         <div class="report-header">
             <h1 class="recent-Articles">Mortgage Refinance Data</h1>
             <button class="view">View All</button>
         </div>
 
-        <div class="report-body">
-            <div class="report-topic-heading">
-                <h3 class="t-op">Lender</h3>
-                <h3 class="t-op">Loan Type</h3>
-                <h3 class="t-op">Interest Rate</h3>
-                <h3 class="t-op">Monthly Payment</h3>
-                <h3 class="t-op">Term</h3>
-                <h3 class="t-op">Fees</h3>
-                <h3 class="t-op">APR</h3>
-                <h3 class="t-op">status</h3>
-            </div>
+        <div class="product-table flextable">
+            <div class="tbody">
+                <div class="thead trow">
+                    <div class="tcell">Lender</div>
+                    <div class="tcell">Loan Type</div>
+                    <div class="tcell">Interest Rate</div>
+                    <div class="tcell">Monthly Payment</div>
+                    <div class="tcell">Term</div>
+                    <div class="tcell">Fees</div>
+                    <div class="tcell">APR</div>
+                    <div class="tcell">status</div>
 
-            <div class="items">
-                <div class="item1" *ngFor="let item of mortgageData">
-                    <h3 class="t-op-nextlvl">{{item.lender}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.loanType}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.interestRate}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.monthlyPayment}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.term}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.fees}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.apr}}</h3>
-        
-                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
-                    <div class="modal" *ngIf="isModalOpen">
-                        <div class="modal-content">
-                            <span class="close" (click)="closeModal()">&times;</span>
-                            <div class="modal-body">
+                </div>
+                <div *ngFor="let item of mortgageData; let i = index">
 
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="input1">Label 1</label>
-                                        <input type="text" id="input1" value="Readonly 1" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="input2">Label 2</label>
-                                        <input type="text" id="input2" value="Readonly 2" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="input3">Label 3</label>
-                                        <input type="text" id="input3" value="Readonly 3" readonly>
-                                    </div>
-                                </div>
-
-                                <div class="propContainer">
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
-                                            alt="">
-                                    </div>
-
-                                </div>
-                            </div>
+                    <div class="trow">
+                        <div class="tcell">{{item.lender}}</div>
+                        <div class="tcell">{{item.loanType}}</div>
+                        <div class="tcell">{{item.interestRate}}</div>
+                        <div class="tcell">{{item.monthlyPayment}}</div>
+                        <div class="tcell">{{item.term}}</div>
+                        <div class="tcell">{{item.fees}}</div>
+                        <div class="tcell">{{item.apr}}</div>
+                        <div class="tcell">
+                            <button class="btn btn-outline label-tag" (click)="openModal('MortgageRefinance', i)">Show
+                                Unite</button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -177,73 +66,34 @@
             <h1 class="recent-Articles">Equity Release Data</h1>
             <button class="view">View All</button>
         </div>
+        <div class="product-table flextable">
+            <div class="tbody">
+                <div class="thead trow">
+                    <div class="tcell">Provider</div>
+                    <div class="tcell">Type of Plan</div>
+                    <div class="tcell">Interest Rate</div>
+                    <div class="tcell">Initial Amount Released</div>
+                    <div class="tcell">Estimated Value After 10 Years</div>
+                    <div class="tcell">Monthly Payment</div>
+                    <div class="tcell">Notes</div>
+                    <div class="tcell">Status</div>
 
-        <div class="report-body">
-            <div class="report-topic-heading">
-            
-                <h3 class="t-op">Provider</h3>
-                <h3 class="t-op">Type of Plan</h3>
-                <h3 class="t-op">Interest Rate</h3>
-                <h3 class="t-op">Initial Amount Released</h3>
-                <h3 class="t-op">Estimated Value After 10 Years</h3>
-                <h3 class="t-op">Monthly Payment</h3>
-                <h3 class="t-op">Notes</h3>
-                <h3 class="t-op">Status</h3>
-            </div>
-
-            <div class="items">
-                <div class="item1" *ngFor="let item of equityData">
-                    <h3 class="t-op-nextlvl">{{item.provider}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.typeOfPlan}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.interestRate}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.initialAmountReleased}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.estimatedValueAfter10Years}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.monthlyPayment}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.notes}}</h3>
-            
-                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
-                    <div class="modal" *ngIf="isModalOpen">
-                        <div class="modal-content">
-                            <span class="close" (click)="closeModal()">&times;</span>
-                            <div class="modal-body">
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="input1">Label 1</label>
-                                        <input type="text" id="input1" value="Readonly 1" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="input2">Label 2</label>
-                                        <input type="text" id="input2" value="Readonly 2" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="input3">Label 3</label>
-                                        <input type="text" id="input3" value="Readonly 3" readonly>
-                                    </div>
-                                </div>
-
-                                <div class="propContainer">
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
-                                            alt="">
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div *ngFor="let item of equityData ; let i = index">
+                    <div class="trow">
+                        <div class="tcell">{{item.provider}}</div>
+                        <div class="tcell">{{item.typeOfPlan}}</div>
+                        <div class="tcell">{{item.interestRate}}</div>
+                        <div class="tcell">{{item.initialAmountReleased}}</div>
+                        <div class="tcell">{{item.estimatedValueAfter10Years}}</div>
+                        <div class="tcell">{{item.monthlyPayment}}</div>
+                        <div class="tcell">{{item.notes}}</div>
+                        <div class="tcell">
+                            <button class="btn btn-outline  label-tag" (click)="openModal('EquityRelease', i)">Show
+                                Unite</button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -254,79 +104,43 @@
             <button class="view">View All</button>
         </div>
 
-        <div class="report-body">
-            <div class="report-topic-heading">
-                <h3 class="t-op">Property Type</h3>
-                <h3 class="t-op">Location</h3>
-                <h3 class="t-op">Purchase Price</h3>
-                <h3 class="t-op">Down Payment</h3>
-                <h3 class="t-op">Mortgage Amount</h3>
-                <h3 class="t-op">Interest Rate</h3>
-                <h3 class="t-op">Term Length</h3>
-                <h3 class="t-op">Monthly Payment</h3>
-                <h3 class="t-op">Notes</h3>
-                <h3 class="t-op">Status</h3>
-            </div>
 
-            <div class="items">
-                <div class="item1"  *ngFor="let item of purchaseData">
-                    <h3 class="t-op-nextlvl">{{item.propertyType}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.location}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.purchasePrice}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.downPayment}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.mortgageAmount}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.interestRate}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.termLength}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.monthlyPayment}}</h3>
-                    <h3 class="t-op-nextlvl">{{item.notes}}</h3>
-                  
-                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Show Unite</button>
-                    <div class="modal" *ngIf="isModalOpen">
-                        <div class="modal-content">
-                            <span class="close" (click)="closeModal()">&times;</span>
-                            <div class="modal-body">
+        <div class="product-table flextable">
+            <div class="tbody">
+                <div class="thead trow">
+                    <div class="tcell">Property Type</div>
+                    <div class="tcell">Location</div>
+                    <div class="tcell">Purchase Price</div>
+                    <div class="tcell">Down Payment </div>
+                    <div class="tcell">Mortgage Amount</div>
+                    <div class="tcell">Interest Rate</div>
+                    <div class="tcell">Term Length</div>
+                    <div class="tcell">Monthly Payment</div>
+                    <div class="tcell">Notes </div>
+                    <div class="tcell">Status </div>
 
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="input1">Label 1</label>
-                                        <input type="text" id="input1" value="Readonly 1" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="input2">Label 2</label>
-                                        <input type="text" id="input2" value="Readonly 2" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="input3">Label 3</label>
-                                        <input type="text" id="input3" value="Readonly 3" readonly>
-                                    </div>
-                                </div>
+                </div>
+                <div *ngFor="let item of purchaseData; let i = index">
 
-                                <div class="propContainer">
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <span>Description</span>
-                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
-                                            alt="">
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="trow">
+                        <div class="tcell">{{item.propertyType}}</div>
+                        <div class="tcell">{{item.location}}</div>
+                        <div class="tcell">{{item.purchasePrice}}</div>
+                        <div class="tcell">{{item.downPayment}}</div>
+                        <div class="tcell">{{item.mortgageAmount}}</div>
+                        <div class="tcell">{{item.interestRate}}</div>
+                        <div class="tcell">{{item.termLength}}</div>
+                        <div class="tcell">{{item.monthlyPayment}}</div>
+                        <div class="tcell">{{item.notes}}</div>
+                        <div class="tcell">
+                            <button class="btn btn-outline label-tag" (click)="openModal('DirectPurchase', i)">Show
+                                Unite</button>
                         </div>
                     </div>
                 </div>
-
-             
-
             </div>
         </div>
+
     </div>
 
     <div class="report-container" *ngIf="selectedTable === 4" class="data-table">
@@ -334,53 +148,145 @@
             <h1 class="recent-Articles">MOH Program Data</h1>
             <button class="view">View All</button>
         </div>
+        <div class="product-table flextable">
+            <div class="tbody">
+                <div class="thead trow">
+                    <div class="tcell">Buyout </div>
+                    <div class="tcell" style="margin-left: -75px;">Self constaction</div>
+                    <div class="tcell">Off Plan Product</div>
+                    <div class="tcell">MOH Land </div>
+                    <div class="tcell">Market Ready Units</div>
+                    <div class="tcell">MOH Ready Units</div>
+                </div>
+                <div *ngFor="let program of mohPrograms; let i = index">
 
-        <div class="report-body">
-            <div class="report-topic-heading">
-                <h3 class="t-op">Buyout</h3>
-                <h3 class="t-op">Self constaction</h3>
-                <h3 class="t-op">Off Plan Product</h3>
-                <h3 class="t-op">MOH Land</h3>
-                <h3 class="t-op">Market Ready Units</h3>
-                <h3 class="t-op">MOH Ready Units</h3>
-            </div>
-
-            <div class="items">
-                <div class="item1" *ngFor="let program of mohPrograms; let i = index"> 
-                    <h3 class="t-op-nextlvl">{{program.bayout}}</h3>
-                    <h3 class="t-op-nextlvl">
-                        <div class="container">
+                    <div class="trow">
+                        <div class="tcell">{{program.bayout}}</div>
+                        <div class="tcell">
                             <div class="radio-group">
-                                <input type="radio" id="Number1_{{i}}" name="selfConstruction{{i}}" value="Number 1" (change)="onSelfConstructionChange($event)" [checked]="!program.selfConstruction">
+                                <input type="radio" id="Number1_{{i}}" name="selfConstruction{{i}}" value="Number 1"
+                                    (change)="onSelfConstructionChange($event)" [checked]="!program.selfConstruction">
                                 <label for="Number1_{{i}}">No</label>
-                    
-                                <input type="radio" id="Number2_{{i}}" name="selfConstruction{{i}}" value="Number 2" (change)="onSelfConstructionChange($event)" [checked]="program.selfConstruction">
-                                <label for="Number2_{{i}}">Yes</label>
-                              </div>
-                        </div>
-                    </h3>
-                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
-                        Units</button>
 
-                    <h3 class="t-op-nextlvl">{{program.mohLand}}</h3>
-                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openRealEastateMarket()">Shom
-                        Units</button>
-                    <button class="btn btn-outline t-op-nextlvl label-tag" (click)="openModal()">Shom Units</button>
-                    <div class="modal" *ngIf="isModalOpen">
-                        <div class="modal-content">
-                            <span class="close" (click)="closeModal()">&times;</span>
-                            <div class="modal-body">
+                                <input type="radio" id="Number2_{{i}}" name="selfConstruction{{i}}" value="Number 2"
+                                    (change)="onSelfConstructionChange($event)" [checked]="program.selfConstruction">
+                                <label for="Number2_{{i}}">Yes</label>
                             </div>
                         </div>
+                        <div class="tcell">
+                            <button class="btn btn-outline t-op-nextlvl label-tag"
+                                (click)="openRealEastateMarket()">Shom
+                                Units</button>
+                        </div>
+                        <div class="tcell">{{program.mohLand}}</div>
+                        <div class="tcell">
+                            <button class="btn btn-outline t-op-nextlvl label-tag"
+                                (click)="openRealEastateMarket()">Shom
+                                Units</button>
+                        </div>
+
+                        <div class="tcell">
+                            <button class="btn btn-outline t-op-nextlvl label-tag"
+                                (click)="openModal('MOHProgram', i)">Show Unite</button>
+
+                        </div>
+
                     </div>
                 </div>
-
-   
-
-
-
             </div>
         </div>
     </div>
 </div>
 <button class="btn btn-outline-secondary" (click)="previous()">Previous</button>
+
+
+
+<div class="modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <div class="modal-body">
+            <div *ngIf="currentModalData">
+
+                <div *ngIf="isMortgageRefinance(currentModalData)">
+                    <div class="row">
+                        <p class="col-md-3"><strong>Lender:</strong> {{ currentModalData.lender }}</p>
+                        <p class="col-md-3"><strong>Loan Type:</strong> {{ currentModalData.loanType }}</p>
+                        <p class="col-md-3"><strong>Interest Rate:</strong> {{ currentModalData.interestRate }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-3"><strong>Monthly Payment:</strong> {{ currentModalData.monthlyPayment }}</p>
+                        <p class="col-md-3"><strong>Term:</strong> {{ currentModalData.term }}</p>
+                        <p class="col-md-3"><strong>Fees:</strong> {{ currentModalData.fees }}</p>
+                    </div>
+                    <div class="row"> <p class="col-md-3"><strong>APR:</strong> {{ currentModalData.apr }}</p></div>
+                   
+                </div>
+
+                <div *ngIf="isEquityRelease(currentModalData)">
+                    <div class="row">
+                        <p class="col-md-3"><strong>Provider:</strong> {{ currentModalData.provider }}</p>
+                        <p class="col-md-3"><strong>Type of Plan:</strong> {{ currentModalData.typeOfPlan }}</p>
+                        <p class="col-md-3"><strong>Interest Rate:</strong> {{ currentModalData.interestRate }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-3"><strong>Initial Amount Released:</strong> {{
+                            currentModalData.initialAmountReleased }}</p>
+                        <p class="col-md-3"><strong>Estimated Value After 10 Years:</strong> {{
+                            currentModalData.estimatedValueAfter10Years }}</p>
+                        <p class="col-md-3"><strong>Monthly Payment:</strong> {{ currentModalData.monthlyPayment }}</p>
+                    </div>
+                    <div class="row"><p class="col-md-3"><strong>Notes:</strong> {{ currentModalData.notes }}</p>
+                    </div>
+                    
+                </div>
+
+                <div *ngIf="isDirectPurchase(currentModalData)">
+                    <div class="row">
+                        <p class="col-md-3"><strong>Property Type:</strong> {{ currentModalData.propertyType }}</p>
+                        <p class="col-md-3"><strong>Location:</strong> {{ currentModalData.location }}</p>
+                        <p class="col-md-3"><strong>Purchase Price:</strong> {{ currentModalData.purchasePrice }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-3"><strong>Down Payment:</strong> {{ currentModalData.downPayment }}</p>
+                        <p class="col-md-3"><strong>Mortgage Amount:</strong> {{ currentModalData.mortgageAmount }}</p>
+                        <p class="col-md-3"><strong>Interest Rate:</strong> {{ currentModalData.interestRate }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-3"><strong>Term Length:</strong> {{ currentModalData.termLength }}</p>
+                        <p class="col-md-3"><strong>Monthly Payment:</strong> {{ currentModalData.monthlyPayment }}</p>
+                        <p class="col-md-3"><strong>Notes:</strong> {{ currentModalData.notes }}</p>
+                    </div>
+                </div>
+
+                <div *ngIf="isMOHProgram(currentModalData)">
+                    <div class="row">
+                        <p class="col-md-3"><strong>Buyout:</strong> {{ currentModalData.bayout }}</p>
+                        <p class="col-md-3"><strong>Self Construction:</strong> {{ currentModalData.selfConstruction ?
+                            'Yes'
+                            : 'No' }}</p>
+                        <p class="col-md-3"><strong>MOH Land:</strong> {{ currentModalData.mohLand }}</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="propContainer">
+                <div>
+                    <span>Description</span>
+                    <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
+                        alt="">
+                </div>
+                <div>
+                    <span>Description</span>
+                    <img src="https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0253fdb32e31d50537b28f5ea7c48986&auto=format&fit=crop&w=934&q=80"
+                        alt="">
+                </div>
+                <div>
+                    <span>Description</span>
+                    <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
