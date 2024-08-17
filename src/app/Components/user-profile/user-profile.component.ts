@@ -63,6 +63,9 @@ export class UserProfileComponent implements OnInit{
    noAnnualFee:'',
    airline:' ',
    noForeignFransactionFees:'',
+   eventCount:'',
+   emailsCount:'',
+   weatherDegree:''
   };
   constructor(private fb: FormBuilder , private router:Router , private userDataService: UserDataService) {
 

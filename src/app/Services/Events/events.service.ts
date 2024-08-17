@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
  export interface EventData {
+  // eventCount?:string;
   title:string;
   date: string;
   location: string;
@@ -18,6 +19,7 @@ export class EventsService {
 
   private events: EventData[] = [
     {
+      // eventCount:'5',
       title:'new cards',
       date: '17/08/2023',
       location: 'NEW YORK',

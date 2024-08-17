@@ -47,6 +47,7 @@ import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { GuestFinanceProductsComponent } from './Components/guest-finance-products/guest-finance-products.component';
 import { GuestCardsComponent } from './Components/guest-cards/guest-cards.component';
 import { GuestInvestmentComponent } from './Components/guest-investment/guest-investment.component';
+import { ServiceProviderComponent } from './Components/service-provider/service-provider.component';
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { GuestInvestmentComponent } from './Components/guest-investment/guest-in
     GuestFinanceProductsComponent,
     GuestCardsComponent,
     GuestInvestmentComponent,
+    ServiceProviderComponent,
   ],
   imports: [
     BrowserModule,

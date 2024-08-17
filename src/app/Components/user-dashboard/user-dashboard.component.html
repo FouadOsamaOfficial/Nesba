@@ -218,30 +218,30 @@
 </aside>
 
   
-    <main class="main">
-      <div class="main-header">
-        <div class="main-header__intro-wrapper">
-          <div class="main-header__welcome" *ngIf="userData">
+    <main class="main" >
+      <div class="main-header" >
+        <div class="main-header__intro-wrapper" *ngIf="userData">
+          <div class="main-header__welcome" >
             <div class="main-header__welcome-title text-light">Welcome, <strong>{{userData.fullName}}</strong></div>
             <div class="main-header__welcome-subtitle text-light">How are you today?</div>
           </div>
-          <div class="quickview">
-            <div class="quickview__item">
-              <div class="quickview__item-total">3</div>
+          <div class="quickview" >
+            <div class="quickview__item" >
+              <div class="quickview__item-total" >{{userData.eventCount}}</div>
               <div class="quickview__item-description">
                 <i class="fa fa-calendar-alt"></i>
                 <span class="text-light">Events</span>
               </div>
             </div>
-            <div class="quickview__item">
-              <div class="quickview__item-total">14</div>
+            <div class="quickview__item" >
+              <div class="quickview__item-total" >{{userData.emailsCount}}</div>
               <div class="quickview__item-description">
                 <i class="fa fa-comment"></i>
                 <span class="text-light">Emails</span>
               </div>
             </div>
             <div class="quickview__item">
-              <div class="quickview__item-total">27&deg;</div>
+              <div class="quickview__item-total">{{userData.weatherDegree}}&deg;</div>
               <div class="quickview__item-description">
                 <i class="fa fa-map-marker-alt"></i>
                 <span class="text-light">Suadi Arbia</span>
@@ -259,7 +259,7 @@
 
           <div class="overviewCard-description" >
             <h3 class="overviewCard-title text-light1">New <strong>Document</strong></h3>
-            <p class="overviewCard-subtitle">Europe Trip</p>
+            <p class="overviewCard-subtitle">Add or Delet Document</p>
           </div>
         </div>
         <div class="overviewCard" (click)="goToEvents()">
@@ -269,7 +269,7 @@
           <!-- <img src="../../../assets/images/nesbalogo-removebg-preview.png" alt="" style="border-radius: 50%; height: 80px; width: 100px;"> -->
           <div class="overviewCard-description" >
             <h3 class="overviewCard-title text-light1">Upcoming <strong>Event</strong></h3>
-            <p class="overviewCard-subtitle">Chili Cookoff</p>
+            <p class="overviewCard-subtitle">Financing Events</p>
           </div>
         </div>
         <div class="overviewCard" (click)="goToEmails()">

@@ -19,7 +19,7 @@ export class MOHProgramService {
     { bayout: '6000', selfConstruction: true, mohLand: '3500' },
     { bayout: '6000', selfConstruction: true, mohLand: '3500' },
     { bayout: '6000', selfConstruction: true, mohLand: '3500' },
-    { bayout: '6000', selfConstruction: true, mohLand: '3500' },
+    { bayout: '6000', selfConstruction: true, mohLand: '3500' }
   ];
   constructor() { }
 

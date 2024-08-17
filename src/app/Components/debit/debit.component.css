@@ -331,6 +331,9 @@ body {
   margin-left: 140px;
 }
 
+.contentBx a {
+  cursor: pointer;
+}
 /* Media Queries for Different Screen Sizes */
 
 /* Large Devices (desktops, 1200px and up) */

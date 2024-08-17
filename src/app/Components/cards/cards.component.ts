@@ -22,7 +22,6 @@ ngOnInit(): void {
     // this.currentFundingData2 = data.length > 1 ? data[1] : null;
   });
 }
-
   previous() {
     this.router.navigate(['./services']);
   }

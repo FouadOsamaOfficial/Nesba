@@ -12,13 +12,17 @@ export class CreditComponent {
   userData: UserData | undefined;
 
 
+
   ngOnInit(): void {
     this.userDataService.getUserData().subscribe(data => {
       this.userData = data;
     });
 
   }
+  toServiceProvider(){
+    this.router.navigate(['./service-provider']);
 
+  }
   previous() {
     this.router.navigate(['./cards']);
 

@@ -1,0 +1,30 @@
+<h6 class="providingTitle"  *ngIf="!showModal && !messageShown">Connecting Your Request To The Provider</h6>
+
+<div class="loader" *ngIf="!showModal && !messageShown">
+  <ul class="hexagon-container">
+    <li class="hexagon hex_1"></li>
+    <li class="hexagon hex_2"></li>
+    <li class="hexagon hex_3"></li>
+    <li class="hexagon hex_4"></li>
+    <li class="hexagon hex_5"></li>
+    <li class="hexagon hex_6"></li>
+    <li class="hexagon hex_7"></li>
+  </ul>
+</div>
+
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-content">
+  
+    <div class="modal-body">
+      <div class="message" *ngIf="messageShown">
+        <p>Your request has been processed. Redirecting you back...</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p>Thank You</p>
+
+      <!-- <button class="btn btn-primary" type="button" (click)="onClose()">OK</button> -->
+      <!-- <button class="btn btn-warning" type="button" (click)="onClose()">Cancel</button> -->
+    </div>
+  </div>
+</div>

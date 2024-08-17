@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { UserData, UserDataService } from 'src/app/Services/User-Data/user-data.service';
 import { DocumentsService } from 'src/app/Services/Documents/documents.service';
 import { EventData, EventsService } from 'src/app/Services/Events/events.service';
+import { EmailItem } from 'src/app/Services/email/email.service';
 type DropdownKeys = 'funding' | 'loan' | 'mortgage' | 'inbox' | 'unread' | 'archives' | 'vacation' | 'anniversary' | 'university' | 'finances' | 'callStats' | 'tripLogs' | 'newFeature' | 'userDiscounts' | 'govStatement';
 
 @Component({
@@ -18,12 +19,10 @@ export class UserDashboardComponent {
   @ViewChild('funding') funding!: ElementRef;
 
   isDropdownActive: boolean = false;
-
   userData: UserData | undefined;
   documents: { name: string, size: string, date: Date, type?: string, preview?: string }[] = [];
 
-  events: EventData[] = []; // Define the property
-
+  events: EventData[] = []; 
 
   dropdowns: Record<DropdownKeys, boolean> = {
     funding: false,

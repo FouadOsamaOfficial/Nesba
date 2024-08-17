@@ -12,13 +12,18 @@ export class DebitComponent {
   userData: UserData | undefined;
 
 
+
   ngOnInit(): void {
     this.userDataService.getUserData().subscribe(data => {
       this.userData = data;
     });
 
   }
-  previous() {
+  toServiceProvider(){
+    this.router.navigate(['./service-provider']);
+
+  }
+    previous() {
     this.router.navigate(['./cards']);
 
   }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 export interface EmailItem {
+  emailsCount?:string;
   id: string;
   subject: string;
   sender: string;
@@ -22,7 +23,7 @@ export class EmailService {
     { id: '8', subject: 'Special Offer', sender: 'offers@example.com', body: 'Check out our special offers just for you.' },
     { id: '9', subject: 'Special Offer', sender: 'offers@example.com', body: 'Check out our special offers just for you.' },
     { id: '10', subject: 'Special Offer', sender: 'offers@example.com', body: 'Check out our special offers just for you.' },
-    { id: '11', subject: 'Special Offer', sender: 'offers@example.com', body: 'Check out our special offers just for you.' },
+    { id: '11', subject: 'Special Offer', sender: 'offers@example.com', body: 'Check out our special offers just for you.'  },
     // Add more dummy emails here...
   ];
 

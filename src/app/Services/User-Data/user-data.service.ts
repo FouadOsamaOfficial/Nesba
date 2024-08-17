@@ -49,6 +49,9 @@ export interface UserData {
  noAnnualFee:string;
  airline:string;
  noForeignFransactionFees:string;
+ eventCount:string;
+emailsCount:string;
+weatherDegree:string;
 }
 @Injectable({
   providedIn: 'root'
@@ -104,6 +107,9 @@ export class UserDataService {
    noAnnualFee:'no',
    airline:'saudi arabia',
    noForeignFransactionFees:'yes',
+   eventCount:'5',
+   emailsCount:'11',
+   weatherDegree:'27'
   };
 
   getUserData(): Observable<UserData> {
