@@ -1,39 +1,65 @@
 <app-aside></app-aside>
 <h2 class="containerOneTitle">Selected Unit</h2>
-
-<div class="container">
-  <div *ngIf=" property " class="box">
-    <div class="top" (click)="contactProvider()">
-      <img [src]="property.imageUrl" [alt]="property.title" />
-      <span><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i></span>
-    </div>
-    <div class="bottom" >
-      <h3>{{property.title}}</h3>
-      <p>{{property.description}}</p>
-      <div class="advants">
-        <div>
-          <span>Bedrooms</span>
-          <div><i class="fas fa-th-large"></i><span>{{property.bedrooms}}</span></div>
-        </div>
-        <div>
-          <span>Bathrooms</span>
-          <div><i class="fas fa-shower"></i><span>{{property.bathrooms}}</span></div>
-        </div>
-        <div>
-          <span>Area</span>
+<div class="row">
+  <div class="container">
+    <div *ngIf="property" class="box">
+      <div class="top" (click)="contactProvider()">
+        <img [src]="property.imageUrl" [alt]="property.title" />
+        <span><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i></span>
+      </div>
+      <div class="bottom">
+        <h3>{{ property.title }}</h3>
+        <p>{{ property.description }}</p>
+        <div class="advants">
           <div>
-            <i class="fas fa-vector-square"></i><span>{{property.area}}<span>{{property.areaUnit}}</span></span>
+            <span>Bedrooms</span>
+            <div><i class="fas fa-th-large"></i><span>{{ property.bedrooms }}</span></div>
+          </div>
+          <div>
+            <span>Bathrooms</span>
+            <div><i class="fas fa-shower"></i><span>{{ property.bathrooms }}</span></div>
+          </div>
+          <div>
+            <span>Area</span>
+            <div>
+              <i class="fas fa-vector-square"></i><span>{{ property.area }}<span>{{ property.areaUnit }}</span></span>
+            </div>
           </div>
         </div>
+        <div class="price">
+          <span>For Sale</span>
+          <span>{{ property.price }}</span>
+        </div>
       </div>
-      <div class="price">
-        <span>For Sale</span>
-        <span>{{property.price}}</span>
+    </div>
+    <div class="container2" *ngIf="property">
+      <input type="radio" name="slider" id="item-1" checked>
+      <input type="radio" name="slider" id="item-2">
+      <input type="radio" name="slider" id="item-3">
+      <input type="radio" name="slider" id="item-4">
+      <input type="radio" name="slider" id="item-5">
+      <input type="radio" name="slider" id="item-6">
+      <div class="cards">
+        <label *ngFor="let room of getRoomDetails(property); let i = index" class="card2" [for]="'item-' + (i + 1)" [id]="'song-' + (i + 1)">
+          <img [src]="room.imageUrl" [alt]="room.title">
+        </label>
+      </div>
+      <div class="player">
+        <div class="upper-part">
+          <div class="info-area" id="test">
+            <label *ngFor="let room of getRoomDetails(property)" class="song-info">
+              <div class="title">{{ room.title }}</div>
+              <div class="sub-line">
+                <div class="subtitle">{{ room.subtitle }}</div>
+                <div class="time">{{ room.area }}</div>
+              </div>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-
-
+<button class="btn btn-outline-secondary" (click)="previous()">Previous</button>
 

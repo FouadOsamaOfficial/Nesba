@@ -10,8 +10,8 @@ body {
 }
 
 .container {
-    width: 1200px;
-    margin: 100px auto;
+    width: 1300px;
+    margin: 100px 270px;
     display: flex;
     justify-content: space-between;
 }
@@ -74,7 +74,7 @@ body {
 }
 
 .container .box .top:after {
-    content: "View Property";
+    content: "Buying Request";
     color: white;
     font-size: 12px;
     padding: 10px;
@@ -230,3 +230,206 @@ img {
     margin-left: 140px;
 
   }
+
+
+
+
+/* * {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  font-family: 'DM Sans', sans-serif;
+  transition: background .4s ease-in;
+  background-color: #c394f8;
+}
+
+body.blue {
+  background-color: #428aa6;
+}
+input[type="radio"] {
+    display: none;
+  }
+  
+  input[type="radio"]:nth-of-type(1):checked ~ .cards .card2:nth-of-type(1),
+  input[type="radio"]:nth-of-type(2):checked ~ .cards .card2:nth-of-type(2),
+  input[type="radio"]:nth-of-type(3):checked ~ .cards .card2:nth-of-type(3),
+  input[type="radio"]:nth-of-type(4):checked ~ .cards .card2:nth-of-type(4),
+  input[type="radio"]:nth-of-type(5):checked ~ .cards .card2:nth-of-type(5),
+  input[type="radio"]:nth-of-type(6):checked ~ .cards .card2:nth-of-type(6) {
+    opacity: 1;
+  }
+  
+  input[type="radio"]:not(:checked) ~ .cards .card2 {
+    opacity: 0;
+  }
+.container2 .card2 {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.container2 {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container2 .cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.container2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 ,  #item-4:checked ~ .cards #song-6, #item-5:checked ~ .cards #song-1, #item-6:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-4 ,#item-4:checked ~ .cards #song-5,#item-5:checked ~ .cards #song-6,#item-6:checked ~ .cards #song-1    {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 , #item-4:checked ~ .cards #song-4 , #item-5:checked ~ .cards #song-5, #item-6:checked ~ .cards #song-6{
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.player {
+  background-color: #fff;
+  border-radius: 8px;
+  min-width: 320px;
+  padding: 16px 10px;
+}
+
+.upper-part {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.play-icon { margin-right: 10px; }
+
+.song-info {
+  width: calc(100% - 32px);
+  display: block;
+}
+
+.song-info .title {
+  color: #403d40;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.sub-line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.subtitle, .time {
+  font-size: 12px;
+  line-height: 16px;
+  color: #c6c5c6;
+}
+
+.time {
+  font-size: 12px;
+  line-height: 16px;
+  color: #a5a5a5;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.progress-bar {
+  height: 3px;
+  width: 100%;
+  background-color: #e9efff;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color: #2992dc;
+  border-radius: 6px;
+}
+
+.info-area {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  transition: transform .4s ease-in;
+}
+
+#item-1:checked ~ .player #test {
+  transform: translateY(0);
+}
+
+#item-2:checked ~ .player #test {
+  transform: translateY(-40px);
+}
+
+#item-3:checked ~ .player #test {
+  transform: translateY(-80px);
+}
+
+#item-4:checked ~ .player #test {
+    transform: translateY(-120px);
+  }
+  
+  #item-5:checked ~ .player #test {
+    transform: translateY(-160px);
+  }
+  
+  #item-6:checked ~ .player #test {
+    transform: translateY(-200px);
+  }
+
+  .btn {
+    margin: 10px;
+    margin-left: 250px;
+  }
+  
