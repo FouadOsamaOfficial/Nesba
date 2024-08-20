@@ -35,6 +35,7 @@ import { GuestFinanceProductsComponent } from './Components/guest-finance-produc
 import { GuestCardsComponent } from './Components/guest-cards/guest-cards.component';
 import { GuestInvestmentComponent } from './Components/guest-investment/guest-investment.component';
 import { ServiceProviderComponent } from './Components/service-provider/service-provider.component';
+import { SlectedUniteComponent } from './Components/SlectedUnite/slected-unite/slected-unite.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent  },
@@ -71,6 +72,7 @@ const routes: Routes = [
 { path: 'guest-cards' , component:GuestCardsComponent },
 { path: 'guest-investment' , component:GuestInvestmentComponent },
 { path: 'service-provider' , component:ServiceProviderComponent },
+{ path: 'slected-unite/:title' , component:SlectedUniteComponent },
 { path: 'not-found', component: NotFoundComponent },
 { path: '**', redirectTo: '/not-found' },
 

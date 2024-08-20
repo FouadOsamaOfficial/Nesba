@@ -1,0 +1,39 @@
+<app-aside></app-aside>
+<h2 class="containerOneTitle">Selected Unit</h2>
+
+<div class="container">
+  <div *ngIf=" property " class="box">
+    <div class="top" (click)="contactProvider()">
+      <img [src]="property.imageUrl" [alt]="property.title" />
+      <span><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i></span>
+    </div>
+    <div class="bottom" >
+      <h3>{{property.title}}</h3>
+      <p>{{property.description}}</p>
+      <div class="advants">
+        <div>
+          <span>Bedrooms</span>
+          <div><i class="fas fa-th-large"></i><span>{{property.bedrooms}}</span></div>
+        </div>
+        <div>
+          <span>Bathrooms</span>
+          <div><i class="fas fa-shower"></i><span>{{property.bathrooms}}</span></div>
+        </div>
+        <div>
+          <span>Area</span>
+          <div>
+            <i class="fas fa-vector-square"></i><span>{{property.area}}<span>{{property.areaUnit}}</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="price">
+        <span>For Sale</span>
+        <span>{{property.price}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

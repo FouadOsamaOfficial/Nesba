@@ -48,6 +48,7 @@ import { GuestFinanceProductsComponent } from './Components/guest-finance-produc
 import { GuestCardsComponent } from './Components/guest-cards/guest-cards.component';
 import { GuestInvestmentComponent } from './Components/guest-investment/guest-investment.component';
 import { ServiceProviderComponent } from './Components/service-provider/service-provider.component';
+import { SlectedUniteComponent } from './Components/SlectedUnite/slected-unite/slected-unite.component';
 
 
 @NgModule({
@@ -94,6 +95,7 @@ import { ServiceProviderComponent } from './Components/service-provider/service-
     GuestCardsComponent,
     GuestInvestmentComponent,
     ServiceProviderComponent,
+    SlectedUniteComponent,
   ],
   imports: [
     BrowserModule,

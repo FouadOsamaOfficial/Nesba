@@ -81,6 +81,11 @@ export class AutoLeaseFinanceComponent implements OnInit {
   monthlyPaymentCalc(p: number, n: number, i: number): number {
     return p * i * (Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1);
   }
+
+
+  toServiceProvider(){
+    this.router.navigate(['./service-provider']);
+  }
   // showTable(tableNumber: number) {
   //   this.selectedTable = tableNumber;
   // }
