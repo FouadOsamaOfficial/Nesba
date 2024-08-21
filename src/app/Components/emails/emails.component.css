@@ -166,3 +166,57 @@ textarea {
   height: 100px;
   margin-bottom: 10px;
 }
+
+/* Style for the select element with custom arrow */
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select-wrapper select {
+  width: 100px;
+  padding: 10px 40px 10px 10px; /* Add padding for the arrow */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  appearance: none; /* Remove default arrow */
+}
+
+.custom-select-wrapper .arrow-down {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #000; /* Black arrow */
+  transform: translateY(-50%);
+}
+
+/* Style for the input element with custom arrow */
+.custom-input-wrapper {
+  position: relative;
+}
+
+.custom-input-wrapper input {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* Add padding for the arrow */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.custom-input-wrapper .arrow-down {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #000; /* Black arrow */
+  transform: translateY(-50%);
+}

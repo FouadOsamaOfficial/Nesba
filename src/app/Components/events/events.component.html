@@ -8,8 +8,8 @@
         <div class="top-right">
           <div class="tags-list mb-2">
             <span class="tags-list-town text-uppercase">{{ event.location }}</span>
-            <span style="background-color: #28a745; text-transform: uppercase; font-weight: 800;">
-              FREE
+            <span class="news">
+                NEWS
             </span>
           </div>
         </div>
@@ -26,10 +26,10 @@
           <a >
             
             <img [src]="event.imageUrl" class="card-img-top" alt="Image" />
-            <div class="image-overlay text-over text-center d-flex justify-content-center align-items-center text-uppercase">
+            <div class="image-overlay text-over text-uppercase">
               
-              <div>
-                <span class="row" style="text-align: center; justify-content: center; padding: 10px;">
+              <div class="mainDec">
+                <span class="row decTitle">
                   {{event.title}}
                 </span>
                 {{ event.description }}

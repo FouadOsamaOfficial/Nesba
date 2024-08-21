@@ -1,4 +1,16 @@
-/* Base Styles */
+.news{
+  background-color: #28a745; text-transform: uppercase; font-weight: 800;
+}
+
+.mainDec{
+  width: 75%; font-size: 15px;
+}
+
+.decTitle{
+  text-align: center;
+   justify-content: center;
+    padding: 10px;
+}
 a {
   text-decoration: none;
 }
@@ -11,8 +23,11 @@ a {
 .container {
   margin-top: 100px;
   margin-bottom: 50px;
-  margin-right: 10px;
   display: flex;
+  max-width: 1600px;
+  margin-left: 0;
+  padding-left: 250px;
+  padding-right: 0;
 }
 
 .thumbnail-date-day {
@@ -25,7 +40,7 @@ a {
 
 div,
 span {
-  box-sizing: initial;
+  box-sizing: inherit;
   line-height: 1;
 }
 
@@ -101,6 +116,7 @@ span {
 
 .card-img-top {
   border-radius: 0 !important;
+  background-size: auto;
 }
 
 .image-container {
@@ -116,6 +132,10 @@ span {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.57);
   z-index: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-container .card-img-top {
@@ -174,7 +194,7 @@ span {
 /* Large Devices (desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
   .container {
-    margin-right: 20px;
+    /* margin-right: 20px; */
   }
 
   .btn {

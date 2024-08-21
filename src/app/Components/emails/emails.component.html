@@ -6,15 +6,21 @@
       <div class="row">
         <div class="col-sm-2">
           <div class="show-row">
-            <select class="form-control" (change)="changeShowCount($event)">
-              <option *ngFor="let option of showOptions" [value]="option">{{ option }}</option>
-            </select>
+            <div class="custom-select-wrapper">
+              <select class="form-control" (change)="changeShowCount($event)">
+                <option *ngFor="let option of showOptions" [value]="option">{{ option }}</option>
+              </select>
+              <div class="arrow-down"></div>
+            </div>
           </div>
         </div>
         <div class="col-sm-4"></div>
         <div class="col-sm-6">
           <div class="search-row">
-            <input type="text" (input)="filterEmails($event)" class="form-control" placeholder="Enter your keyword">
+            <div class="custom-input-wrapper">
+              <input type="text" (input)="filterEmails($event)" class="form-control" placeholder="Enter your keyword">
+              <div class="arrow-down"></div>
+            </div>
           </div>
         </div>
       </div>

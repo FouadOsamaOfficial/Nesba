@@ -22,9 +22,9 @@ export class EventsService {
       // eventCount:'5',
       title:'new cards',
       date: '17/08/2023',
-      location: 'NEW YORK',
-      imageUrl: 'https://images.pexels.com/photos/1230397/pexels-photo-1230397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description: 'Cheers and Grooves in the Heart of New York!',
+      location: 'SUADI ARABIA',
+      imageUrl: 'assets/images/eventAlrajhi.jpeg',
+      description: 'Al Rajhi Bank and Almosafer form a strategic partnership to elevate customer experiences across travel and banking',
       thumbnailBackgroundColor: '#ffa5009e',
       thumbnailDateDay: '17',
       thumbnailDateMonth: 'ago'
@@ -32,9 +32,9 @@ export class EventsService {
     {
       title:'new investments',
       date: '20/09/2023',
-      location: 'ROME',
-      imageUrl: 'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description: 'CSips and Sway: Where Rome Dances the Night Away!',
+      location: 'SUADI ARABIA',
+      imageUrl: 'assets/images/landmarkAlrajhi.jpeg',
+      description: 'Al Rajhi Bank and Landmark Arabia partner to elevate customer rewards experience',
       thumbnailBackgroundColor: '#00800070',
       thumbnailDateDay: '20',
       thumbnailDateMonth: 'sep'
@@ -42,9 +42,9 @@ export class EventsService {
     {
       title:'cards',
       date: '31/12/2023',
-      location: 'PARIS',
-      imageUrl: 'https://images.pexels.com/photos/2526105/pexels-photo-2526105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description: 'Countdown to Joy: New Year\'s Eve Bash in Paris!',
+      location: 'SUADI ARABIA',
+      imageUrl: 'assets/images/suadideposit.jpeg',
+      description: 'Saudi Arabia says it is close to making $5 billion deposit with Turkey',
       thumbnailBackgroundColor: '#ff000070',
       thumbnailDateDay: '31',
       thumbnailDateMonth: 'dec'
@@ -52,9 +52,9 @@ export class EventsService {
     {
       title:'new branch',
       date: '17/03/2024',
-      location: 'DUBLIN',
-      imageUrl: 'https://images.pexels.com/photos/1441460/pexels-photo-1441460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description: 'Luck and Laughter: Embrace the Spirit of St. Patrick\'s Day!',
+      location: 'SUADI ARABIA',
+      imageUrl: 'assets/images/suadiWithFeelancers.jpeg',
+      description: 'Saudi Social Development Bank pledges $6.4bn to start-up businesses and freelancers',
       thumbnailBackgroundColor: '#2196f3ad',
       thumbnailDateDay: '17',
       thumbnailDateMonth: 'mar'
@@ -62,9 +62,9 @@ export class EventsService {
     {
       title:'mortgage',
       date: '31/02/2024',
-      location: 'WORLD',
-      imageUrl: 'https://images.pexels.com/photos/813787/pexels-photo-813787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description: 'Party Bad!',
+      location: 'SUADI ARABIA',
+      imageUrl: 'assets/images/SABBNewVisia.jpeg',
+      description: 'SABB launches Visa debit card ',
       thumbnailBackgroundColor: '#673ab794',
       thumbnailDateDay: '31',
       thumbnailDateMonth: 'Feb'

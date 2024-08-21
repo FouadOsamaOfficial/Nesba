@@ -27,6 +27,7 @@
   .card .card-link a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
   }
 
   .card .card-link a:hover{
