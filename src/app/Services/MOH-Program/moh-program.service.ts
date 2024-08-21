@@ -5,7 +5,7 @@ export interface MohProgram {
   bayout: string;
   selfConstruction: boolean;
   mohLand: string;
-  imageUrl: string;
+  imageUrl: string[];
 }
 @Injectable({
   providedIn: 'root'
@@ -13,15 +13,31 @@ export interface MohProgram {
 export class MOHProgramService {
 
   private data: MohProgram[] = [
-    { bayout: '5000', selfConstruction: true, mohLand: '3000', imageUrl:'assets/images/villa1.webp'},
-    { bayout: '7000', selfConstruction: false, mohLand: '4000', imageUrl:'assets/images/villa2.jpeg'},
-    { bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl:'assets/images/villa3.jpeg'},
-    { bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl:'assets/images/villa4.jpeg' },
-    { bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl:'assets/images/villa5.jpeg'},
-    { bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl:'assets/images/villa6.jpeg'},
-    { bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl:'assets/images/villa1.webp'},
-    { bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl:'assets/images/villa2.jpeg'}
-  
+    {
+      bayout: '5000', selfConstruction: true, mohLand: '3000', imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg' ,'assets/images/villa4.jpeg ']
+    },
+    {
+      bayout: '7000', selfConstruction: false, mohLand: '4000', imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg' ,'assets/images/villa4.jpeg ']
+    },
+    {
+      bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg' ,'assets/images/villa4.jpeg ']
+    },
+    {
+      bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']
+    },
+    {
+      bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg' ,'assets/images/villa4.jpeg ']
+    },
+    {
+      bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']
+    },
+    {
+      bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']
+    },
+    {
+      bayout: '6000', selfConstruction: true, mohLand: '3500', imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg' ,'assets/images/villa4.jpeg ']
+    }
+
 
   ];
   constructor() { }

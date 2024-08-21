@@ -9,7 +9,7 @@ export interface MortgageRefinance {
   term: string;
   fees: string;
   apr: string;
-  imageUrl:string;
+  imageUrl: string[];
 }
 
 @Injectable({
@@ -26,7 +26,7 @@ export class MortgageRefinanceService {
       term: '30 years',
       fees: '$2,000',
       apr: '3.50%',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -37,7 +37,7 @@ export class MortgageRefinanceService {
       term: '15 years',
       fees: '$1,500',
       apr: '2.90%',
-        imageUrl:'assets/images/villa2.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -48,7 +48,7 @@ export class MortgageRefinanceService {
       term: '15 years',
       fees: '$1,500',
       apr: '2.90%',
-        imageUrl:'assets/images/villa3.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -59,7 +59,7 @@ export class MortgageRefinanceService {
       term: '15 years',
       fees: '$1,500',
       apr: '2.90%',
-        imageUrl:'assets/images/villa4.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -70,7 +70,7 @@ export class MortgageRefinanceService {
       term: '15 years',
       fees: '$1,500',
       apr: '2.90%',
-        imageUrl:'assets/images/villa5.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -81,7 +81,7 @@ export class MortgageRefinanceService {
       term: '15 years',
       fees: '$1,500',
       apr: '2.90%',
-        imageUrl:'assets/images/villa6.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -92,7 +92,7 @@ export class MortgageRefinanceService {
       term: '15 years',
       fees: '$1,500',
       apr: '2.90%',
-        imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -103,7 +103,7 @@ export class MortgageRefinanceService {
       term: '15 years',
       fees: '$1,500',
       apr: '2.90%',
-        imageUrl:'assets/images/villa2.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     }
     // Add more dummy data if needed

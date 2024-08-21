@@ -10,7 +10,7 @@ export interface DirectPurchase {
   termLength: string;
   monthlyPayment: string;
   notes: string;
-  imageUrl:string;
+  imageUrl:string[];
 }
 @Injectable({
   providedIn: 'root'
@@ -29,7 +29,7 @@ export class DirectPurchaseService {
       termLength: '30 years',
       monthlyPayment: '$1,910',
       notes: 'Fixed-rate mortgage',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -42,7 +42,7 @@ export class DirectPurchaseService {
       termLength: '20 years',
       monthlyPayment: '$887',
       notes: 'Adjustable-rate mortgage',
-      imageUrl:'assets/images/villa2.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -55,7 +55,7 @@ export class DirectPurchaseService {
       termLength: '20 years',
       monthlyPayment: '$887',
       notes: 'Adjustable-rate mortgage',
-      imageUrl:'assets/images/villa2.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -68,7 +68,7 @@ export class DirectPurchaseService {
       termLength: '20 years',
       monthlyPayment: '$887',
       notes: 'Adjustable-rate mortgage',
-      imageUrl:'assets/images/villa3.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -81,7 +81,7 @@ export class DirectPurchaseService {
       termLength: '20 years',
       monthlyPayment: '$887',
       notes: 'Adjustable-rate mortgage',
-      imageUrl:'assets/images/villa4.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     },
     {
@@ -94,7 +94,7 @@ export class DirectPurchaseService {
       termLength: '20 years',
       monthlyPayment: '$887',
       notes: 'Adjustable-rate mortgage',
-      imageUrl:'assets/images/villa5.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg' ,'assets/images/villa4.jpeg ']  
 
     },
     {
@@ -107,7 +107,7 @@ export class DirectPurchaseService {
       termLength: '20 years',
       monthlyPayment: '$887',
       notes: 'Adjustable-rate mortgage',
-      imageUrl:'assets/images/villa6.jpeg'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg' ,'assets/images/villa4.jpeg ']  
 
     },
     {
@@ -120,7 +120,7 @@ export class DirectPurchaseService {
       termLength: '20 years',
       monthlyPayment: '$887',
       notes: 'Adjustable-rate mortgage',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ','assets/images/villa4.jpeg ']  
 
     }
     // Add more dummy data if needed

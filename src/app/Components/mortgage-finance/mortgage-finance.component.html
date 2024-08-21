@@ -221,8 +221,10 @@
                     <div class="row"> <p class="col-md-3"><strong>APR:</strong> {{ currentModalData.apr }}</p></div>
 
                     <div class="propContainer">
-                     <div> <span>Description</span><img [src]="currentModalData.imageUrl" ></div>
-                    </div>
+                        <div *ngFor="let imageUrl of currentModalData.imageUrl.slice(0, 3)">
+                            <span>Description</span>     <img [src]="imageUrl" alt="Image Description">
+                        </div>
+                      </div>
                    
                 </div>
 
@@ -241,8 +243,10 @@
                     </div>
                     <div class="row"><p class="col-md-3"><strong>Notes:</strong> {{ currentModalData.notes }}</p>
                         <div class="propContainer">
-                            <div> <span>Description</span><img [src]="currentModalData.imageUrl" ></div>
-                           </div>
+                            <div *ngFor="let imageUrl of currentModalData.imageUrl.slice(0, 3)">
+                                <span>Description</span>     <img [src]="imageUrl" alt="Image Description">
+                            </div>
+                          </div>
                     </div>
                     
                 </div>
@@ -264,9 +268,11 @@
                         <p class="col-md-3"><strong>Notes:</strong> {{ currentModalData.notes }}</p>
                     </div>
                     <div class="row">
-                    <div class="propContainer">
-                        <div> <span>Description</span><img [src]="currentModalData.imageUrl" ></div>
-                        </div>
+                        <div class="propContainer">
+                            <div *ngFor="let imageUrl of currentModalData.imageUrl.slice(0, 3)">
+                                <span>Description</span>  <img [src]="imageUrl" alt="Image Description">
+                            </div>
+                          </div>
                     </div>
                                         
                 </div>
@@ -281,8 +287,10 @@
                     </div>
                     <div class="row">
                         <div class="propContainer">
-                            <div> <span>Description</span><img [src]="currentModalData.imageUrl" ></div>
+                            <div *ngFor="let imageUrl of currentModalData.imageUrl.slice(0, 3)">
+                                <span>Description</span>  <img [src]="imageUrl" alt="Image Description">
                             </div>
+                          </div>
                         </div>
                 </div>
             </div>

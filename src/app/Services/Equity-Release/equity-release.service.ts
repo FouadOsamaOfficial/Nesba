@@ -8,7 +8,7 @@ export interface EquityRelease {
   estimatedValueAfter10Years: string;
   monthlyPayment: string;
   notes: string;
-  imageUrl:string;
+  imageUrl:string[];
 }
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$80,000',
       monthlyPayment: 'None (interest rolled up)',
       notes: 'No early repayment charges',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -36,7 +36,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -47,7 +47,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -58,7 +58,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -69,7 +69,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -80,7 +80,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -91,7 +91,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -102,7 +102,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -113,7 +113,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     {
@@ -124,7 +124,7 @@ export class EquityReleaseService {
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
       notes: 'Option to buy back property',
-      imageUrl:'assets/images/villa1.webp'
+      imageUrl: ['assets/images/villa1.webp', 'assets/images/villa2.jpeg', 'assets/images/villa3.jpeg ,assets/images/villa4.jpeg ']  
 
     },
     // Add more dummy data if needed
