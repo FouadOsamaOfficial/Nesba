@@ -9,6 +9,7 @@ export interface MortgageRefinance {
   term: string;
   fees: string;
   apr: string;
+  imageUrl:string;
 }
 
 @Injectable({
@@ -24,7 +25,9 @@ export class MortgageRefinanceService {
       monthlyPayment: '$1,200',
       term: '30 years',
       fees: '$2,000',
-      apr: '3.50%'
+      apr: '3.50%',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       lender: 'Bank B',
@@ -33,7 +36,9 @@ export class MortgageRefinanceService {
       monthlyPayment: '$1,150',
       term: '15 years',
       fees: '$1,500',
-      apr: '2.90%'
+      apr: '2.90%',
+        imageUrl:'assets/images/villa2.jpeg'
+
     },
     {
       lender: 'Bank c',
@@ -42,7 +47,9 @@ export class MortgageRefinanceService {
       monthlyPayment: '$1,150',
       term: '15 years',
       fees: '$1,500',
-      apr: '2.90%'
+      apr: '2.90%',
+        imageUrl:'assets/images/villa3.jpeg'
+
     },
     {
       lender: 'Bank d',
@@ -51,7 +58,9 @@ export class MortgageRefinanceService {
       monthlyPayment: '$1,150',
       term: '15 years',
       fees: '$1,500',
-      apr: '2.90%'
+      apr: '2.90%',
+        imageUrl:'assets/images/villa4.jpeg'
+
     },
     {
       lender: 'Bank e',
@@ -60,7 +69,9 @@ export class MortgageRefinanceService {
       monthlyPayment: '$1,150',
       term: '15 years',
       fees: '$1,500',
-      apr: '2.90%'
+      apr: '2.90%',
+        imageUrl:'assets/images/villa5.jpeg'
+
     },
     {
       lender: 'Bank f',
@@ -69,7 +80,9 @@ export class MortgageRefinanceService {
       monthlyPayment: '$1,150',
       term: '15 years',
       fees: '$1,500',
-      apr: '2.90%'
+      apr: '2.90%',
+        imageUrl:'assets/images/villa6.jpeg'
+
     },
     {
       lender: 'Bank g',
@@ -78,7 +91,9 @@ export class MortgageRefinanceService {
       monthlyPayment: '$1,150',
       term: '15 years',
       fees: '$1,500',
-      apr: '2.90%'
+      apr: '2.90%',
+        imageUrl:'assets/images/villa1.webp'
+
     },
     {
       lender: 'Bank h',
@@ -87,7 +102,9 @@ export class MortgageRefinanceService {
       monthlyPayment: '$1,150',
       term: '15 years',
       fees: '$1,500',
-      apr: '2.90%'
+      apr: '2.90%',
+        imageUrl:'assets/images/villa2.jpeg'
+
     }
     // Add more dummy data if needed
   ];

@@ -10,6 +10,7 @@ export interface DirectPurchase {
   termLength: string;
   monthlyPayment: string;
   notes: string;
+  imageUrl:string;
 }
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,9 @@ export class DirectPurchaseService {
       interestRate: '4.0%',
       termLength: '30 years',
       monthlyPayment: '$1,910',
-      notes: 'Fixed-rate mortgage'
+      notes: 'Fixed-rate mortgage',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       propertyType: 'Land',
@@ -38,7 +41,9 @@ export class DirectPurchaseService {
       interestRate: '3.5%',
       termLength: '20 years',
       monthlyPayment: '$887',
-      notes: 'Adjustable-rate mortgage'
+      notes: 'Adjustable-rate mortgage',
+      imageUrl:'assets/images/villa2.jpeg'
+
     },
     {
       propertyType: 'House',
@@ -49,7 +54,9 @@ export class DirectPurchaseService {
       interestRate: '3.5%',
       termLength: '20 years',
       monthlyPayment: '$887',
-      notes: 'Adjustable-rate mortgage'
+      notes: 'Adjustable-rate mortgage',
+      imageUrl:'assets/images/villa2.jpeg'
+
     },
     {
       propertyType: 'Land',
@@ -60,7 +67,9 @@ export class DirectPurchaseService {
       interestRate: '3.5%',
       termLength: '20 years',
       monthlyPayment: '$887',
-      notes: 'Adjustable-rate mortgage'
+      notes: 'Adjustable-rate mortgage',
+      imageUrl:'assets/images/villa3.jpeg'
+
     },
     {
       propertyType: 'House',
@@ -71,7 +80,9 @@ export class DirectPurchaseService {
       interestRate: '3.5%',
       termLength: '20 years',
       monthlyPayment: '$887',
-      notes: 'Adjustable-rate mortgage'
+      notes: 'Adjustable-rate mortgage',
+      imageUrl:'assets/images/villa4.jpeg'
+
     },
     {
       propertyType: 'Land',
@@ -82,7 +93,9 @@ export class DirectPurchaseService {
       interestRate: '3.5%',
       termLength: '20 years',
       monthlyPayment: '$887',
-      notes: 'Adjustable-rate mortgage'
+      notes: 'Adjustable-rate mortgage',
+      imageUrl:'assets/images/villa5.jpeg'
+
     },
     {
       propertyType: 'House',
@@ -93,7 +106,9 @@ export class DirectPurchaseService {
       interestRate: '3.5%',
       termLength: '20 years',
       monthlyPayment: '$887',
-      notes: 'Adjustable-rate mortgage'
+      notes: 'Adjustable-rate mortgage',
+      imageUrl:'assets/images/villa6.jpeg'
+
     },
     {
       propertyType: 'Land',
@@ -104,7 +119,9 @@ export class DirectPurchaseService {
       interestRate: '3.5%',
       termLength: '20 years',
       monthlyPayment: '$887',
-      notes: 'Adjustable-rate mortgage'
+      notes: 'Adjustable-rate mortgage',
+      imageUrl:'assets/images/villa1.webp'
+
     }
     // Add more dummy data if needed
   ];

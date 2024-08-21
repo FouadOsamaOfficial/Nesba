@@ -219,6 +219,10 @@
                         <p class="col-md-3"><strong>Fees:</strong> {{ currentModalData.fees }}</p>
                     </div>
                     <div class="row"> <p class="col-md-3"><strong>APR:</strong> {{ currentModalData.apr }}</p></div>
+
+                    <div class="propContainer">
+                     <div> <span>Description</span><img [src]="currentModalData.imageUrl" ></div>
+                    </div>
                    
                 </div>
 
@@ -236,6 +240,9 @@
                         <p class="col-md-3"><strong>Monthly Payment:</strong> {{ currentModalData.monthlyPayment }}</p>
                     </div>
                     <div class="row"><p class="col-md-3"><strong>Notes:</strong> {{ currentModalData.notes }}</p>
+                        <div class="propContainer">
+                            <div> <span>Description</span><img [src]="currentModalData.imageUrl" ></div>
+                           </div>
                     </div>
                     
                 </div>
@@ -256,6 +263,12 @@
                         <p class="col-md-3"><strong>Monthly Payment:</strong> {{ currentModalData.monthlyPayment }}</p>
                         <p class="col-md-3"><strong>Notes:</strong> {{ currentModalData.notes }}</p>
                     </div>
+                    <div class="row">
+                    <div class="propContainer">
+                        <div> <span>Description</span><img [src]="currentModalData.imageUrl" ></div>
+                        </div>
+                    </div>
+                                        
                 </div>
 
                 <div *ngIf="isMOHProgram(currentModalData)">
@@ -266,11 +279,14 @@
                             : 'No' }}</p>
                         <p class="col-md-3"><strong>MOH Land:</strong> {{ currentModalData.mohLand }}</p>
                     </div>
-
-
+                    <div class="row">
+                        <div class="propContainer">
+                            <div> <span>Description</span><img [src]="currentModalData.imageUrl" ></div>
+                            </div>
+                        </div>
                 </div>
             </div>
-            <div class="propContainer">
+            <!-- <div class="propContainer">
                 <div>
                     <span>Description</span>
                     <img src="https://images.unsplash.com/photo-1528150113746-eedf29a184c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=418cfe031d636ba13d884ecb0f791291&auto=format&fit=crop&w=3334&q=80"
@@ -286,7 +302,7 @@
                     <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0786d4e2ad0dc64e08df49423e6e18&auto=format&fit=crop&w=1834&q=80"
                         alt="">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

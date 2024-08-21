@@ -8,6 +8,7 @@ export interface EquityRelease {
   estimatedValueAfter10Years: string;
   monthlyPayment: string;
   notes: string;
+  imageUrl:string;
 }
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$50,000',
       estimatedValueAfter10Years: '$80,000',
       monthlyPayment: 'None (interest rolled up)',
-      notes: 'No early repayment charges'
+      notes: 'No early repayment charges',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider B',
@@ -32,7 +35,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider C',
@@ -41,7 +46,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider D',
@@ -50,7 +57,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider E',
@@ -59,7 +68,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider F',
@@ -68,7 +79,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider G',
@@ -77,7 +90,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider H',
@@ -86,7 +101,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider U',
@@ -95,7 +112,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     {
       provider: 'Provider x',
@@ -104,7 +123,9 @@ export class EquityReleaseService {
       initialAmountReleased: '$40,000',
       estimatedValueAfter10Years: '$70,000',
       monthlyPayment: 'None',
-      notes: 'Option to buy back property'
+      notes: 'Option to buy back property',
+      imageUrl:'assets/images/villa1.webp'
+
     },
     // Add more dummy data if needed
   ];
