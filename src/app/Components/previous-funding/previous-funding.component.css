@@ -10,7 +10,7 @@
   }
 .previousFundingHeader{
   text-align: center;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 .card {
     border: none;
@@ -48,6 +48,7 @@
   
    .container{
     margin-top: 50px !important;
+    margin-bottom: 28px;
   
   } 
    :root {

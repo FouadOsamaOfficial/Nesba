@@ -3,12 +3,13 @@
 
 }
 .fundingHeader{
-  margin-top: 50px;
+  margin-top: 200px;
   text-align: center;
 
 }
 .container {
   margin-top: 150px;
+  margin-bottom: 130px;
   /* margin-left: 270px;  */
   position: relative;
   /* display: flex; */

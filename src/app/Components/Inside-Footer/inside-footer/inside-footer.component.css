@@ -1,0 +1,39 @@
+/* Importing Google font - Open Sans */
+
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+    background: #10182F;
+    height: 40px;
+    width: 100%;
+    /* margin-top: 500px; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    position: relative;
+    /* height: 200px; */
+    /* margin-top: 100px; */
+}
+
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+    /* padding: 60px; */
+}
+
+.footer-copyright .container p {
+    color: #fff;
+    padding: 8px 0px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
