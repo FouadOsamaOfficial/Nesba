@@ -49,7 +49,7 @@ import { GuestCardsComponent } from './Components/guest-cards/guest-cards.compon
 import { GuestInvestmentComponent } from './Components/guest-investment/guest-investment.component';
 import { ServiceProviderComponent } from './Components/service-provider/service-provider.component';
 import { SlectedUniteComponent } from './Components/SlectedUnite/slected-unite/slected-unite.component';
-import { InsideFooterComponent } from './Components/Inside-Footer/inside-footer/inside-footer.component';
+import { InsideFooterComponent } from './sharedComponents/Inside-Footer/inside-footer/inside-footer.component';
 
 
 @NgModule({
